@@ -1,0 +1,55 @@
+                                                                               \documentclass[tikz]{standalone}
+\usepackage{lmodern}
+\usepackage[algoruled,vlined,linesnumbered,titlenotnumbered,noend]{algorithm2e}
+\usepackage{color,amsmath,bm,bbm,stmaryrd,amssymb,pifont,bbding}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc} 
+
+\usetikzlibrary{shapes}
+\usetikzlibrary{shadows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{decorations}
+\usetikzlibrary{arrows,bending}
+\usetikzlibrary{shapes.arrows}
+\tikzset{nobg/.style={show background rectangle,background rectangle/.style={opacity=0}}}
+
+
+\input ../../styles
+\input ../../globalcomm
+\usetikzlibrary{arrows, shapes.gates.logic.US, calc}
+
+\begin{document}
+
+
+\begin{tikzpicture}
+
+\node[not gate US, draw,name=notx] at ($(0,0) + (0, 0)$) {};
+\node[not gate US, draw,name=noty,anchor=west] at ($(notx.east) + (20pt,0pt)$) {};
+\node[and gate US, draw,name=and,anchor=north west,logic gate inputs=nn,fill=gray!20] at ($(notx.east) + (20pt,0pt)$) {};
+\draw (notx.output) -- ([xshift=0.10pt]notx.output) -| (and.input 1);
+    
+\end{tikzpicture}
+
+\begin{tikzpicture}
+    \node (x) at (0, 1) {$x$};
+    \node (y) at (0, 0) {$y$};
+
+    \node[not gate US, draw] at ($(x) + (0.8, 0)$) (notx) {};
+    \node[not gate US, draw] at ($(y) + (0.8, 0)$) (noty) {};
+    \node[or gate US, draw, rotate=0, logic gate inputs=nn] at ($(noty) + (1.5, 0.5)$) (xory) {};
+
+    \draw (x) -- (notx.input);
+    \draw (y) -- (noty.input);
+
+    
+
+    \draw (xory.output) -- node[above]{$\bar x + \bar y$} ($(xory) + (1.5, 0)$);
+\end{tikzpicture}
+
+
+
+
+
+     
+\end{document}

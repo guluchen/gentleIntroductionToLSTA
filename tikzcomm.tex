@@ -1,0 +1,411 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Inference Rules - no lable - no background %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\tikzstyle{irnamenode}=
+      [text=blue!70!black,anchor=west,align=left,
+      font=\sffamily\Large\bfseries,anchor=west]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\oneinfer[2]{
+  \begin{tikzpicture}
+    \node[irnode,name=n1] at (0,0) {${#1}$};
+    \node[irnode,name=n2,anchor=north] at       
+    ($(n1.south)+(0pt,-2pt)$){${#2}$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+    \path let \p1=(n1.south west),\p2=(n2.north west) in 
+    coordinate (Q1) at ({min(\x1,\x2)}, {(\y1+\y2)/2}){};
+
+    \path let \p1=(n1.south east),\p2=(n2.north east) in 
+    coordinate (Q2) at ({max(\x1,\x2)}, {(\y1+\y2)/2});
+    \draw[-,line width=1pt] (Q1) -- (Q2);
+%%%%%%%%%%%%%%%%%%%%%%%%
+   \end{tikzpicture}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\twoinfer[3]{
+  \begin{tikzpicture}
+    \node[irnode,name=n1]{${#1}$};
+    \node[irnode,name=n2,anchor=north] at ($(n1.south)+(0pt,0pt)$){${#2}$};
+    \node[irnode,name=n3,anchor=north] at ($(n2.south)+(0pt,-2pt)$){${#3}$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+    \path let \p1=(n1.west),\p2=(n2.south west),\p3=(n3.north west) in 
+    coordinate (Q1) at ({min(\x1,\x2,\x3)}, {(\y2+\y3)/2}){};
+    \path let \p1=(n1.east),\p2=(n2.south east),\p3=(n3.north east) in 
+    coordinate (Q2) at ({max(\x1,\x2,\x3)}, {(\y2+\y3)/2});
+    \draw[-,line width=1pt] (Q1) -- (Q2);
+   \end{tikzpicture}             
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\threeinfer[4]{
+\begin{tikzpicture}
+%%%%%%%%%%%%%%%%%%%%%%%%
+  \node[irnode,name=n1]{
+    ${#1}$};
+  \node[irnode,name=n2,anchor=north] at ($(n1.south)+(0pt,-3pt)$){
+    ${#2}$};
+  \node[irnode,name=n3,anchor=north] at ($(n2.south)+(0pt,-3pt)$){
+    ${#3}$};
+  \node[irnode,name=n4,anchor=north] at ($(n3.south)+(0pt,-6pt)$){
+     ${#4}$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+  
+     \path let \p1=(n1.west),\p2=(n2.west),\p3=(n3.south west),\p4=(n4.north west) in 
+     coordinate (Q1) at ({min(\x1,\x2,\x3,\x4)}, {(\y3+\y4)/2}){};
+
+     \path let \p1=(n1.east),\p2=(n2.east),\p3=(n3.south east),\p4=(n4.north east) in 
+     coordinate (Q2) at ({max(\x1,\x2,\x3,\x4)}, {(\y3+\y4)/2});
+     \draw[-,line width=1pt] (Q1) -- (Q2);
+%%%%%%%%%%%%%%%%%%%%%%%%
+   \end{tikzpicture}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\fourinfer[5]{
+\begin{tikzpicture}
+%%%%%%%%%%%%%%%%%%%%%%%%
+  \node[irnode,name=n1]{
+    ${#1}$};
+  \node[irnode,name=n2,anchor=north] at ($(n1.south)+(0pt,-3pt)$){
+    ${#2}$};
+  \node[irnode,name=n3,anchor=north] at ($(n2.south)+(0pt,-3pt)$){
+    ${#3}$};
+  \node[irnode,name=n4,anchor=north] at ($(n3.south)+(0pt,-3pt)$){
+    ${#4}$};
+  \node[irnode,name=n5,anchor=north] at ($(n4.south)+(0pt,-6pt)$){
+     ${#5}$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.west),\p2=(n2.west),\p3=(n3.west),
+     \p4=(n4.south west),\p5=(n5.north west) in 
+     coordinate (Q1) at ({min(\x1,\x2,\x3,\x4,\x5)}, {(\y4+\y5)/2}){};
+     \path let \p1=(n1.east),\p2=(n2.east),\p3=(n3.east),
+     \p4=(n4.south east),\p5=(n5.north east) in 
+     coordinate (Q2) at ({max(\x1,\x2,\x3,\x4,\x5)}, {(\y4+\y5)/2});
+     \draw[-,line width=1pt] (Q1) -- (Q2);
+%%%%%%%%%%%%%%%%%%%%%%%%
+  \end{tikzpicture}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\fiveinfer[6]{
+\begin{tikzpicture}
+%%%%%%%%%%%%%%%%%%%%%%%%
+  \node[irnode,name=n1]{
+    ${#1}$};
+  \node[irnode,name=n2,anchor=north] at ($(n1.south)+(0pt,-3pt)$){
+    ${#2}$};
+  \node[irnode,name=n3,anchor=north] at ($(n2.south)+(0pt,-3pt)$){
+    ${#3}$};
+  \node[irnode,name=n4,anchor=north] at ($(n3.south)+(0pt,-3pt)$){
+    ${#4}$};
+  \node[irnode,name=n5,anchor=north] at ($(n4.south)+(0pt,-3pt)$){
+     ${#5}$};
+  \node[irnode,name=n6,anchor=north] at ($(n5.south)+(0pt,-6pt)$){
+     ${#6}$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.west),\p2=(n2.west),\p3=(n3.west),
+     \p4=(n4.west),\p5=(n5.south west),\p6=(n6.north west) in 
+     coordinate (Q1) at ({min(\x1,\x2,\x3,\x4,\x5,\x6)}, {(\y5+\y6)/2}){};
+     \path let \p1=(n1.east),\p2=(n2.east),\p3=(n3.east),
+     \p4=(n4.east),\p5=(n5.south east),\p6=(n6.north east) in 
+     coordinate (Q2) at ({max(\x1,\x2,\x3,\x4,\x5,\x6)}, {(\y5+\y6)/2});
+     \draw[-,line width=1pt] (Q1) -- (Q2);
+%% %%%%%%%%%%%%%%%%%%%%%%%%
+ \end{tikzpicture}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\sixinfer[7]{
+\begin{tikzpicture}
+%%%%%%%%%%%%%%%%%%%%%%%%
+  \node[irnode,name=n1]{
+    ${#1}$};
+  \node[irnode,name=n2,anchor=north] at ($(n1.south)+(0pt,-3pt)$){
+    ${#2}$};
+  \node[irnode,name=n3,anchor=north] at ($(n2.south)+(0pt,-3pt)$){
+    ${#3}$};
+  \node[irnode,name=n4,anchor=north] at ($(n3.south)+(0pt,-3pt)$){
+    ${#4}$};
+  \node[irnode,name=n5,anchor=north] at ($(n4.south)+(0pt,-3pt)$){
+     ${#5}$};
+  \node[irnode,name=n6,anchor=north] at ($(n5.south)+(0pt,-6pt)$){
+     ${#6}$};
+  \node[irnode,name=n7,anchor=north] at ($(n6.south)+(0pt,-6pt)$){
+     ${#7}$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.west),\p2=(n2.west),\p3=(n3.west),
+     \p4=(n4.west),\p5=(n5.south west),\p6=(n6.south west),
+     \p7=(n7.north west) in 
+     coordinate (Q1) at ({min(\x1,\x2,\x3,\x4,\x5,\x6,\x7)}, {(\y6+\y7)/2}){};
+     \path let \p1=(n1.east),\p2=(n2.east),\p3=(n3.east),
+     \p4=(n4.east),\p5=(n5.south east),\p6=(n6.south east),
+     \p7=(n7.north east)in
+     coordinate (Q2) at ({max(\x1,\x2,\x3,\x4,\x5,\x6,\x7)}, {(\y6+\y7)/2});
+     \draw[-,line width=1pt] (Q1) -- (Q2);
+%% %%%%%%%%%%%%%%%%%%%%%%%%
+
+ \end{tikzpicture}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Inference Rulls with Labels %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\onelabelinfer[3]{
+  \begin{tikzpicture}[framed, background rectangle/.style={draw=black,fill=black!5,rounded corners=1ex}]
+    \node[irnode,name=n1]{${#1}$};
+    \node[irnode,name=n2,anchor=north] at ($(n1.south)+(0pt,-6pt)$){${#2}$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+    \path let \p1=(n1.south west),\p2=(n2.north west) in 
+    coordinate (Q1) at ({min(\x1,\x2)}, {(\y1+\y2)/2}){};
+    \path let \p1=(n1.south east),\p2=(n2.north east) in 
+    coordinate (Q2) at ({max(\x1,\x2)}, {(\y1+\y2)/2});
+    \draw[-,line width=1pt] (Q1) -- (Q2);
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.east),\p2=(n2.east),
+     \p3=(n1.north),\p4=(n2.south) in 
+     coordinate (Q3) at ({max(\x1,\x2)}, {(\y3+\y4)/2});
+     \node[irnamenode] at ($(Q3.east)+(0pt,0pt)$){#3};
+  \end{tikzpicture}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\twolabelinfer[4]{
+  \begin{tikzpicture}[framed, background rectangle/.style={draw=black,fill=black!5,rounded corners=1ex}]
+    \node[irnode,name=n1]{${#1}$};
+    \node[irnode,name=n2,anchor=north] at ($(n1.south)+(0pt,-3pt)$){${#2}$};
+    \node[irnode,name=n3,anchor=north] at ($(n2.south)+(0pt,-6pt)$){${#3}$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+    \path let \p1=(n1.west),\p2=(n2.south west),\p3=(n3.north west) in 
+    coordinate (Q1) at ({min(\x1,\x2,\x3)}, {(\y2+\y3)/2}){};
+    \path let \p1=(n1.east),\p2=(n2.south east),\p3=(n3.north east) in 
+    coordinate (Q2) at ({max(\x1,\x2,\x3)}, {(\y2+\y3)/2});
+    \draw[-,line width=1pt] (Q1) -- (Q2);
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.east),\p2=(n2.east),\p3=(n3.east),
+     \p4=(n1.north),\p5=(n3.south) in 
+     coordinate (Q3) at ({max(\x1,\x2,\x3)}, {(\y4+\y5)/2});
+     \node[irnamenode] at ($(Q3.east)+(0pt,0pt)$){#4};
+  \end{tikzpicture}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\threelabelinfer[5]{
+\begin{tikzpicture}[framed, background rectangle/.style={draw=black,fill=black!5,rounded corners=1ex}]
+%%%%%%%%%%%%%%%%%%%%%%%%
+  \node[irnode,name=n1]{
+    ${#1}$};
+  \node[irnode,name=n2,anchor=north] at ($(n1.south)+(0pt,-3pt)$){
+    ${#2}$};
+  \node[irnode,name=n3,anchor=north] at ($(n2.south)+(0pt,-3pt)$){
+    ${#3}$};
+  \node[irnode,name=n4,anchor=north] at ($(n3.south)+(0pt,-6pt)$){
+     ${#4}$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.west),\p2=(n2.west),\p3=(n3.south west),\p4=(n4.north west) in 
+     coordinate (Q1) at ({min(\x1,\x2,\x3,\x4)}, {(\y3+\y4)/2}){};
+     \path let \p1=(n1.east),\p2=(n2.east),\p3=(n3.south east),\p4=(n4.north east) in 
+     coordinate (Q2) at ({max(\x1,\x2,\x3,\x4)}, {(\y3+\y4)/2});
+     \draw[-,line width=1pt] (Q1) -- (Q2);
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.east),\p2=(n2.east),\p3=(n3.east),\p4=(n4.east),
+     \p5=(n1.north),\p6=(n4.south) in 
+     coordinate (Q3) at ({max(\x1,\x2,\x3,\x4)}, {(\y5+\y6)/2});
+     \node[irnamenode] at ($(Q3.east)+(0pt,0pt)$){#5};
+\end{tikzpicture}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\fourlabelinfer[6]{
+\begin{tikzpicture}[framed, background rectangle/.style={draw=black,fill=black!5,rounded corners=1ex}]
+%%%%%%%%%%%%%%%%%%%%%%%%
+  \node[irnode,name=n1]{
+    ${#1}$};
+  \node[irnode,name=n2,anchor=north] at ($(n1.south)+(0pt,-3pt)$){
+    ${#2}$};
+  \node[irnode,name=n3,anchor=north] at ($(n2.south)+(0pt,-3pt)$){
+    ${#3}$};
+  \node[irnode,name=n4,anchor=north] at ($(n3.south)+(0pt,-3pt)$){
+    ${#4}$};
+  \node[irnode,name=n5,anchor=north] at ($(n4.south)+(0pt,-6pt)$){
+     ${#5}$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.west),\p2=(n2.west),\p3=(n3.west),
+     \p4=(n4.south west),\p5=(n5.north west) in 
+     coordinate (Q1) at ({min(\x1,\x2,\x3,\x4,\x5)}, {(\y4+\y5)/2}){};
+     \path let \p1=(n1.east),\p2=(n2.east),\p3=(n3.east),
+     \p4=(n4.south east),\p5=(n5.north east) in 
+     coordinate (Q2) at ({max(\x1,\x2,\x3,\x4,\x5)}, {(\y4+\y5)/2});
+     \draw[-,line width=1pt] (Q1) -- (Q2);
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.east),\p2=(n2.east),\p3=(n3.east),\p4=(n4.east),\p5=(n5.east),
+     \p6=(n1.north),\p7=(n5.south) in 
+     coordinate (Q3) at ({max(\x1,\x2,\x3,\x4)}, {(\y5+\y6)/2});
+     \node[irnamenode] at ($(Q3.east)+(0pt,0pt)$){#6};
+\end{tikzpicture}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\fivelabelinfer[7]{
+\begin{tikzpicture}[framed, background rectangle/.style={draw=black,fill=black!5,rounded corners=1ex}]
+%%%%%%%%%%%%%%%%%%%%%%%%
+  \node[irnode,name=n1]{
+    ${#1}$};
+  \node[irnode,name=n2,anchor=north] at ($(n1.south)+(0pt,-3pt)$){
+    ${#2}$};
+  \node[irnode,name=n3,anchor=north] at ($(n2.south)+(0pt,-3pt)$){
+    ${#3}$};
+  \node[irnode,name=n4,anchor=north] at ($(n3.south)+(0pt,-3pt)$){
+    ${#4}$};
+  \node[irnode,name=n5,anchor=north] at ($(n4.south)+(0pt,-3pt)$){
+     ${#5}$};
+  \node[irnode,name=n6,anchor=north] at ($(n5.south)+(0pt,-6pt)$){
+     ${#6}$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.west),\p2=(n2.west),\p3=(n3.west),
+     \p4=(n4.west),\p5=(n5.south west),\p6=(n6.north west) in 
+     coordinate (Q1) at ({min(\x1,\x2,\x3,\x4,\x5,\x6)}, {(\y5+\y6)/2}){};
+     \path let \p1=(n1.east),\p2=(n2.east),\p3=(n3.east),
+     \p4=(n4.east),\p5=(n5.south east),\p6=(n6.north east) in 
+     coordinate (Q2) at ({max(\x1,\x2,\x3,\x4,\x5,\x6)}, {(\y5+\y6)/2});
+     \draw[-,line width=1pt] (Q1) -- (Q2);
+%% %%%%%%%%%%%%%%%%%%%%%%%%
+    \path let
+     \p1=(n1.east),\p2=(n2.east),\p3=(n3.east),\p4=(n4.east),\p5=(n5.east),
+     \p6=(n6.east),
+     \p7=(n1.north),\p8=(n6.south) in 
+     coordinate (Q3) at ({max(\x1,\x2,\x3,\x4,\x5)}, {(\y6+\y7)/2});
+     \node[irnamenode] at ($(Q3.east)+(0pt,0pt)$){#7};
+\end{tikzpicture}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%% Red Label %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\oneredlabelinfer[3]{
+  \begin{tikzpicture}[framed, background rectangle/.style={draw=black,fill=red!3,rounded corners=1ex}]
+    \node[irnode,name=n1]{${#1}$};
+    \node[irnode,name=n2,anchor=north] at ($(n1.south)+(0pt,-6pt)$){${#2}$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+    \path let \p1=(n1.south west),\p2=(n2.north west) in 
+    coordinate (Q1) at ({min(\x1,\x2)}, {(\y1+\y2)/2}){};
+    \path let \p1=(n1.south east),\p2=(n2.north east) in 
+    coordinate (Q2) at ({max(\x1,\x2)}, {(\y1+\y2)/2});
+    \draw[-,line width=1pt] (Q1) -- (Q2);
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.east),\p2=(n2.east),
+     \p3=(n1.north),\p4=(n2.south) in 
+     coordinate (Q3) at ({max(\x1,\x2)}, {(\y3+\y4)/2});
+     \node[irnamenode] at ($(Q3.east)+(0pt,0pt)$){#3};
+  \end{tikzpicture}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\tworedlabelinfer[4]{
+  \begin{tikzpicture}[framed, background rectangle/.style={draw=black,fill=red!3,rounded corners=1ex}]
+    \node[irnode,name=n1]{${#1}$};
+    \node[irnode,name=n2,anchor=north] at ($(n1.south)+(0pt,-3pt)$){${#2}$};
+    \node[irnode,name=n3,anchor=north] at ($(n2.south)+(0pt,-6pt)$){${#3}$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+    \path let \p1=(n1.west),\p2=(n2.south west),\p3=(n3.north west) in 
+    coordinate (Q1) at ({min(\x1,\x2,\x3)}, {(\y2+\y3)/2}){};
+    \path let \p1=(n1.east),\p2=(n2.south east),\p3=(n3.north east) in 
+    coordinate (Q2) at ({max(\x1,\x2,\x3)}, {(\y2+\y3)/2});
+    \draw[-,line width=1pt] (Q1) -- (Q2);
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.east),\p2=(n2.east),\p3=(n3.east),
+     \p4=(n1.north),\p5=(n3.south) in 
+     coordinate (Q3) at ({max(\x1,\x2,\x3)}, {(\y4+\y5)/2});
+     \node[irnamenode] at ($(Q3.east)+(0pt,0pt)$){#4};
+  \end{tikzpicture}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\threeredlabelinfer[5]{
+\begin{tikzpicture}[framed, background rectangle/.style={draw=black,fill=red!3,rounded corners=1ex}]
+%%%%%%%%%%%%%%%%%%%%%%%%
+  \node[irnode,name=n1]{
+    ${#1}$};
+  \node[irnode,name=n2,anchor=north] at ($(n1.south)+(0pt,-3pt)$){
+    ${#2}$};
+  \node[irnode,name=n3,anchor=north] at ($(n2.south)+(0pt,-3pt)$){
+    ${#3}$};
+  \node[irnode,name=n4,anchor=north] at ($(n3.south)+(0pt,-6pt)$){
+     ${#4}$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.west),\p2=(n2.west),\p3=(n3.south west),\p4=(n4.north west) in 
+     coordinate (Q1) at ({min(\x1,\x2,\x3,\x4)}, {(\y3+\y4)/2}){};
+     \path let \p1=(n1.east),\p2=(n2.east),\p3=(n3.south east),\p4=(n4.north east) in 
+     coordinate (Q2) at ({max(\x1,\x2,\x3,\x4)}, {(\y3+\y4)/2});
+     \draw[-,line width=1pt] (Q1) -- (Q2);
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.east),\p2=(n2.east),\p3=(n3.east),\p4=(n4.east),
+     \p5=(n1.north),\p6=(n4.south) in 
+     coordinate (Q3) at ({max(\x1,\x2,\x3,\x4)}, {(\y5+\y6)/2});
+     \node[irnamenode] at ($(Q3.east)+(0pt,0pt)$){#5};
+\end{tikzpicture}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\fourredlabelinfer[6]{
+\begin{tikzpicture}[framed, background rectangle/.style={draw=black,fill=red!3,rounded corners=1ex}]
+%%%%%%%%%%%%%%%%%%%%%%%%
+  \node[irnode,name=n1]{
+    ${#1}$};
+  \node[irnode,name=n2,anchor=north] at ($(n1.south)+(0pt,-3pt)$){
+    ${#2}$};
+  \node[irnode,name=n3,anchor=north] at ($(n2.south)+(0pt,-3pt)$){
+    ${#3}$};
+  \node[irnode,name=n4,anchor=north] at ($(n3.south)+(0pt,-3pt)$){
+    ${#4}$};
+  \node[irnode,name=n5,anchor=north] at ($(n4.south)+(0pt,-6pt)$){
+     ${#5}$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.west),\p2=(n2.west),\p3=(n3.west),
+     \p4=(n4.south west),\p5=(n5.north west) in 
+     coordinate (Q1) at ({min(\x1,\x2,\x3,\x4,\x5)}, {(\y4+\y5)/2}){};
+     \path let \p1=(n1.east),\p2=(n2.east),\p3=(n3.east),
+     \p4=(n4.south east),\p5=(n5.north east) in 
+     coordinate (Q2) at ({max(\x1,\x2,\x3,\x4,\x5)}, {(\y4+\y5)/2});
+     \draw[-,line width=1pt] (Q1) -- (Q2);
+%%%%%%%%%%%%%%%%%%%%%%%%
+     \path let \p1=(n1.east),\p2=(n2.east),\p3=(n3.east),\p4=(n4.east),\p5=(n5.east),
+     \p6=(n1.north),\p7=(n5.south) in 
+     coordinate (Q3) at ({max(\x1,\x2,\x3,\x4)}, {(\y5+\y6)/2});
+     \node[irnamenode] at ($(Q3.east)+(0pt,0pt)$){#5};
+\end{tikzpicture}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
