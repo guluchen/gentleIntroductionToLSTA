@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.19)  17 APR 2025 21:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.19)  17 APR 2025 22:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1196,53 +1196,59 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
 (./title.tex
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 5
-.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 3
+7.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 5.
-
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 37
+.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 ))
-(./introduction.tex
-<Figures/Trees/Tree.pdf, id=4, 243.05867pt x 77.34627pt>
+(./introduction.tex [1
+
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<Figures/Trees/Tree.pdf, id=15, 243.05867pt x 77.34627pt>
 File: Figures/Trees/Tree.pdf Graphic file (type pdf)
 <use Figures/Trees/Tree.pdf>
 Package pdftex.def Info: Figures/Trees/Tree.pdf  used on input line 15.
 (pdftex.def)             Requested size: 230.9044pt x 73.47852pt.
- [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Overfull \hbox (20.16556pt too wide) in paragraph at lines 28--30
 []\OT1/cmr/m/n/10 A pri-mary ob-jec-tive in quan-tum com-put-ing is to achieve 
 \OT1/cmr/m/it/10 quan-tum supremacy\OT1/cmr/m/n/10 |the
  []
 
-
+[2 <./Figures/Trees/Tree.pdf>]
 Overfull \hbox (3.18257pt too wide) in paragraph at lines 37--38
 []\OT1/cmr/m/n/10 Nevertheless, ver-i-fy-ing quan-tum sys-tems presents formida
 ble chal-lenges. Their
  []
 
-[2 <./Figures/Trees/Tree.pdf>]) (./states.tex [3]
+
+Underfull \vbox (badness 3601) has occurred while \output is active []
+
+ [3])
+(./states.tex
 <figures/States/states.pdf, id=53, 404.29936pt x 101.77603pt>
 File: figures/States/states.pdf Graphic file (type pdf)
 <use figures/States/states.pdf>
 Package pdftex.def Info: figures/States/states.pdf  used on input line 26.
 (pdftex.def)             Requested size: 343.65608pt x 86.51001pt.
-<figures/States/state3.pdf, id=54, 315.27577pt x 99.85135pt>
+ [4 <./figures/States/states.pdf>]
+<figures/States/state3.pdf, id=155, 315.27577pt x 99.85135pt>
 File: figures/States/state3.pdf Graphic file (type pdf)
 <use figures/States/state3.pdf>
 Package pdftex.def Info: figures/States/state3.pdf  used on input line 81.
 (pdftex.def)             Requested size: 315.275pt x 99.85109pt.
- [4 <./figures/States/states.pdf>]) (./gates.tex
-<Figures/Gates/not.pdf, id=157, 343.48967pt x 91.28714pt>
+) (./gates.tex
+<Figures/Gates/not.pdf, id=156, 343.48967pt x 91.28714pt>
 File: Figures/Gates/not.pdf Graphic file (type pdf)
 <use Figures/Gates/not.pdf>
 Package pdftex.def Info: Figures/Gates/not.pdf  used on input line 10.
 (pdftex.def)             Requested size: 343.48883pt x 91.2869pt.
-<Figures/Gates/and.pdf, id=158, 510.05344pt x 130.77467pt>
+ [5 <./figures/States/state3.pdf>]
+<Figures/Gates/and.pdf, id=199, 510.05344pt x 130.77467pt>
 File: Figures/Gates/and.pdf Graphic file (type pdf)
 <use Figures/Gates/and.pdf>
 Package pdftex.def Info: Figures/Gates/and.pdf  used on input line 35.
@@ -1252,13 +1258,13 @@ Overfull \hbox (9.91142pt too wide) in paragraph at lines 35--38
 [][] 
  []
 
-<Figures/Gates/qgates.pdf, id=159, 433.38864pt x 69.73181pt>
+<Figures/Gates/qgates.pdf, id=200, 433.38864pt x 69.73181pt>
 File: Figures/Gates/qgates.pdf Graphic file (type pdf)
 <use Figures/Gates/qgates.pdf>
 Package pdftex.def Info: Figures/Gates/qgates.pdf  used on input line 50.
 (pdftex.def)             Requested size: 303.36996pt x 48.81192pt.
-[5 <./figures/States/state3.pdf>] [6 <./Figures/Gates/not.pdf> <./Figures/Gates
-/and.pdf> <./Figures/Gates/qgates.pdf>] [7]
+[6 <./Figures/Gates/not.pdf> <./Figures/Gates/and.pdf>] [7 <./Figures/Gates/qga
+tes.pdf>]
 <Figures/Trees/ApplyNOT.pdf, id=323, 370.8518pt x 75.63277pt>
 File: Figures/Trees/ApplyNOT.pdf Graphic file (type pdf)
 <use Figures/Trees/ApplyNOT.pdf>
@@ -1269,8 +1275,8 @@ File: Figures/Trees/ApplyH.pdf Graphic file (type pdf)
 <use Figures/Trees/ApplyH.pdf>
 Package pdftex.def Info: Figures/Trees/ApplyH.pdf  used on input line 152.
 (pdftex.def)             Requested size: 334.59608pt x 68.84827pt.
-) (./circuits.tex [8 <./Figures/Trees/ApplyNOT.pdf> <./Figures/Trees/ApplyH.pdf
->]
+ [8 <./Figures/Trees/ApplyNOT.pdf> <./Figures/Trees/ApplyH.pdf>])
+(./circuits.tex
 <Figures/HWCircuits/DigitalCircuit.pdf, id=405, 261.68835pt x 97.51993pt>
 File: Figures/HWCircuits/DigitalCircuit.pdf Graphic file (type pdf)
 <use Figures/HWCircuits/DigitalCircuit.pdf>
@@ -1328,13 +1334,14 @@ File: Figures/Automata/aut3.pdf Graphic file (type pdf)
 <use Figures/Automata/aut3.pdf>
 Package pdftex.def Info: Figures/Automata/aut3.pdf  used on input line 88.
 (pdftex.def)             Requested size: 334.94492pt x 169.71844pt.
-<Figures/Circuits/Bells.pdf, id=435, 281.01456pt x 135.30429pt>
+
+[10 <./Figures/BDDs/BDDs.pdf>]
+<Figures/Circuits/Bells.pdf, id=462, 281.01456pt x 135.30429pt>
 File: Figures/Circuits/Bells.pdf Graphic file (type pdf)
 <use Figures/Circuits/Bells.pdf>
 Package pdftex.def Info: Figures/Circuits/Bells.pdf  used on input line 121.
 (pdftex.def)             Requested size: 281.01385pt x 135.30396pt.
-
-[10 <./Figures/BDDs/BDDs.pdf>]) (./challenges.tex
+) (./challenges.tex
 Overfull \hbox (47.71071pt too wide) in paragraph at lines 4--10
 \OT1/cmr/m/n/10 ver-i-fi-ca-tion of quan-tum cir-cuits [[],[],[]]. 
  []
@@ -1399,17 +1406,21 @@ Overfull \hbox (5.59831pt too wide) in paragraph at lines 133--143
 on [[]].
  []
 
-) (./conclusions.tex) (./main.bbl [18]) [19] (./main.aux)
+) (./conclusions.tex) (./main.bbl [18] [19]) [20] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 35729 strings out of 474116
- 883077 string characters out of 5743682
- 1940187 words of memory out of 5000000
- 57489 multiletter control sequences out of 15000+600000
+ 35730 strings out of 474116
+ 883085 string characters out of 5743682
+ 1939187 words of memory out of 5000000
+ 57490 multiletter control sequences out of 15000+600000
  567575 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,16n,107p,735b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1444,10 +1455,10 @@ e/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf
 s/type1/public/lm/lmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pub
 lic/lm/lmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt
 10.pfb>
-Output written on main.pdf (19 pages, 1950033 bytes).
+Output written on main.pdf (20 pages, 1953876 bytes).
 PDF statistics:
- 678 PDF objects out of 1000 (max. 8388607)
- 501 compressed objects within 6 object streams
+ 681 PDF objects out of 1000 (max. 8388607)
+ 503 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
