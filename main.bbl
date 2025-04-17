@@ -1,0 +1,109 @@
+\begin{thebibliography}{}
+
+\bibitem[Abdulla, 2025]{CACM25}
+Abdulla, P.~A. (2025).
+\newblock A symbolic approach to verifying quantum systems.
+\newblock To appear.
+
+\bibitem[Abdulla et~al., 2025a]{PLanQC25}
+Abdulla, P.~A., Chen, Y., Chen, Y., Chung, K., Hol{\'{\i}}k, L., Leng{\'{a}}l,
+  O., Lin, J., Lo, F., Tsai, W., and Yen, D. (2025a).
+\newblock An automata-based framework for quantum circuit verification.
+
+\bibitem[Abdulla et~al., 2025b]{DBLP:journals/pacmpl/AbdullaCCHLLLT25}
+Abdulla, P.~A., Chen, Y., Chen, Y., Hol{\'{\i}}k, L., Leng{\'{a}}l, O., Lin,
+  J., Lo, F., and Tsai, W. (2025b).
+\newblock Verifying quantum circuits with level-synchronized tree automata.
+\newblock {\em Proc. {ACM} Program. Lang.}, 9({POPL}):923--953.
+
+\bibitem[Abdulla et~al., 2010]{DBLP:conf/tacas/AbdullaCHMV10}
+Abdulla, P.~A., Chen, Y., Hol{\'{\i}}k, L., Mayr, R., and Vojnar, T. (2010).
+\newblock When simulation meets antichains.
+\newblock In Esparza, J. and Majumdar, R., editors, {\em Tools and Algorithms
+  for the Construction and Analysis of Systems, 16th International Conference,
+  {TACAS} 2010, Held as Part of the Joint European Conferences on Theory and
+  Practice of Software, {ETAPS} 2010, Paphos, Cyprus, March 20-28, 2010.
+  Proceedings}, volume 6015 of {\em Lecture Notes in Computer Science}, pages
+  158--174. Springer.
+
+\bibitem[Abdulla et~al., 2007]{DBLP:conf/tacas/AbdullaDHR07}
+Abdulla, P.~A., Delzanno, G., Henda, N.~B., and Rezine, A. (2007).
+\newblock Regular model checking without transducers (on efficient verification
+  of parameterized systems).
+\newblock In Grumberg, O. and Huth, M., editors, {\em TACAS}, volume 4424 of
+  {\em Lecture Notes in Computer Science}, pages 721--736. Springer.
+
+\bibitem[Abdulla et~al., 2016]{DBLP:journals/sttt/AbdullaHH16}
+Abdulla, P.~A., Haziza, F., and Hol{\'{\i}}k, L. (2016).
+\newblock Parameterized verification through view abstraction.
+\newblock {\em {STTT}}, 18(5):495--516.
+
+\bibitem[Abdulla et~al., 2018]{DBLP:reference/mc/AbdullaST18}
+Abdulla, P.~A., Sistla, A.~P., and Talupur, M. (2018).
+\newblock Model checking parameterized systems.
+\newblock In Clarke, E.~M., Henzinger, T.~A., Veith, H., and Bloem, R.,
+  editors, {\em Handbook of Model Checking.}, pages 685--725. Springer.
+
+\bibitem[Bauer{-}Marquart et~al., 2023]{BauerMarquartLS23}
+Bauer{-}Marquart, F., Leue, S., and Schilling, C. (2023).
+\newblock symqv: Automated symbolic verification of quantum programs.
+\newblock In Chechik, M., Katoen, J., and Leucker, M., editors, {\em Formal
+  Methods - 25th International Symposium, {FM} 2023, L{\"{u}}beck, Germany,
+  March 6-10, 2023, Proceedings}, volume 14000 of {\em Lecture Notes in
+  Computer Science}, pages 181--198. Springer.
+
+\bibitem[Chen et~al., 2023a]{DBLP:journals/pacmpl/0001CLLTY23}
+Chen, Y., Chung, K., Leng{\'{a}}l, O., Lin, J., Tsai, W., and Yen, D. (2023a).
+\newblock An automata-based framework for verification and bug hunting in
+  quantum circuits.
+\newblock {\em Proc. {ACM} Program. Lang.}, 7({PLDI}):1218--1243.
+
+\bibitem[Chen et~al., 2023b]{DBLP:conf/cade/ChenRT23}
+Chen, Y., R{\"{u}}mmer, P., and Tsai, W. (2023b).
+\newblock A theory of cartesian arrays (with applications in quantum circuit
+  verification).
+\newblock In Pientka, B. and Tinelli, C., editors, {\em Automated Deduction -
+  {CADE} 29 - 29th International Conference on Automated Deduction, Rome,
+  Italy, July 1-4, 2023, Proceedings}, volume 14132 of {\em Lecture Notes in
+  Computer Science}, pages 170--189. Springer.
+
+\bibitem[D'Hondt and Panangaden, 2006]{d2006quantum}
+D'Hondt, E. and Panangaden, P. (2006).
+\newblock Quantum weakest preconditions.
+\newblock {\em Mathematical Structures in Computer Science}, 16(3):429--451.
+
+\bibitem[King, 1976]{10.1145/360248.360252}
+King, J.~C. (1976).
+\newblock Symbolic execution and program testing.
+\newblock 19(7).
+
+\bibitem[Perdrix, 2008]{perdrix2008quantum}
+Perdrix, S. (2008).
+\newblock Quantum entanglement analysis based on abstract interpretation.
+\newblock In {\em International Static Analysis Symposium}, pages 270--282.
+  Springer.
+
+\bibitem[Wulf et~al., 2006]{wulfantichains}
+Wulf, M.~D., Doyen, L., Henzinger, T.~A., and Raskin, J.-F. (2006).
+\newblock {Antichains: A New Algorithm for Checking Universality of Finite
+  Automata}.
+\newblock In {\em CAV'06}, volume 4144 of {\em LNCS}, pages 17--30. Springer.
+
+\bibitem[Yanofsky and Mannucci, 2008]{10.5555/1408782}
+Yanofsky, N.~S. and Mannucci, M.~A. (2008).
+\newblock {\em Quantum Computing for Computer Scientists}.
+\newblock Cambridge University Press, USA, 1 edition.
+
+\bibitem[Ying, 2012]{ying2012floyd}
+Ying, M. (2012).
+\newblock Floyd-{Hoare} logic for quantum programs.
+\newblock {\em ACM Transactions on Programming Languages and Systems (TOPLAS)},
+  33(6):1--49.
+
+\bibitem[Yu and Palsberg, 2021]{yu2021quantum}
+Yu, N. and Palsberg, J. (2021).
+\newblock Quantum abstract interpretation.
+\newblock In {\em Proceedings of the 42nd ACM SIGPLAN International Conference
+  on Programming Language Design and Implementation}, pages 542--558.
+
+\end{thebibliography}

@@ -1,0 +1,19 @@
+
+\begin{tikzpicture}[line width=1pt]
+\node[name=in0]{$\ketof{0}$};
+
+
+\node[name=H,anchor=west,draw] at 
+($(in0.east)+(15pt,0pt)$){$\hgate$};
+\node[name=Z,anchor=west,draw] at 
+($(H.east)+(20pt,0pt)$){${\mathtt Z}$};
+
+
+\node[anchor=west,name=end] at ($(Z.east)+(15pt,0pt)$){};
+
+
+\draw (in0) -- (H);
+\draw (H) -- (Z);
+\draw (Z) -- (end);
+\end{tikzpicture}
+

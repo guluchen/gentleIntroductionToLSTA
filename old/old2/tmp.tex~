@@ -1,0 +1,17 @@
+
+In quantum circuits, we store data in quantum bits, so called {\it qubits}.
+%
+
+Qubits are the fundamental units of quantum computing.  
+%
+A qubit can exist in a state of 0, 1, or a superposition of both 0 and 1 simultaneously. 
+%
+%
+In other words, a qubit is , in general, in in a {\it superposition} of both $0$ and $1$ simultaneously: it can be in the states $0$ and $1$ with probabilitiues that add up to one.
+%
+This difference potentially allows quantum circuits to have a complex information encoding leading to a more efficient information processing compared to classical circuits.
+%
+Furthermore, while different bits in a classical circuit have their separate individual values, sets of qubits can be {\it entangled}:  the state of one qubit can be interconnected with (depend on) the state of another.
+%
+This means that the qubits' values are correlated in such a way that the state of one cannot be described independently of the state of the others.
+%

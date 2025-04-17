@@ -1,0 +1,46 @@
+\begin{tikzpicture}[line width=0.6pt]
+
+\node[name=l0,font=\footnotesize] at(0,0) {$0$};
+\node[name=l1,anchor=west,font=\footnotesize] at ($(l0.east)+(10pt,0pt)$) {$0$};
+\node[name=l2,anchor=west,font=\footnotesize] at ($(l1.east)+(10pt,0pt)$) {$0$};
+\node[name=l3,anchor=west,font=\footnotesize] at ($(l2.east)+(10pt,0pt)$) {$0$};
+\node[name=l4,anchor=west,font=\footnotesize] at ($(l3.east)+(10pt,0pt)$) {$0$};
+\node[name=l5,anchor=west,font=\footnotesize] at ($(l4.east)+(10pt,0pt)$) {$0$};
+\node[name=l6,anchor=west,font=\footnotesize] at ($(l5.east)+(10pt,0pt)$) {$1$};
+\node[name=l7,anchor=west,font=\footnotesize] at ($(l6.east)+(10pt,0pt)$) {$0$};
+
+\node[name=00,anchor=south,circle,draw,inner sep=2pt] at ($(l0.east)+(5pt,15pt)$){};
+\node[name=01,anchor=south,circle,draw,inner sep=2pt] at ($(l2.east)+(5pt,15pt)$){};
+\node[name=10,anchor=south,circle,draw,inner sep=2pt] at ($(l4.east)+(5pt,15pt)$){};
+\node[name=11,anchor=south,circle,draw,inner sep=2pt] at ($(l6.east)+(5pt,15pt)$){};
+
+
+
+
+\node[name=0,anchor=south,circle,draw,inner sep=2pt] at ($(00.east)+(18.5pt,15pt)$){};
+\node[name=1,anchor=south,circle,draw,inner sep=2pt] at ($(10.east)+(18.5pt,15pt)$){};
+\node[name=e,anchor=south,circle,draw,inner sep=2pt] at ($(0.east)+(40.5pt,15pt)$){};
+
+
+\draw(00)--(l0);
+\draw(00)--(l1);
+\draw(01)--(l2);
+\draw(01)--(l3);
+\draw(10)--(l4);
+\draw(10)--(l5);
+\draw[color=red](11)--(l6);
+\draw(11)--(l7);
+\draw[color=red](11)--(l6);
+\draw(11)--(l7);
+
+\draw(0)--(00);
+\draw(0)--(01);
+\draw(1)--(10);
+\draw[red](1)--(11);
+
+\draw(e)--(0);
+\draw[color=red](e)--(1);
+
+
+\end{tikzpicture}
+

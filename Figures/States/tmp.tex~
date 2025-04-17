@@ -1,0 +1,26 @@
+
+\begin{tikzpicture}
+\node[]{$[
+\frac1{\sqrt2}
+\;\;
+0
+\;\;
+0
+\;\;
+\frac{\sqrt 3}4
+\;\;
+0
+\;\;
+\frac1 4
+\;\;
+\frac1 4
+\;\;
+\frac{\sqrt3} 4
+]^T$
+
+}
+\end{tikzpicture}
+
+
+\end{document}
+

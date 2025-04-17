@@ -1,76 +1,63 @@
 \section{Introduction}
 \label{introduction:section}
-We may get substantial  added value when connecting two complementary areas of computer science.
-%
-This applies particularly when adapting mature techniques developed in one area to solve complex problems that arise in another (tyupically) new area.
-%
-The current paper illustrates one such a case. 
-%
-It describes the application of techniques developed in logic, automata, and symbolic verification to analyze the correctness of quantum circuits.
 
-The current quest of quantum computing is achieving  so called {\it quantum supremacy}, meaning that we reach a stage in the technology development
-where we can   solve problems that are practically unsolvable using conventional computing.
-%
-To that end, substantial effoprt is ongoing to implement quantum hardware and develop programming languages for quantum computers.
-%
-In many applications, system correctness is of critical importance.
-%
-For instance, identifying a subtle bug in a quantum circuit used for quantum chemistry simulations could prevent incorrect predictions about molecular interactions, which are critical for drug discovery and material design. 
-%
+Classical computing has advanced considerably over the decades and now forms the backbone of modern technological infrastructure. %
+In contrast, quantum computing introduces a fundamentally new paradigm for information processing, grounded in the principles of quantum mechanics. This paradigm enables the solution of computational problems that are beyond the practical capabilities of classical methods. %
 
+The core distinction between classical and quantum computing lies in the way information is represented and manipulated. %
+Classical computers operate on bits that exist in one of two binary states—$0$ or $1$. In contrast, quantum computers use quantum bits, or \emph{qubits}, which exhibit the quantum phenomena of \emph{superposition} and \emph{entanglement}. %
+Superposition enables a qubit to exist in multiple states at once, thereby allowing parallel evaluation of many possibilities. Entanglement creates correlations between qubits such that the state of one qubit can instantaneously influence the state of another, regardless of the distance between them. %
+These phenomena enable quantum systems to represent and manipulate exponentially many states simultaneously,
+and to encode complex correlations that classical systems cannot efficiently reproduce, resulting in powerful computational advantages. %
 
+\begin{figure}
+\center
+\includegraphics[scale=0.95]{Figures/Trees/Tree}
+\caption{A quantum state with three qubits and its tree representation.
+The system can be in any of the eight states, with the probability given in the table.}
+\label{qustate:tree:fig}
+\end{figure}
 
-Given the complexity of quantum systems and the above mentioned correctness requirements, tools for analyzing and verifying quantum programs' correctness are of critical importance.
-%
-However, building verification tools for quantum programs is a formiddable challenge.
-%
-First,  due their behaviors are probabilistic in nature, and their computational space is exponential in size.     
-%
-Furthermore, there is a fundamental difference in the manner in which conventional and quantum computers store information: conventional computers use digital bits (0s and 1s), while quantum computers use  quantum bits (qubits) that probabilistically have values in nthe intgerval between 0 and 1.
+\cref{qustate:tree:fig} depicts a quantum state consisting of three qubits.\footnote{Throughout the text, we illustrate the challenges encountered in verifying quantum circuits through examples. %
+For clarity, these examples are simplified. Full technical details are beyond the scope of this document and can be found, for example, in~\cite{10.5555/1408782}.} In a classical circuit, the system would occupy a single \emph{basis} state from among the eight possible configurations: $000$, $001$, \ldots, $111$. %
+By contrast, a quantum system can exist in a superposition of all eight basis states simultaneously, each associated with a specific probability amplitude.
 
-The current paper reports on research in whose goal is adating the research community's vast experience in conventional program verification to develop tools for verifying quantum systems.
-%
-Verification tools, in general, and for quantum systems in particular, would ideally have the following properties: (1) Flexibility: allows flexible specification of properties of interest, (2) Diagnostics: provides precise bug diagnostics, (3) Automation:
-Operates automatically, and (4) Scalability: scales efficiently to verify useful programs.
-%
-Symbolic verification is one of the most successful techniques that satisfy the above criteria for conventional programs.
-%
-Notable instances, are invariant certification (e.g., in the form of Hoare triples), and model checking.
-%
-Despite the overwheling success achieved in the verification of conventional hardware and software,  we are lacking an extension to the quantum realm.
-%
-The principal reasonm isthe latter's unique mathematical structure and different operational principles.                          
-                                                                               
-In this work we describe an innovative application of automata theory to quantum circuit verification.
-%
-%
-More precisley, we  combine we use tree automata-based symbolic representations for represeting quantum states.
-%
-The class of tree we consider is tailored for quantum circuits, considerably extending the sacalbility of quantum circuit verification comnpared to existing techniques.
-%
-As expected, when dealing with an entirely new application area, we 
-we go back to the very basics of program verification.
-%
-We consider classical Hoare triples $\{P\} C \{Q\}$, where $P$, the {\it pre-condition}, represents a set of initial quantum states, $Q$, the {\it post-conditions} represents a set of quantum {\it target} states, and $C$ is a quantum circuit.
-%
-It uses  symbolic verification to check the
-validity of the triple, ensuring that all executions of $C$ from states in $P$ result in states within $Q$.
-%
-More precisely, we will resprent $P$ and $Q$ by a special form of tree automata, and provide algorithms to check whether we reach $Q$ from $P$ if we execute $C$.
-%
-The framework  is based on the observation that we can lift core concepts of classical verification, such as state-space exploration and symbolic reasoning, into the quantum setting. 
+A quantum state can be interpreted as a distribution over basis states, where each state is assigned a complex amplitude. This distribution may be visualized as a tree, in which each path from the root to a leaf corresponds to a basis state, and each leaf stores a complex-valued amplitude. %
+Unlike classical probabilistic models, quantum amplitudes are complex numbers, and the sum of the squares of their absolute values must equal one.\footnote{An \emph{amplitude} generalizes the classical notion of probability. The square of the absolute value of a complex amplitude gives the corresponding probability. The use of complex numbers permits constructive and destructive interference, allowing for the cancellation of certain outcomes.} %
 
+A primary objective in quantum computing is to achieve \emph{quantum supremacy}—the point at which quantum computers can solve problems that are infeasible for even the most powerful classical supercomputers. %
+Reaching this milestone would result in exponential speedups for specific computational tasks. %
 
+Although the field is still in an early phase of practical realization, quantum computing applications are growing rapidly. %
+In the near term, hybrid systems integrating classical and quantum processors are expected to gain prominence. Looking ahead, quantum supremacy could revolutionize entire industries by solving problems that were previously considered intractable. %
 
-Although this is the first attempt to use such techniques in the context of quantum computing, implementing the framework with a tool gives spectacular results.
+Potential application areas for quantum technologies include medical diagnostics, cryptography, secure communications infrastructure, and autonomous systems, among others. %
+These domains typically require stringent reliability and safety standards, as they cannot tolerate critical system failures. Consequently, they demand rigorous certification procedures and robust assurance mechanisms. Ensuring the reliability of quantum systems is therefore of critical importance. %
+
+Nevertheless, verifying quantum systems presents formidable challenges. Their probabilistic behavior, combined with the exponential growth of state spaces as the number of qubits increases, introduces substantial complexity. %
+
+In this paper, we describe initial steps toward tackling these challenges by leveraging insights from our community's extensive experience in verifying classical systems. %
+Building on this foundation, we will also propose a roadmap for the development of new verification frameworks that transfer the proven strengths of classical approaches—such as concise property specification, accurate fault detection, automation, and scalability—into the quantum domain.
+
+We envision significant added value in bridging two complementary areas of computer science, especially when established techniques from a mature field are adapted to address complex problems in an emerging domain.
 %
-For instance, the tool manages to verify large circuits with up to 40 qubits and 141,527 gates or catch bugs injected
-into circuits with up to 320 qubits and 1,758 gates, while all exiting tools fail to handle such benchmarks.
+This work embodies such interdisciplinary integration by applying well-developed methods from logic, automata theory, and symbolic verification to the problem of ensuring the correctness of quantum programs.
+%
+ 
+We present a novel application of automata theory—a foundational discipline in formal verification—to the verification of quantum systems.
+%
+Our methodology integrates automata-based reasoning with symbolic representations tailored for the automated analysis of quantum behavior.
+%
+The goal is to generalize core concepts from classical verification, such as state-space exploration and symbolic reasoning, into the quantum realm, thereby enabling the adaptation of robust classical paradigms to quantum computing, where formal assurances are essential.
 %
 
+Interestingly, this approach also opens new avenues for research in automata theory itself, as the mathematical structures encountered in quantum systems introduce novel challenges and opportunities.
 %
-This extension allows the verification of quantum circuits, offering a path to applying well-established classical paradigms in a domain where formal guarantees are critical. 
+It establishes a conceptual bridge between quantum program verification and automata theory, fostering potential for new theoretical developments and extending the expressive and analytical power of automata-based techniques into the context of quantum computation.
+%
 
 
+We will give a high-level description  of how to  develop {\it symbolic representations}, based on {\it automata}, that serve as a theoretical and algorithmic foundation for efficiently modeling the state spaces of quantum circuits. These representations are grounded in the idea of modeling quantum states as binary trees, where each path from the root to a leaf corresponds to a computational basis state (see \cref{qustate:tree:fig}). 
 
-
+In the remainder of the paper, we first describe the modeling of quantum states, gates, and circuits, followed by a formalization of the verification problem.
+Subsequently, we outline a roadmap highlighting potential challenges and opportunities in the verification of quantum systems.

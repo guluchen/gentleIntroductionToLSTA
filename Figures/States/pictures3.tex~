@@ -1,0 +1,245 @@
+
+                                                                               \documentclass[tikz]{standalone}
+\usepackage{lmodern}
+\usepackage[algoruled,vlined,linesnumbered,titlenotnumbered,noend]{algorithm2e}
+\usepackage{color,amsmath,bm,bbm,stmaryrd,amssymb,pifont,bbding}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc} 
+
+\usetikzlibrary{shapes}
+\usetikzlibrary{shadows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{decorations}
+\usetikzlibrary{arrows,bending}
+\usetikzlibrary{shapes.arrows}
+\tikzset{nobg/.style={show background rectangle,background rectangle/.style={opacity=0}}}
+
+
+\input ../../styles
+\input ../../globalcomm
+\input ../../localcomm
+\usetikzlibrary{arrows, shapes.gates.logic.US, calc}
+
+  \tikzstyle{bddnode}=[draw,rectangle,rounded corners=2mm]
+  \tikzstyle{aops}=[pos=0.9,below,yshift=0mm,xshift=-2mm]
+\begin{document}
+
+\begin{tikzpicture}
+\node[line width=0.4pt,draw,name=n000,minimum width=7pt,minimum height=18pt,font=\scriptsize,anchor=north]
+at (0,0)
+{\textcolor{green!50!black}{$000$}};
+
+\node[line width=0.4pt,draw,name=p000,minimum width=18pt,minimum height=18pt,font=\scriptsize,anchor=west]
+at ($(n000.east)+(-0.4pt,0pt)$)
+{\textcolor{green!50!black}{$\frac1{\sqrt2}$}};
+
+\node[draw,name=n001,minimum width=7pt,minimum height=18pt,font=\scriptsize,anchor=north]
+at ($(n000.south)+(0pt,0.4pt)$)
+{\textcolor{green!50!black}{$001$}};
+
+\node[line width=0.4pt,draw,name=p001,minimum width=18pt,minimum height=18pt,font=\scriptsize,anchor=west]
+at ($(n001.east)+(-0.4pt,0pt)$)
+{\textcolor{green!50!black}{$0$}};
+
+
+\node[draw,name=n010,minimum width=7pt,minimum height=18pt,font=\scriptsize,anchor=north]
+at ($(n001.south)+(0pt,0.4pt)$)
+{\textcolor{green!50!black}{$010$}};
+
+\node[line width=0.4pt,draw,name=p010,minimum width=18pt,minimum height=18pt,font=\scriptsize,anchor=west]
+at ($(n010.east)+(-0.4pt,0pt)$)
+{\textcolor{green!50!black}{$0$}};
+
+
+\node[draw,name=n011,minimum width=7pt,minimum height=18pt,font=\scriptsize,anchor=north]
+at ($(n010.south)+(0pt,0.4pt)$)
+{\textcolor{green!50!black}{$011$}};
+
+\node[line width=0.4pt,draw,name=p011,minimum width=18pt,minimum height=18pt,font=\scriptsize,anchor=west]
+at ($(n011.east)+(-0.4pt,0pt)$)
+{\textcolor{green!50!black}{$\frac{\sqrt 3}4$}};
+
+
+
+\node[line width=0.4pt,draw,name=n100,minimum width=7pt,minimum height=18pt,font=\scriptsize,anchor=west]
+at ($(n000.east)+(20pt,0pt)$)
+{\textcolor{green!50!black}{$100$}};
+\node[line width=0.4pt,draw,name=p1001,minimum width=18pt,minimum height=18pt,font=\scriptsize,anchor=west]
+at ($(n100.east)+(-0.4pt,0pt)$)
+{\textcolor{green!50!black}{$0$}};
+
+
+
+\node[draw,name=n101,minimum width=7pt,minimum height=18pt,font=\scriptsize,anchor=north]
+at ($(n100.south)+(0pt,0.4pt)$)
+{\textcolor{green!50!black}{$101$}};
+\node[line width=0.4pt,draw,name=p1001,minimum width=18pt,minimum height=18pt,font=\scriptsize,anchor=west]
+at ($(n101.east)+(-0.4pt,0pt)$)
+{\textcolor{green!50!black}{$\frac1 4$}};
+
+
+\node[draw,name=n110,minimum width=7pt,minimum height=18pt,font=\scriptsize,anchor=north]
+at ($(n101.south)+(0pt,0.4pt)$)
+{\textcolor{green!50!black}{$110$}};
+\node[line width=0.4pt,draw,name=p1001,minimum width=18pt,minimum height=18pt,font=\scriptsize,anchor=west]
+at ($(n110.east)+(-0.4pt,0pt)$)
+{\textcolor{green!50!black}{$\frac1 4$}};
+
+
+\node[draw,name=n111,minimum width=7pt,minimum height=18pt,font=\scriptsize,anchor=north]
+at ($(n110.south)+(0pt,0.4pt)$)
+{\textcolor{green!50!black}{$111$}};
+\node[line width=0.4pt,draw,name=p1001,minimum width=18pt,minimum height=18pt,font=\scriptsize,anchor=west]
+at ($(n111.east)+(-0.4pt,0pt)$)
+{\textcolor{green!50!black}{$\frac{\sqrt3} 4$}};
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\node[circle,draw,name=ne,inner sep=0pt,minimum size=7pt] at (0,0){};
+\node[anchor=south,font=\scriptsize,inner sep=1pt] at (ne.north) {\textcolor{green!50!black}{$\xvar_0$}};
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\node[circle,draw,name=n0,inner sep=0pt,minimum size=7pt] at
+($(ne)+(195:40pt)$){};
+\node[anchor=south,inner sep=1pt,font=\scriptsize] at (n0.north) 
+{\textcolor{green!50!black}{$\xvar_1$}};
+
+\node[circle,draw,name=n00,inner sep=0pt,minimum size=7pt] at 
+($(n0)+(210:25pt)$){};
+\node[anchor=south,inner sep=1pt,font=\scriptsize] at (n00.north) 
+{\textcolor{green!50!black}{$\xvar_2$}};
+
+
+
+\node[circle,draw,name=n000,inner sep=0pt,minimum size=7pt] at ($(n00)+(240:15pt)$){};
+\node[anchor=north,inner sep=1pt,font=\scriptsize] at (n000.south) 
+{\textcolor{green!50!black}{$\frac{1}{\sqrt2}$}};
+
+
+
+\node[circle,draw,name=n001,inner sep=0pt,minimum size=7pt] at ($(n00)+(300:15pt)$){};
+\node[anchor=north,inner sep=1pt,font=\scriptsize] at (n001.south) 
+{\textcolor{green!50!black}{$0$}};
+
+
+\node[circle,draw,name=n01,inner sep=0pt,minimum size=7pt] at
+($(n0)+(330:25pt)$){};
+\node[anchor=south,inner sep=1pt,font=\scriptsize] at (n01.north) 
+{\textcolor{green!50!black}{$\xvar_2$}};
+
+\node[circle,draw,name=n010,inner sep=0pt,minimum size=7pt] at ($(n01)+(240:15pt)$){};
+\node[anchor=north,inner sep=1pt,font=\scriptsize] at (n010.south) 
+{\textcolor{green!50!black}{$0$}};
+
+\node[circle,draw,name=n011,inner sep=0pt,minimum size=7pt] at ($(n01)+(300:15pt)$){};
+\node[anchor=north,inner sep=1pt,font=\scriptsize] at (n011.south) 
+{\textcolor{green!50!black}{$\frac{\sqrt3}{4}$}};
+
+\node[circle,draw,name=n1,inner sep=0pt,minimum size=7pt] at
+($(ne)+(345:40pt)$){};
+\node[anchor=south,inner sep=1pt,font=\scriptsize] at (n1.north) 
+{\textcolor{green!50!black}{$\xvar_1$}};
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\node[circle,draw,name=n10,inner sep=0pt,minimum size=7pt] at 
+($(n1)+(210:25pt)$){};
+\node[anchor=south,inner sep=1pt,font=\scriptsize] at (n10.north) 
+{\textcolor{green!50!black}{$\xvar_2$}};
+
+\node[circle,draw,name=n100,inner sep=0pt,minimum size=7pt] at ($(n10)+(240:15pt)$){};
+\node[anchor=north,inner sep=1pt,font=\scriptsize] at (n100.south) 
+{\textcolor{green!50!black}{$0$}};
+
+\node[circle,draw,name=n101,inner sep=0pt,minimum size=7pt] at ($(n10)+(300:15pt)$){};
+\node[anchor=north,inner sep=1pt,font=\scriptsize] at (n101.south) 
+{\textcolor{green!50!black}{$\frac{1}{4}$}};
+
+
+\node[circle,draw,name=n11,inner sep=0pt,minimum size=7pt] at
+($(n1)+(330:25pt)$){};
+\node[anchor=south,inner sep=1pt,font=\scriptsize] at (n11.north) 
+{\textcolor{green!50!black}{$\xvar_2$}};
+
+\node[circle,draw,name=n110,inner sep=0pt,minimum size=7pt] at ($(n11)+(240:15pt)$){};
+\node[anchor=north,inner sep=1pt,font=\scriptsize] at (n110.south) 
+{\textcolor{green!50!black}{$\frac{1}{4}$}};
+
+\node[circle,draw,name=n111,inner sep=0pt,minimum size=7pt] at ($(n11)+(300:15pt)$){};
+\node[anchor=north,inner sep=1pt,font=\scriptsize] at (n111.south) 
+{\textcolor{green!50!black}{$\frac{\sqrt3}{4}$}};
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\draw[line width=0.4pt] (ne) -- 
+node[anchor=south east,inner sep=0pt,font=\scriptsize]{$0$}
+(n0);
+\draw[line width=0.4pt] (ne)-- 
+node[anchor=south west,inner sep=0pt,font=\scriptsize]{$1$}
+(n1);
+
+\draw[line width=0.4pt] (n0)-- 
+node[anchor=south east,inner sep=0pt,font=\scriptsize]{$0$}(n00);
+\draw[line width=0.4pt] (n00)--
+node[anchor=south east,inner sep=0pt,font=\scriptsize]{$0$}(n000);
+\draw[line width=0.4pt] (n00)--
+node[anchor=south west,inner sep=0pt,font=\scriptsize]{$1$}
+(n001);
+
+\draw[line width=0.4pt] (n0)--
+node[anchor=south west,inner sep=0pt,font=\scriptsize]{$1$}
+(n01);
+\draw[line width=0.4pt] (n01)-- 
+node[anchor=south east,inner sep=0pt,font=\scriptsize]{$0$}
+(n010);
+
+\draw[line width=0.4pt] (n01)--
+node[anchor=south west,inner sep=0pt,font=\scriptsize]{$1$}
+(n011);
+
+\draw[line width=0.4pt] (n1)-- 
+node[anchor=south east,inner sep=0pt,font=\scriptsize]{$0$}
+(n10);
+\draw[line width=0.4pt] (n10)--
+node[anchor=south east,inner sep=0pt,font=\scriptsize]{$0$}
+(n100);
+\draw[line width=0.4pt] (n10)--
+node[anchor=south west,inner sep=0pt,font=\scriptsize]{$1$}
+(n101);
+
+\draw[line width=0.4pt] (n1)--
+node[anchor=south west,inner sep=0pt,font=\scriptsize]{$1$}
+(n11);
+\draw[line width=0.4pt] (n11)--
+node[anchor=south east,inner sep=0pt,font=\scriptsize]{$0$}
+(n110);
+\draw[line width=0.4pt] (n11)--
+node[anchor=south west,inner sep=0pt,font=\scriptsize]{$1$}
+(n111);
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\node[name=leftmargin] at (-80pt,0pt){};
+\node[name=rightmargin] at (80pt,0pt){};
+\node[name=leftlevel1] at (leftmargin |- n0.west) {};
+\node[name=rightlevel1] at (rightmargin |- n0.west) {};
+%\draw[dotted] (leftlevel1) -- (rightlevel1);
+
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\node[] at (0,0)
+     {$(1/\sqrt2)\;\katof{000}+(\sqrt3/4)\;\katof{011}+(1/4)\;\katof{101}+(1/4)\;\katof{110}+(\sqrt3/4)\;\katof{111}$};
+\end{tikzpicture}
+
+
+\end{document}
+

@@ -1,0 +1,145 @@
+\section{Research Opportunities}
+\label{opportunities:section}
+We outline some opportunities for research in quantum circuit verification.
+
+\subsection{Automata}
+\label{automata:subsection}
+We need to provide a comprehensive road map for designing efficient symbolic encodings based on automata to represent the state spaces of quantum systems.
+%
+Furthermore, we should develop the first algorithms for minimization and checking language inclusion, language equivalence, simulation, and bisimulation
+relations for such automata.
+%
+
+\subsubsection{Language Inclusion and Equivalence}
+A central challenge in formal verification, in general, and for quantum systems in particular, is \textit{language inclusion}.
+%
+We can use the operation to ensure that a system's behavior conforms to its specification and to formulate termination conditions within verification procedures.
+%
+However, in many cases, checking language inclusion is computationally intensive or even undecidable.
+%
+This problem is well known in classical automata and similarly manifests in the models for quantum systems in \cite{DBLP:journals/pacmpl/AbdullaCCHLLLT25}.
+%
+Therefore, we anticipate the models introduced in this project will exhibit the same computational difficulty.
+%
+To address this, we may employ \textit{simulation} relations as an efficient alternative and enhance them with subset-construction-like techniques to improve precision.
+%
+We expect these simulation-based methods to be significantly more efficient than direct language inclusion checks when applied to quantum constraints.
+%
+%
+The disadvantage of using simulation relations is their incompleteness: a simulation preorder implies language inclusion, but the converse does not necessarily hold.
+%
+To deal with incompleteness, we can, in parallel, develop methods based on the classical subset-construction for checking language inclusion.
+%
+As in the classical case, we expect these algorithms to suffer from state space explosion, with an exponential increase in the number of states.
+%
+To combine the strengths of both approaches, we need to adapt the antichain framework introduced in~\cite{wulfantichains,DBLP:conf/tacas/AbdullaCHMV10}.
+%
+In this setting, the computed simulation relation will be used to prune unnecessary search paths during the execution of the subset-construction-based algorithm, thereby improving both performance and scalability.
+%
+
+\subsubsection{Minimization}
+It is vital to design and implement algorithms to minimize the automata models developed in the project.
+%
+Minimization techniques are essential for ensuring the scalability of our tools, as automata will serve as symbolic representations of state spaces. Consequently, the size of these automata directly impacts the computational complexity of language inclusion, simulation, and bisimulation problems addressed in \cref{automata:subsection}, which underpin the verification procedures described in \cref{verification:subsection}.
+%
+
+In general, computing a minimal automaton requires a determinization step, which may cause an intermediate exponential blow-up in the automaton's size.
+%
+As a result, despite the potential compactness of the final minimized automaton, the computational cost of determinization may render the approach impractical, constituting a bottleneck in our verification pipeline.
+%
+
+We can adopt a pragmatic and computationally feasible strategy to circumvent this challenge: merge automaton states according to simulation and bisimulation relations.
+%
+Although these relations are stricter than language equivalence, they can be computed efficiently (as discussed above).
+%
+This yields a practical trade-off between the efficiency of the minimization algorithm and the degree of reduction it achieves.
+%
+
+\subsection{Verification Techniques}
+\label{verification:subsection}
+
+We need to develop algorithms for parameterized verification of quantum circuits, and expand the regular model checking framework to account for the complexities of quantum systems.
+
+\subsubsection{Parameterized Verification}
+One can carry out parameterized verification of quantum circuits by employing \emph{cut-off} techniques.
+Empirical evidence suggests that concurrent programs often exhibit a \emph{small model property}, indicating that analyzing only a small number of threads can suffice to capture the reachability of bad configurations.
+In practice, if any problematic behavior exists, it typically manifests in relatively small instances of the system.
+
+Building on this insight, we can develop methods that leverage the small model property by restricting the verification process to a limited set of fixed-size system instances.
+Inspired by the \emph{view abstraction} approach of \cite{DBLP:journals/sttt/AbdullaHH16}, one can design a procedure that involves a fixed-point iteration where we apply gate operations on fixed-size states that effectively sample the quantum state.
+If the results are inconclusive, we can refine the abstraction by increasing the size of the sampled states.
+We can repeat this process until we either uncover a specification violation or establish an invariant confirming the correctness of the circuit.
+
+\subsubsection{\textbf{Regular Model Checking}}
+A major current limitation in applying regular model checking to quantum circuits is the lack of suitable frameworks to represent the semantics of quantum gates using transducers.
+%
+One promising approach is to introduce a new class of weighted transducers, where each transition is labeled not only with input and output symbols—as in classical models—but also with a unitary matrix that captures the behavior of a quantum gate.
+%
+
+In existing quantum computing frameworks, circuit semantics are defined via matrix operations such as composition (matrix multiplication) and the Kronecker (tensor) product.
+%
+These operations can be naturally expressed through the composition and product of transducers, leveraging their inherent compositional semantics.
+%
+A central technical challenge in this context is computing the transitive closure of transducer relations.
+%
+In general, such closures are either not computable or involve prohibitive computational complexity.
+%
+To mitigate this, we can enhance the framework with acceleration and abstraction techniques, drawing on methods developed in prior work \cite{DBLP:conf/tacas/AbdullaDHR07}, in order to approximate or accelerate the computation of transitive closures.
+%
+
+Because both the (potentially infinite) sets of initial and target states can be encoded as automata, the regular model checking framework will provide a powerful and expressive foundation for verifying both parameterized and fixed-parameter quantum circuits.
+%
+
+\subsection{Applications}
+We can apply the frameworks defined in \cref{automata:subsection} and \cref{verification:subsection} to solve verification problems of particular interest in quantum computing.
+%
+We mention two problems, circuit equivalence, and amplitude measurement, as examples, which we consider in two different tasks.
+
+\subsubsection{Circuit Equivalence}
+\label{equivalence:task}
+We need to develop a framework for checking circuit equivalence: given circuits $C_1$ and $C_2$, determine whether they define the same quantum function.
+%
+The equivalence problem is relevant since we can use $C_1$ as a reference specification for a more complicated circuit $C_2$.
+%
+
+One can approach the solution to the equivalence problem based on the following observations.
+%
+First, circuit equivalence can be verified by checking whether $C_1C_2^\dag$ implements the identity transformation, where $C_2^\dag$ is obtained from $C_2$ by reversing the circuit (i.e., swapping inputs and outputs) and replacing each gate with its inverse.
+%
+Since all quantum gates correspond to unitary matrices, their conjugate transposes give their inverses.
+%
+
+Second, to determine whether an $n$-qubit circuit is equivalent to the identity, we can test it on $2^n$ linearly independent \emph{vectors}, verifying that each output vector matches its corresponding input.
+%
+This criterion holds because the identity matrix is the only transformation that maps all vectors to themselves.
+%
+This step is challenging and will require the techniques such as the ones proposed above.
+%
+
+Third, due to the linearity of quantum operations, it is sufficient to test a maximal set of linearly independent vectors rather than exhaustively considering the entire state space.
+%
+
+\subsubsection{Amplitude Verification}
+In many quantum circuits, it is often essential to consider \textit{relational specifications} that impose numerical constraints on the amplitudes found in the leaves of the trees representing quantum states.
+%
+Such specifications allow us to express properties such as ``Grover's circuit has ${>}90\%$ probability of finding a correct answer'' or ``the amplitude of the basis state is increased after executing the circuit $C$.'' 
+%
+
+To this end, we can introduce \textit{symbolic} quantum states, in which each computational basis state is associated with a numerical variable representing its amplitude.
+%
+Relational specifications can then be naturally formulated as arithmetic constraints over these variables.
+%
+
+Verification of such specifications is achieved through symbolic execution of the quantum circuit, following the principles of symbolic execution described in \cite{10.1145/360248.360252}.
+%
+We can then check whether all trees accepted by the resulting tree automaton (TA) satisfy the given property.
+%
+Potentially, one can use a modified antichain-based algorithm for testing TA language inclusion \cite{DBLP:conf/tacas/AbdullaCHMV10}.
+%
+As described above, these algorithms reduce the state space by pruning based on simulation relations over automaton states.
+%
+In our setting, we can extend this pruning strategy to account for the numerical constraints associated with symbolic amplitudes, ensuring that the verification process respects quantum states' structural and quantitative aspects.
+%
+
+
+

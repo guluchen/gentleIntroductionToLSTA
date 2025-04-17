@@ -1,0 +1,114 @@
+\begin{tikzpicture}[line width=1pt]
+%%%%%%%%%%%%%%% p: root %%%%%%%%%%%%%%%%%%%
+\node[draw,rectangle,inner sep=2pt,rounded corners=3pt] (p) {$p$};
+
+%%%%%%%%%%%%%%%%%%%%%%% Level 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\coordinate (pB) at ($(p.south)+(0pt,-5pt)$);
+\draw (p) -- (pB);
+
+\node[draw,rectangle,inner sep=2pt,rounded corners=3pt,anchor=north east,name=q+] 
+at ($(pB)+(-25pt,-25pt)$){$q_+$};
+\node[draw,rectangle,inner sep=2pt,rounded corners=3pt,anchor=north west,name=q+-] 
+at ($(pB)+(25pt,-25pt)$){$q_\pm$};
+
+\coordinate  (q+NE) at ($(q+.north east)+(-1pt,-1pt)$);
+\coordinate  (q+-NW) at ($(q+-.north west)+(1pt,-1pt)$);
+
+\draw[bend right=30,->,>=stealth](pB) to coordinate[pos=0.4] 
+(pBlm)(q+NE);
+\draw[bend left=30, ->,>=stealth,dotted]       (pB) to coordinate[pos=0.4] 
+(pBrm)(q+-NW);
+
+\draw[fill=blue!10] (pB) to [bend right=12]  (pBlm) to [bend right=50]  (pBrm) to [bend right=12] cycle;
+
+\node[anchor=north,font=\footnotesize] at (pB) {$\xvar_1$};
+
+
+
+
+
+\coordinate  (q+SW) at ($(q+.south west)+(1pt,1pt)$);
+\coordinate (q+L) at ($(q+.south west)+(-5pt,-5pt)$);
+\draw (q+SW) -- (q+L);
+
+\coordinate  (q+SE) at ($(q+.south east)+(-1pt,1pt)$);
+\coordinate (q+R) at ($(q+.south east)+(5pt,-5pt)$);
+
+\coordinate  (q+-SW) at ($(q+-.south west)+(1pt,1pt)$);
+\coordinate (q+-L) at ($(q+-.south west)+(-5pt,-5pt)$);
+
+\coordinate  (q+-SE) at ($(q+-.south east)+(-1pt,1pt)$);
+\coordinate (q+-R) at ($(q+-.south east)+(5pt,-5pt)$);
+
+
+
+\draw (q+SW) -- (q+L);
+\draw (q+SE) -- (q+R);
+
+\draw (q+-SW) -- (q+-L);
+\draw (q+-SE) -- (q+-R);
+
+%%%%%%%%%%%%%%%%%%%%%%% Level 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\node[draw,rectangle,inner sep=2pt,rounded corners=3pt,anchor=north east,name=r+] 
+at ($(q+SE)+(-25pt,-25pt)$){$r_+$};
+
+\node[draw,rectangle,inner sep=2pt,rounded corners=3pt,anchor=north east,name=r+-] 
+at ($(q+-SE)+(25pt,-25pt)$){$r_\pm$};
+
+\node[draw,rectangle,inner sep=2pt,rounded corners=3pt,name=r0] 
+at (r+-| p){$r_0$};
+
+\draw[bend right=30,->,>=stealth,dotted](q+L) to coordinate[pos=0.4] 
+(q+Llm)(r+);
+\draw[bend right=20,->,>=stealth](q+L) to coordinate[pos=0.2] 
+(q+Lrm)(r0);
+\draw[fill=blue!10] (q+L) to [bend right=12]  (q+Llm) to [bend right=50]  (q+Lrm) to [bend left=4] cycle;
+\node[anchor=north,font=\footnotesize] at ($(q+L)+(-1pt,0pt)$) {$\xvar_2$};
+
+
+\draw[bend left=10,->,>=stealth](q+R) to coordinate[pos=0.3] 
+(q+Rlm)(r+);
+\draw[bend left=30,->,>=stealth,dotted](q+R) to coordinate[pos=0.35] 
+(q+Rrm)(r0);
+\draw[fill=red!10] (q+R) to [bend left=3]  (q+Rlm) to [bend right=50]  (q+Rrm) to [bend right=10.5] cycle;
+\node[anchor=north,font=\footnotesize] at ($(q+R)+(1pt,0pt)$) {$\xvar_2$};
+
+
+\draw[bend right=30,->,>=stealth,dotted](q+-L) to coordinate[pos=0.4] 
+(q+-Llm)(r0);
+\draw[bend right=20,->,>=stealth](q+-L) to coordinate[pos=0.2] 
+(q+-Lrm)(r+-);
+\draw[fill=blue!10] (q+-L) to [bend right=12]  (q+-Llm) to [bend right=50]  (q+-Lrm) to [bend left=4] cycle;
+\node[anchor=north,font=\footnotesize] at ($(q+-L)+(-2pt,1pt)$) {$\xvar_2$};
+
+
+\draw[bend left=10,->,>=stealth](q+-R) to coordinate[pos=0.3] 
+(q+-Rlm)(r0);
+\draw[bend left=30,->,>=stealth,dotted](q+-R) to coordinate[pos=0.35] 
+(q+-Rrm)(r+-);
+\draw[fill=red!10] (q+-R) to [bend left=3]  (q+-Rlm) to [bend right=50]  (q+-Rrm) to [bend right=10.5] cycle;
+\node[anchor=north,font=\footnotesize] at ($(q+-R)+(0pt,0pt)$) {$\xvar_2$};
+
+
+
+%%%%%%%%%%%%%%%% Leafs %%%%%%%%%%%%%%%%
+
+
+\node[anchor=north,font=\footnotesize,name=leafr+] at ($(r+)+(0pt,-20pt)$) {$\frac1{\sqrt2}$};
+\draw (r+) -- (leafr+);
+
+\node[anchor=north,font=\footnotesize,name=leafr0] at ($(r0)+(0pt,-20pt)$) {$0$};
+\draw (r0) -- (leafr0);
+
+\node[anchor=north,font=\footnotesize,name=leftleafr+-] at ($(r+-)+(-10pt,-20pt)$) {$\frac1{\sqrt2}$};
+\draw (r+-) -- (leftleafr+-);
+
+\node[anchor=north,font=\footnotesize,name=rightleafr+-] at ($(r+-)+(+10pt,-20pt)$) {$\frac{-1}{\sqrt2}$};
+\draw (r+-) -- (rightleafr+-);
+
+\end{tikzpicture}
+
+

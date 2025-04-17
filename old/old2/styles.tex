@@ -1,0 +1,21 @@
+%%%% Algorithm 2e, no line numer %%%%%
+\let\oldnl\nl% Store \nl in \oldnl
+\newcommand{\nonl}{\renewcommand{\nl}{\let\nl\oldnl}}% Remove line number for one line
+
+%%%%%
+\tikzstyle{irnode}=[font=\Large]
+\tikzstyle{bnfnode}=[font=\Large]
+\colorlet{eventcolor}{green!50!black}
+\colorlet{msgcolor}{red!70!black}
+\colorlet{typecolor}{blue!80!black}
+\colorlet{keycolor}{green!50!black}
+\colorlet{valcolor}{red}
+\colorlet{attrcolor}{blue}
+\colorlet{opcolor}{eventcolor}
+\colorlet{procedurenamecolor}{green!50!black}
+\colorlet{relcolor}{blue}
+%\definecolor{varcolor}{rgb}{0.2, 0.5, 0.2} % mygreen
+\definecolor{varcolor}{RGB}{166,42,42} % brown
+\definecolor{proccolor}{rgb}{0.82, 0.1, 0.26} % myred
+\definecolor{threadcolor}{rgb}{0.82, 0.1, 0.26} % myred
+

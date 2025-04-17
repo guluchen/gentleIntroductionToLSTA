@@ -1,0 +1,52 @@
+\section{Verification}
+
+\begin{figure}[ht] 
+    \centering
+    \includegraphics[scale=0.9]{Figures/BDDs/BDDs} 
+    \caption{The BDD representation of a quantum state..}
+    \label{BDD:fig}
+\end{figure}
+%
+We can formulate the {\it program verification} problem as an instance of the classical Hoare's Logic
+\[
+P \{C\} Q
+\]
+where $P$ is the {\it pre-condition}, $Q$ is the post-condition, and $C$ is a program.
+%
+The pre-condition $P$ characterizes a set of {\it initial} ({\it source}) states, and the post-condition $Q$ characterizes a set of {\it final} ({\it target}) states.
+%
+We would like to verify that if we execute $C$ from any state satisfying $P$, then we end up in state satisfying $Q$.
+%
+Here, take $C$ to be a quantum circuit.
+%
+A fundamental breakthrough in the verification of conventional computer systems, was the invention of efficient data structuires to represent  
+
+Symbolic representation of sets of states
+Algorithm to compute the post image
+Algorithm to check containment
+
+A case in point isd the classical BDD (Binary Decision Diagram) data structure.
+%
+\cref{BDD:fig} depicts a BDD representation  of a quantum state.
+%
+The main challenege in using BDDs in quantum circuits is the fact a BDD represents a single state.
+%
+In the conventgional circuits, a BDD represents a (large) set of staters.
+%
+This we need a framweork in which we can handle sets of BDDs.
+%
+Given that we represent quantum states by trees, a natural choice is to use tree automata to represent sets of quantum states.
+
+Symbolic representation of sets of states
+Algorithm to compute the post image
+Algorithm to check containment
+
+
+\begin{figure}[ht] 
+    \centering
+    \includegraphics[scale=0.9]{Figures/Automata/aut} 
+    \caption{Tree Automata for an (unbounded) set of states.}
+    \label{automata:fig}
+\end{figure}
+%
+

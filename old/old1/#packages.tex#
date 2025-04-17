@@ -1,0 +1,36 @@
+\newcommand\hmmax{0}
+\newcommand\bmmax{0}
+\newcommand\mathdefault[1]{\ensuremath{#1}}
+
+\usepackage{thm-restate}
+%%% Laod the algorithm package before the cleverref package
+\usepackage[algoruled,vlined,linesnumbered,titlenotnumbered,noend]{algorithm2e}
+\newcommand\mycommfont[1]{\ttfamily\textcolor{blue}{#1}}
+\SetKwBlock{Let}{let}{}
+\SetCommentSty{mycommfont}
+\DontPrintSemicolon 
+
+\usepackage{pifont,bbding,stmaryrd,bm,wasysym} % amssymb amsmath
+\usepackage{soul,cancel}
+\usepackage{xcolor}
+%\usepackage{pgf}
+\usepackage{pgfmath}
+\usepackage{wrapfig} 
+\usepackage{xspace} 
+\usepackage[capitalise]{cleveref}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,backgrounds,decorations.pathmorphing,shapes,calc,arrows.meta,graphs}
+\usepackage{tikz-layers}
+\usetikzlibrary {arrows.meta}
+\usepackage{graphicx}
+%\usepackage{mathtools}
+
+
+\usepackage{pgfplots}
+\usepackage{tabularray}
+%\UseTblrLibrary{booktabs}
+
+\usepackage{lineno}
+
+
+\usepackage{caption}

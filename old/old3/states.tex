@@ -1,0 +1,175 @@
+\section{Circuits} 
+\begin{figure} 
+\includegraphics[]{Figures/HWCircuits/DigitalCircuit} 
+\end{figure}
+
+\newcommand\bstate{b}
+\newcommand\qustate{q}
+
+\paragraph{Bits and Qubits}
+In classical computing, bits are the fundamental units of information. 
+%
+They can exist in only one of two possible states: 0 or 1. 
+%
+They may be conceptualized as switches that are either turned on or off. 
+%
+In contrast, quantum computing employs quantum bits, known as {\it qubits}, to represent and process information. 
+%
+Qubits can exist in a {\it superposition}, meaning they can be in state 0, state 1, or a combination of both simultaneously. 
+%
+Furthermore, a qubit can undergo a {\it measurement} process. 
+%
+A qubit’s state can be described by two complex numbers, called {\it amplitudes}, $c_0$ and $c_1$, where $|c_0|^2$ represents the probability of measuring the state as $0$, and $|c_1|^2$ the probability of measuring it as $1$. 
+%
+We require that $|c_0|^2 + |c_1|^2 = 1$.
+
+\begin{figure}
+\includegraphics[scale=0.85]{figures/States/states}
+\caption{Different qubits, and their vector and Dirac representations.
+(a,b) The basis state $0$ and $1$.
+(c,d) quantum states where the states are in superposition.
+%
+Measuring the state in (c) yields $0$ or $1$ with probability $0.5$.
+%
+Measuring the state in (d) yields $0$ with probability $1/9$, and yields $1$ with probability $8/9$.
+}
+\label{qbit:state:fig}
+\end{figure}
+There are two common representations used to describe a qubit state (cf.\ \cref{qbit:state:fig}) .
+%
+One is the vector notation, where the state is written as a column vector of length 2 with complex entries corresponding to the amplitudes of the respective basis states.
+%
+To simplify notation, we often use the transpose of the column vector.
+%
+This results in a row vector, which is more compact and easier to write.
+%
+As a special case, we may refer directly to standard basis column vectors.
+%
+The second representation is the Dirac notation, where the state is expressed as $c_0|0\rangle + c_1|1\rangle$.
+%
+The classical states are special cases where either $c_0=1$ and $c_1=0$ or
+$c_0=0$ and $c_1=1$.
+%
+In the context of quantum systems, we refer to theses states as the basis states $|0\rangle$ and $|1\rangle$.
+
+We generalize the above concepts to the case where we have multiple qubits.
+%
+For $n$ bits we have $2^n$ states.
+%
+For instance, when $n=2$, we have four basis states $00,01,10,11$, and a quantum state is of the form $c_{00}|00\rangle+c_{01}|01\rangle+c_{10}|0\rangle+c_{11}|11\rangle$
+
+The concepts
+Superposition allows quantum circuits to encode information more efficiently than classical circuits. 
+%
+Furthermore, qubits can be {\it entangled}: the state of one qubit is connected to another. 
+%
+Entanglement means the state of one qubit can't be described independently of the others.
+%
+The state of one qubit may be possible to derive from the state of another qubit, even if when physically far away.
+
+
+More generally, we will work with multiple (qu)bits.
+%
+In the case where we have two qubits the systems will have four states.
+%
+The basis states are given by 
+\[
+\left[
+1\;0\;0\;0
+\right]^{\mathtt T}
+\;\;\;
+\left[
+0\;\;1\;0\;0
+\right]^{\mathtt T}
+\;\;\;
+\left[
+0\;0\;1\;0
+\right]^{\mathtt T}
+\;\;\;
+\left[
+0\;0\;0\;1
+\right]^{\mathtt T}
+\]
+
+
+\begin{figure}
+\includegraphics[scale=1]{figures/States/state3}
+\caption{A state involving three qubits. For readability, we illustrate the state using a  table, rather than a (long) column vector. We also give our tree representation of the state.}
+\label{triple:qbit:state:fig}
+\end{figure}
+
+A key concept in our framework is a symbolic representation of quantum states and sets of quantum states.
+%
+We use {\it tree automata} to instantiate the symbolic encoding.
+%
+Specifically, we encode a quantum state, with $\nn$ qubits as a perfect binary tree with depth $\nn$.
+%
+Each level of the tree corresponds to a single qubit. 
+%
+We might refer to the level corresponding to qubit $\xvar$ as the $\xvar$-level, and the nodes at the $\xvar$-level as the $\xvar$-nodes.
+%
+For an $\xvar$-node in the tree,  the left and right sub-trees corresponds to $\xvar$ being in the values $0$ and $1$ respectively.
+%
+Each path in the tree, from the root to a leaf, represents a computational basis state.
+%
+The leaves represent the complex probability amplitudes of these basis states.
+
+Consider \cref{qustate:tree:fig}.
+%
+The left part shows a quantum state comprising nthree qubits.
+%
+On the right side, we show its tree representation.
+%
+
+
+
+\paragraph{Gates}
+Logical gates, such as AND, OR, and NOT, are the fundamental components of digital circuits. 
+%
+They take binary inputs (0s and 1s) and produce a single binary output.
+%
+Each type of gate implements a specific binary function, e.g., the output of an AND gate is the conjunction of its inputs.
+%
+Quantum gates like the Hadamard and CNOT are the building blocks of quantum circuits, similar to classical logic gates. They manipulate qubits through unitary operations, allowing for quantum algorithms. Each gate performs a specific transformation, enabling superposition, entanglement, and measurement, thus enabling more complex computations compared to classical gates.
+
+\paragraph{States}
+The state of a sequence of bits is often represented by listing their values. For example, the input state in the figure is 011, indicating the values of the three input bits. Generally, $n$ bits can have $2^n$ possible states. 
+%
+
+In quantum computing, bits and states have a richer structure.
+%
+A {\it basis state} for a quantum bit is one of the classical states $0$ or $1$.
+%
+A qubit can be in a basis state or, more generally, in a {\it superposition} of the basis states, represented mathematically as: $[|\psi⟩ = \alpha |0⟩ + \beta |1⟩ ]$.
+Here, $\alpha$ and $\beta$ are complex coefficients that determine the probability of measuring the qubit in either state.
+The probabilities are given by:
+Probability of measuring $|0⟩$: $( |\alpha|^2 )$
+Probability of measuring $|1⟩$: $( |\beta|^2 )$
+The condition $( |\alpha|^2 + |\beta|^2 = 1 )$ must hold to ensure valid probabilities.
+%
+In a system with $\nn$ qubits, there are $2^\nn$ possible basis states.
+%
+In general, a quantum state is a superposition of a set of basis state, representing a probability distribution over the possible $2^n$ bit-assignments.
+%
+A quantum state $\qustate$ assigns to each basis state $\bstate$ a complex number $\alpha_\bstate$ called the {\it amplitude} of $\bstate$ in $\qustate$.
+%
+Intuitively, if we \patodo{measure} $\qustate$ then the probability that we observe $\bstate$ is given by the square $\alpha_\bstate^2$ of the amplitude.
+%
+The a
+The left side of \cref{qustate:tree:fig} shows a quantum state with three qubits.
+%
+Each row of the table gives the amplitude of one basis state.
+%
+
+
+\paragraph{Circuits}
+A combinatorial circuit consists of a set of gates and acts as a Boolean function. It takes a sequence of bits as input and produces a sequence of bits as output. There are also internal bits that represent the connections between gates. In the figure, the circuit has three input bits, one output bit, and three internal bits.
+\patodo{Describe quantum states}
+
+
+The basis states represent the simplest forms of qubit states:
+|0⟩: Represents the state where the qubit is definitively in the "0" position.
+|1⟩: Represents the state where the qubit is definitively in the "1" position.
+These states are often referred to as computational basis states.
+3. Superposition
+

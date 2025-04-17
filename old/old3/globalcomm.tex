@@ -1,0 +1,622 @@
+%%%% comments %%%%%%%
+\newcommand\patodo[1]{\textcolor{red}{#1}}
+\newcommand\ksq[1]{\textcolor{red!40!blue}{#1}}
+\newcommand\kstodo[1]{\textcolor{green!40!blue}{#1}}
+\newcommand\sgtodo[1]{\textcolor{magenta}{#1}}
+
+%%%%% Basics %%%%%%%
+\newcommand\hide[1]{}
+\newcommand\true{\mathsf{true}}
+\newcommand\false{\mathsf{false}}
+\newcommand{\tuple}[1]{\left\langle#1\right\rangle}
+
+\newcommand\of[2]{{#1}\left(#2\right)}
+\newcommand\dof[3]{{#1}\left(#2\right)\left(#3\right)}
+\newcommand\tof[4]{{#1}\left(#2\right)\left(#3\right)\left(#4\right)}
+\newcommand\qof[5]{{#1}\left(#2\right)\left(#3\right)\left(#4\right)\left(#5\right)}
+\newcommand\fiveof[6]{{#1}\left(#2\right)\left(#3\right)\left(#4\right)\left(#5\right)\left(#6\right)}
+\newcommand\primeof[1]{{#1}'}
+\newcommand\prm[2]{{#1}_{#2}}
+%%%%%%%%%%%%%%%%%%%%  Letters   %%%%%%%%%%%%%%%%%%%%
+
+\newcommand\ii{i}
+\newcommand\jj{j}
+\newcommand\kk{k}
+\newcommand\mm{m}
+\newcommand\nn{n}
+\newcommand{\var}{\texttt}
+
+%%%%%%%%%%%%%%%%%%%%  Functions  and Relations  %%%%%%%%%%%%%%%%%%%%
+\newcommand\rel{R}
+\newcommand\irel[1]{\rel_{#1}}
+\newcommand\prel{\rel'}
+\newcommand\transcup\Cup
+\newcommand\mkrelof[1]{\,\textcolor{relcolor}{\left[#1\right]}\,}
+\newcommand\mkreftransrelof[1]{\,\textcolor{relcolor}{\left[#1\right]^*}\,}
+\newcommand\mktransrelof[1]{\,\textcolor{relcolor}{\left[#1\right]^+}\,}
+\newcommand\mksuccrelof[1]{\,\textcolor{relcolor}{\left[#1\right]^{\mathsf{Succ}}}}
+\newcommand\mksymrelof[1]{\,\textcolor{relcolor}{\left[#1\right]^\bullet}\,}
+\newcommand\mkonerelof[1]{\,\textcolor{relcolor}{\left[#1\right]^{=1}}}
+%% \newcommand\dclof[1]{{#1}\mathop{\downarrow}}
+%% \newcommand\dcldof[2]{{#1}\mathop{\downarrow}{#2}}
+%% \newcommand\dcleddof[2]{{#1}\mathop{\Downarrow}{#2}}
+%% \newcommand\dcltof[3]{{#2}\mathop{\downarrow_{#1}}{#3}}
+%% \newcommand\uclof[1]{{#1}\mathop{\uparrow}}
+%% \newcommand\ucldof[2]{{#1}\mathop{\uparrow}{#2}}
+%% \newcommand\ucltof[3]{{#2}\mathop{\uparrow_{#1}}{#3}}
+%% \newcommand\ucleddof[2]{{#1}\mathop{\Uparrow}{#2}}
+%% \newcommand\topof[1]{\of{\mathsf{Top}}{#1}}
+%% \newcommand\topdof[2]{\dof{\mathsf{Top}}{#1}{#2}}
+%% \newcommand\botof[1]{\of{\mathsf{Bot}}{#1}}
+%% \newcommand\botdof[2]{\dof{\mathsf{Bot}}{#1}{#2}}
+\newcommand\height{{\mathsf{height}}}
+\newcommand\heightof[1]{\of\height{#1}}
+\newcommand\heightdof[2]{\dof\height{#1}{#2}}
+\newcommand\fundom{{\mathsf{dom}}}
+\newcommand\fundomof[1]{\of\fundom{#1}}
+\newcommand\funrange{{\mathsf{range}}}
+\newcommand\funrangeof[1]{\of\funrange{#1}}
+\newcommand\fun{f}
+\newcommand\gfun{g}
+\newcommand\hfun{h}
+\newcommand\bluehfun{\textcolor{eventcolor}\hfun}
+\newcommand\funof[1]{\of\fun{#1}}
+\newcommand\gfunof[1]{\of\gfun{#1}}
+\newcommand\hfunof[1]{\of\hfun{#1}}
+\newcommand\inverseof[1]{{#1}^{-1}}
+\newcommand\reldelete\ominus
+\newcommand\compose\circ
+\newcommand\composeof[3]{\of{\left({#1}\compose{#2}\right)}{#3}}
+\newcommand\undf\bot
+\newcommand\funtype[3]{{#1}:{#2}\rightarrow{#3}}
+\newcommand\funset[2]{\left[{#1}\rightarrow{#2}\right]}
+\newcommand\updatefun[3]{{#1}\left[#2\leftarrow#3\right]}
+\newcommand\addupdatefun[3]{{#1}\left[#2+#3\right]}
+\newcommand\uupdatefun[5]{{#1}\left[#2\leftarrow#3,#4\leftarrow#5\right]}
+\newcommand\multiupdatefun[5]{{#1}\left[#2\leftarrow#3,\ldots,#4\leftarrow#5\right]}
+\newcommand\restrictof[2]{{#1}|_{#2}}
+%\newcommand\succof[1]{{#1}^\bullet} % immediate sucessor of a binary relation
+\newcommand\apply[2]{{#1}\left[{#2}\right]}
+\newcommand\initapply[1]{\left[{#1}\right]}
+\newcommand\xmodels[1]{\models^{#1}}
+
+%%%%%%%%%%%%%%%%%%%%  Sets   %%%%%%%%%%%%%%%%%%%%
+
+\newcommand\set[1]{\left\{{#1}\right\}}
+\newcommand\setcomp[2]{\left\{{#1}\mid\,{#2}\right\}}
+\newcommand\addtoset\oplus
+\newcommand\nat{{\mathbb N}}
+\newcommand\pnat{\nat^{>0}}
+\newcommand\boolset{{\mathbb B}}
+\newcommand\aset{A}
+\newcommand\paset{\aset'}
+\newcommand\iaset[1]{\aset_{#1}}
+\newcommand\bset{B}
+\newcommand\pbset{\bset'}
+\newcommand\ibset[1]{\bset_{#1}}
+\newcommand\cset{C}
+\newcommand\aelem{a}
+\newcommand\belem{b}
+\newcommand\celem{c}
+\newcommand\gen{\mathsf{gen}}
+\newcommand\genof[1]{\of\gen{#1}}
+\newcommand\upto[1]{\widehat{#1}}
+\newcommand\assigned{:=}
+\newcommand\valassigned[2]{\assigned{#1}\textcolor{red}{{\textcolor{red!70!black}{:\!\!#2}}}}
+\newcommand\ordering\preceq
+\newcommand\maxorder{{\it max}}
+\newcommand\maxorderof[1]{\of\maxorder{#1}}
+\newcommand\maxorderdof[2]{\dof\maxorder{#1}{#2}}
+\newcommand\sizeof[1]{\left|#1\right|}
+\newcommand\setflattenof[1]{\overline{#1}}
+
+
+%%%%%%%%%%%% Words %%%%%%%%%%%% 
+\newcommand\word{w}
+\newcommand\pword{\word'}
+\newcommand\iword[1]{\word_{#1}}
+\newcommand\emptyword\epsilon
+\newcommand\vword{v}
+\newcommand\wordsover[1]{{#1}^*}
+\newcommand\wposition[2]{{#1}[{#2}]}
+\newcommand\winterval[3]{{#1}[{#2}\cdot\cdot{#3}]}
+\newcommand\fst{{\mathsf{first}}}
+\newcommand\firstof[1]{\of\fst{#1}}
+\newcommand\lst{{\mathsf{last}}}
+\newcommand\lastof[1]{\of\lst{#1}}
+\newcommand\md{{\mathsf{mid}}}
+\newcommand\midof[1]{\of\md{#1}}
+\newcommand\flatten[1]{\widehat{#1}} % elements inside the word 
+%\newcommand\wminus\ominus
+\newcommand\ithword[2]{{#1}[#2]}
+\newcommand\wtranspose\otriangle
+\newcommand\lengthof[1]{\left|#1\right|}
+\newcommand\app\bullet
+\newcommand\wordof[2]{{#1}\left[{#2}\right]}
+\newcommand\frto[2]{{#1}\cdot\cdot\,{#2}}
+\newcommand\prfx{\sqsubseteq_{\mathsf{prfx}}}
+\newcommand\prfxset{\mathsf{prfx}}
+\newcommand\prfxsetof[1]{\of\prfxset{#1}}
+\newcommand\wfilter\odot
+
+\newcommand\idx{{\mathsf{idx}}}
+\newcommand\idxs{{\mathsf{Idxs}}}
+\newcommand\idxsof[1]{\of\idxs{#1}}
+
+%%%%%%%%%%%%%% Balls %%%%%%%%%%%
+\newcommand\greenball{\tikz{\node[circle,ball color=green]{};}}
+\newcommand\blackball{\tikz{\node[circle,ball color=black]{};}}
+\newcommand\blueball{\tikz{\node[circle,ball color=blue]{};}}
+\newcommand\redball{\tikz{\node[circle,ball color=red]{};}}
+
+%%%%%%%%% Circled Characters  %%%%%%%
+
+%\ding{172}--\ding{181} % seriffed fonts
+%\ding{192}--\ding{201} % sans-seriffed fonts
+
+%% \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+%%             \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+%% \newcommand\cone{\mathop{\circled{1}}}
+\newcommand\cone{\mbox{\ding{172}}}
+\newcommand\ctwo{\mbox{\ding{173}}}
+\newcommand\cthree{\mbox{\ding{174}}}
+\newcommand\cfour{\mbox{\ding{175}}}
+\newcommand\cfive{\mbox{\ding{176}}}
+\newcommand\csix{\mbox{\ding{177}}}
+\newcommand\cseven{\mbox{\ding{178}}}
+\newcommand\ceight{\mbox{\ding{179}}}
+\newcommand\cnine{\mbox{\ding{180}}}
+
+\newcommand\bluecircled[1]{\mathop{\tikz{\node[draw,circle,fill=blue!15, inner sep=0.5pt,font={\footnotesize}]{#1};}}}
+
+\newcommand\largebluecircled[1]{\mathop{\tikz{\node[draw,circle,fill=blue!15, inner sep=1pt]{#1};}}}
+
+\newcommand\redcircled[1]{\mathop{\tikz{\node[draw,circle,fill=red!15, inner sep=0.5pt,font={\footnotesize}]{#1};}}}
+
+\newcommand\largeredcircled[1]{\mathop{\tikz{\node[draw,circle,fill=red!15, inner sep=1pt]{#1};}}}
+
+
+%%%%%%%%%%%%%%%%% Symbols %%%%%%%%%%%
+\newcommand{\cmark}{\mbox{\textcolor{green!50!black}{\ding{51}}}}
+\newcommand{\xmark}{\mbox{\textcolor{red!50!black}{\ding{55}}}}
+
+
+
+%%%%%%%%%%%%%%%%%% Inference Rules %%%%%%%%%%%%%%%%%%
+\newcommand\irspace{\;\;\;\;\;}
+\newcommand\irname[1]{\mbox{\sf{\color{blue!70!black}{#1}}}}
+  %% \node[name=n0,anchor=north]{$
+  %%   \event\in\eventsof\ststmt\irspace
+  %%   \neg(\event\lrs\eventsof\ldxstmt)
+  %%   $};
+  %% \node[name=n1,anchor=north] at (n0.south){$
+  %%   \xfresh\xfreshmovesto
+  %%   \event\updatefun\xfresh\memloc\emptyset$};
+  %% \path[draw,line width=0.5pt]
+  %% let 
+  %% \p1=(n1.east), 
+  %% \p2=(n1.west),
+  %% \p3=(n1.north) 
+  %% in 
+  %% (\x1,\y3) -- (\x2,\y3);
+
+
+%%%%%%%%%%%%%%%%%%% Variables, Registers, Expressions, and Values %%%%%%%%%%%%%%%%%%% 
+\newcommand\valset{\mathcal{V}}
+\newcommand\val{\mathsf{v}}
+\newcommand\ival[1]{\val_{#1}}
+\newcommand\uval{\mathsf{u}}
+\newcommand\pval{\val'}
+\newcommand\ppval{\val''}
+\newcommand\noval{-}
+\newcommand\zero{0}
+\newcommand\arbval{\mathsf{*}}
+\newcommand\noneval{\mathsf{none}}
+\newcommand\varset{{\mathcal X}}
+\newcommand\vars{X}
+\newcommand\ivarset[1]{\varset_{#1}}
+\newcommand\varsetof[1]{\of\varset{#1}}
+\newcommand\regset{{\mathsf{Regs}}}
+\newcommand\regsetof[1]{\regset^{#1}}
+\newcommand\lvarset{\mathsf{Lvars}}
+\newcommand\lvarsetof[1]{\lvarset_{#1}}
+\newcommand\gvarset{\mathsf{Gvars}}
+\newcommand\xvar{x}
+\newcommand\yvar{y}
+\newcommand\avar{a}
+\newcommand\iavar[1]{\avar_{#1}}
+\newcommand\bvar{b}
+\newcommand\ibvar[1]{\bvar_{#1}}
+\newcommand\areg{a}
+\newcommand\iareg[1]{\areg_{#1}}
+\newcommand\breg{b}
+\newcommand\ibreg[1]{\breg_{#1}}
+\newcommand\creg{c}
+\newcommand\icreg[1]{\creg_{#1}}
+\newcommand\dreg{d}
+\newcommand\idreg[1]{\dreg_{#1}}
+\newcommand\tmpvar{\mathsf{tmp}}
+\newcommand\itmpvar[1]{\tmpvar_{#1}}
+\newcommand\onevarof[1]{\operatorname{#1}}
+\newcommand\twovarof[2]{\operatorname{{#1}\_{#2}}}
+\newcommand\threevarof[3]{\operatorname{{{#1}\_{#2}\_{#3}}}}
+\newcommand\fourvarof[4]{{#1}\_{#2}\_{#3}\_{#4}}
+\newcommand\fivevarof[5]{{#1}\_{#2}\_{#3}\_{#4}\_{#5}}
+\newcommand\expr{\mathsf{expr}}
+
+
+
+%%%%%%%%%%%%%%%%%%% Programs Processes and Threads %%%%%%%%%%%%%%%%%%% 
+
+\newcommand\prog{{\mathcal P}}
+\newcommand\procset{\mathsf{Procs}}
+\newcommand\qproc{q}
+\newcommand\proc{p}
+\newcommand\procs{P}
+\newcommand\qprocs{Q}
+\newcommand\iprocs[1]{\procs_{#1}}
+\newcommand\pproc{\proc'}
+\newcommand\iproc[1]{\proc_{#1}}
+\newcommand\iiproc[2]{\proc_{#1}^{#2}}
+\newcommand\thread\theta
+\newcommand\pthread\phi
+\newcommand\sthread\psi
+\newcommand\ethread\eta
+\newcommand\ithread[1]{\thread_{#1}}
+\newcommand\ipthread[1]{\pthread_{#1}}
+\newcommand\threadset\Theta
+\newcommand\lbl\lambda
+\newcommand\plbl{\lbl'}
+\newcommand\pplbl{\lbl''}
+\newcommand\initlbl{\lbl_{\it init}}
+\newcommand\initlblof[1]{\lbl^{#1}_{\it init}}
+\newcommand\lblset\Lambda
+\newcommand\lblsetof[1]{\lblset_{#1}}
+\newcommand\instr{\mathsf{i}}
+\newcommand\initinstr{\instr_{\it init}}
+\newcommand\initinstrof[1]{\initinstr^{#1}}
+\newcommand\mkattrof[1]{\mathop{\cdot}{\textcolor{attrcolor}{#1}}}
+\newcommand\attrtype[1]{\textcolor{attrcolor}{\mathsf{#1}}}
+\newcommand\eventattr{{\attrtype{event}}}
+\newcommand\lblattr{{\attrtype{label}}}
+\newcommand\lblattrof[1]{{#1}\mathop{\cdot}\lblattr}
+\newcommand\stmtattr{{\attrtype{stmt}}}
+\newcommand\stmtattrof[1]{{#1}\mathop{\cdot}\stmtattr}
+\newcommand\instrattr{{\attrtype{instr}}}
+\newcommand\ttype{{\color{typecolor}{\mathit{type}}}}
+\newcommand\wtype{{\color{typecolor}{\mathsf{W}}}}
+\newcommand\rtype{{\color{typecolor}{\mathsf{R}}}}
+\newcommand\starttype{{\color{typecolor}{\mathsf{start}}}}
+\newcommand\myendtype{{\color{typecolor}{\mathsf{end}}}}
+\newcommand\xvartype{{\color{typecolor}{\mathsf{x}}}}
+\newcommand\threadtype{{\color{typecolor}{\mathsf{\tau}}}}
+
+
+\newcommand\instrattrof[1]{{#1}\mathop{\cdot}\instrattr}
+
+
+
+\newcommand\stmttype[1]{\textcolor{blue!70!black}{\mathsf{#1}}}
+\newcommand\stmtset{S}
+\newcommand\stmt{\stmttype{s}}
+\newcommand\skipstmt{\stmttype{skip}}
+\newcommand\assumestmt{\stmttype{assume}}
+\newcommand\assumestmtof[1]{\stmttype{assume}\;{#1}}
+\newcommand\exitstmt{\stmttype{exit}}
+\newcommand\ifstmtof[2]{\stmttype{if}\;{#1}\;\stmttype{then}\;{#2}}
+\newcommand\assgnstmtof[2]{\stmttype{{#1}:={#2}}}
+
+\newcommand\nextattr{{\color{attrcolor}{\mathsf{next}}}}
+\newcommand\nextattrof[1]{{#1}\mathop{\cdot}\nextattr} %
+%%%%%%%%%%%%%%%%%% Movesto %%%%%%%%%%%%%%%%%%% 
+\newcommand\movesto[1]{\xrightarrow{#1}}
+\makeatletter
+\newcommand\mmovesto[2][]{\ext@arrow 0359\Rightarrowfill@{#1}{#2}}
+\makeatother
+
+\newcommand\prmmovesto[2]{\xrightarrow{{#2}}_{#1}}
+\newcommand\procmovesto[1]{\prmmovesto{\mathsf proc}{#1}}
+\newcommand\memmovesto[1]{\prmmovesto{\mathsf mem}{#1}}
+\newcommand\onemovesto[1]{\prmmovesto{\cone}{#1}}
+\newcommand\twomovesto[1]{\prmmovesto{\ctwo}{#1}}
+\newcommand\tikzmovesto[2]{%
+  \mathrel{\begin{tikzpicture}[baseline=-2.5pt] %
+      \node[anchor=south,name=label] {$#1$};
+      \node[inner sep=0pt,anchor=east,name=moveston1]
+      at ($(label.south west)+(0pt,0pt)$){};
+      \node[inner sep=0pt,anchor=west,name=moveston2]
+      at ($(label.south east)+(0pt,0pt)$){};
+      \path[draw,->,line width=1pt] 
+      ($(moveston1.east)+(0pt,0pt)$)-- ($(moveston2.west)+(0pt,0pt)$);
+      \node[anchor=north] at (moveston2.east) {$#2$};
+  \end{tikzpicture}}}
+
+
+%%%%%%%%%%%%%%%%%%% Transitions Systems and Automata %%%%%%%%%%%%%%%%%%% 
+\newcommand\run\rho
+\newcommand\irun[1]{\run_{#1}}
+\newcommand\runset{{\mathsf {Runs}}}
+\newcommand\runsetof[1]{\of\runset{#1}}
+\newcommand\diffrunset{{\mathsf {DiffRuns}}}
+\newcommand\diffrunsetof[1]{\of\diffrunset{#1}}
+
+\newcommand\pth\pi
+\newcommand\ipth[1]{\pth_{#1}}
+\newcommand\pthset{{\mathsf {Pths}}}
+\newcommand\pthsetof[1]{\of\pthset{#1}}
+\newcommand\diffpthset{{\mathsf {DiffPths}}}
+
+
+\newcommand\conf\gamma
+\newcommand\pconf{\conf'}
+\newcommand\iconf[1]{\conf_{#1}}
+\newcommand\confset{{\mathsf{Confs}}}
+\newcommand\initconf{\conf_{\it init}}
+\newcommand\qstate{q} % conflicts with pacmpl
+\newcommand\mystate{q} % conflicts with pacmpl
+\newcommand\pqstate{\qstate'}
+\newcommand\ppqstate{\qstate''}
+\newcommand\iqstate[1]{\qstate_{#1}}
+\newcommand\stateset{Q}
+\newcommand\statesetof[1]{\stateset_{#1}}
+\newcommand\initstate{\qstate^{\mathsf{init}}}
+\newcommand\initstateof[1]{\initstate_{#1}}
+\newcommand\transitionset\Delta
+\newcommand\op{\textcolor{opcolor}{\mathsf{op}}}
+\newcommand\iop[1]{\textcolor{opcolor}{\op_{#1}}}
+\newcommand\pop{\op'}
+\newcommand\opset{\mathsf{Ops}}
+\newcommand\opsetof[1]{\opset^{#1}}
+\newcommand\opseq\rho
+\newcommand\emptyopseq\epsilon
+\newcommand\statemapping{{\mathcal Q}}
+\newcommand\statemappingof[1]{\of\statemapping{#1}}
+\newcommand\istatemapping[1]{\statemapping_{#1}}
+\newcommand\istatemappingof[2]{\of{\istatemapping{#1}}{#2}}
+\newcommand\dstatemappingof[2]{\dof\statemapping{#1}{#2}}
+\newcommand\pstatemapping{\statemapping'}
+\newcommand\pstatemappingof[1]{\of\pstatemapping{#1}}
+\newcommand\regstate{{\mathcal R}}
+\newcommand\regstateof[1]{\of\regstate{#1}}
+\newcommand\initregstate{\regstate_{\it init}}
+\newcommand\initregstateof[1]{\of\initregstate{#1}}
+\newcommand\pregstate{\regstate'}
+\newcommand\pregstateof[1]{\of\pregstate{#1}}
+\newcommand\lblstate{{\mathcal L}}
+\newcommand\lblstateof[1]{\of\lblstate{#1}}
+\newcommand\plblstate{\lblstate'}
+\newcommand\plblstateof[1]{\of\plblstate{#1}}
+
+\newcommand\memstate{\mathcal{M}}
+\newcommand\imemstate[1]{\memstate_{#1}}
+\newcommand\memstateof[1]{\of\memstate{#1}}
+\newcommand\imemstateof[2]{\of{\imemstate\ii}{#1}}
+\newcommand\pmemstate{\memstate'}
+\newcommand\pmemstateof[1]{\of\pmemstate{#1}}
+
+
+\newcommand\post{{\mathsf{post}}}
+\newcommand\postof[1]{\of\post{#1}}
+
+
+\newcommand\enabled{{\mathsf{enabled}}}
+\newcommand\enabledof[1]{\of\enabled{#1}}
+\newcommand\enableddof[2]{\dof\enabled{#1}{#2}}
+
+%%%%%%%%%%%%%%%%%%% Reference Lines %%%%%%%%%%%%%%%%%%% 
+\newcommand\lref[1]{Line~\ref{#1}}
+
+
+
+%%%%%%%%%%%%% Algorithms %%%%%%%%%%%%%%
+\newcommand\codespace{; \hspace{5pt}}
+\newcommand\gcmd{\mathrel{\tikz[baseline=-2.5pt]{\node[inner sep=0pt,rectangle,draw,fill=blue!5,minimum width=4pt, minimum height=8pt]{}}}\;}
+\SetKwProg{Let}{let}{ in}{} %%% The let .. in key word
+
+\SetKwFunction{Return}{\bf return} % e.g. \Return{unlinearizable}
+\SetKwFunction{Exit}{\bf exit} % e.g. \exit{unlinearizable}
+    \SetKwInOut{Input}{Input}
+    \SetKwInOut{Output}{Output}
+%\newcommand\tmpvar{{\mathsc{tmp}}}
+%%%%%%%%%%%%% Grammars %%%%%%%%%%%%%%
+\newcommand\nterminal[1]{\textcolor{black}{\mathsf{#1}}}
+
+%%%%%%%%%%%%% Events %%%%%%%%%%%%%%
+\newcommand\event{{\color{eventcolor}{e}}}
+\newcommand\pevent{{\color{eventcolor}{\event'}}}
+\newcommand\ppevent{{\color{eventcolor}{\event''}}}
+\newcommand\ievent[1]{{\color{eventcolor}{\event_{#1}}}}
+\newcommand\ipevent[1]{{\color{eventcolor}{\event'_{#1}}}}
+\newcommand\revent{{\color{eventcolor}{r}}}
+\newcommand\irevent[1]{{\color{eventcolor}{\revent_{#1}}}}
+\newcommand\prevent{{\color{eventcolor}{\revent'}}}
+\newcommand\revents{{\color{eventcolor}{R}}}
+\newcommand\prevents{{\color{eventcolor}{\revents'}}}
+\newcommand\irevents[1]{{\color{eventcolor}{\revents_{#1}}}}
+\newcommand\wevent{{\color{eventcolor}{w}}}
+\newcommand\vevent{{\color{eventcolor}{v}}}
+\newcommand\iwevent[1]{{\color{eventcolor}{\wevent_{#1}}}}
+\newcommand\pwevent{{\color{eventcolor}{\wevent'}}}
+\newcommand\ppwevent{{\color{eventcolor}{\wevent''}}}
+\newcommand\newevent{{\color{eventcolor}{\event_{\mathsf{new}}}}}
+\newcommand\thevent{{\color{eventcolor}{\event_\thread}}}
+
+\newcommand\events{{\mathsf{E}}}
+\newcommand\fevents{F}
+\newcommand\pevents{\events'}
+\newcommand\ievents[1]{\events_{#1}}
+\newcommand\ipevents[1]{\events'_{#1}}
+\newcommand\eventset{\mathcal{E}}
+\newcommand\silentevent{{\color{eventcolor}\tau}}
+\newcommand\initeventset{\mathsf{init}}
+\newcommand\initevent{{\color{eventcolor}{\mathsf{init}}}}
+\newcommand\initeventof[1]{{\color{eventcolor}{\initevent^{#1}}}}
+\newcommand\xinitevent[1]{{\color{eventcolor}{init^{#1}}}}
+\newcommand\dummyeventset{\mathsf{dummy}}
+\newcommand\dummyevent{{\color{eventcolor}{\mathsf{dummy}}}}
+\newcommand\dummyeventof[1]{{\color{eventcolor}{\dummyevent^{#1}}}}
+\newcommand\xdummyevent[1]{{\color{eventcolor}{init^{#1}}}}
+\newcommand\minweventof[1]{{\color{eventcolor}{\mathsf{minW}^{#1}}}}
+\newcommand\maxweventof[1]{{\color{eventcolor}{\mathsf{maxW}^{#1}}}}
+\newcommand\mintheventof[1]{{\color{eventcolor}{\mathsf{minTh}^{#1}}}}
+
+\newcommand\mkeventdof[2]{({#1}\cdot{#2})}
+\newcommand\mkeventtof[3]{({#1}\cdot{#2}\cdot{#3})}
+
+\newcommand\varattr{{\color{attrcolor}{\mathsf{var}}}}
+\newcommand\varattrof[1]{{#1}\mathop{\cdot}\varattr}
+\newcommand\valattr{{\color{attrcolor}{\mathsf{val}}}}
+\newcommand\valattrof[1]{{#1}\mathop{\cdot}\valattr}
+\newcommand\threadattr{{\color{attrcolor}{\mathsf{thread}}}}
+\newcommand\threadattrof[1]{{#1}\mathop{\cdot}\threadattr}
+\newcommand\typeattr{{\color{attrcolor}{\mathsf{type}}}}
+\newcommand\typeattrof[1]{{#1}\mathop{\cdot}\typeattr}
+
+%%%%%%%%%%%% Histories %%%%%%%%%%%%%%%%%%
+\newcommand\history{h}
+\newcommand\phistory{\history'}
+\newcommand\ihistory[1]{\history_{#1}}
+
+
+%%%%%%%% Execution Graphs %%%%%%%%%%%%%
+
+\newcommand\egraph{G}
+\newcommand\egraphtuple{\tuple{\events,\porel,\rfrel,\corel}}
+\newcommand\egraphset{\operatorname{\mathsf{E-Graphs}}}
+\newcommand\egraphsetof[1]{\egraphset^{#1}}
+\newcommand\iegraph[1]{\egraph_{#1}}
+\newcommand\pegraph{\egraph'}
+\newcommand\ppegraph{\egraph''}
+\newcommand\egraphs{{\mathcal G}}
+\newcommand\egraphsof[1]{\of\egraphs{#1}}
+\newcommand\initegraph{\egraph_{\mathsf{ init}}}
+\newcommand\egraphof[1]{\egraph^{#1}}
+\newcommand\mkegraph{{\mathsf{mkEgraph}}}
+\newcommand\mkegraphof[1]{\of\mkegraph{#1}}
+\newcommand\pegraphof[1]{{(\pegraph)}^{#1}}
+\newcommand\swappable{{\mathsf{swappable}}}
+\newcommand\swappableof[1]{\of\swappable{#1}}
+\newcommand\eseq{\eta}
+\newcommand\ieseq[1]{\eseq_{#1}}
+\newcommand\peseq{\eseq'}
+\newcommand\ppeseq{\eseq''}
+
+\newcommand\porel{{\color{relcolor}{\mathsf{{po}}}}}
+\newcommand\xporel[1]{{\color{relcolor}{\porel^{#1}}}}
+\newcommand\rfrel{{\color{relcolor}{\mathsf{{rf}}}}}
+\newcommand\rfrelsof[1]{{\color{relcolor}{\mathsf{{RF}}}}}
+\newcommand\corel{{\color{relcolor}{\mathsf{{co}}}}}
+\newcommand\corelsof[1]{{\color{relcolor}{\mathsf{{CO}}}}}
+\newcommand\xcorel[1]{{\color{relcolor}{\mathsf{{\corel^{#1}}}}}}
+\newcommand\frrel{{\color{relcolor}{\mathsf{{fr}}}}}
+\newcommand\xfrrel[1]{{\color{relcolor}{\mathsf{{fr^{#1}}}}}}
+\newcommand\frrelsof[1]{{\color{relcolor}{\mathsf{{FR}}}}}
+
+\newcommand\iporel[1]{\porel_{#1}}
+\newcommand\irfrel[1]{\rfrel_{#1}}
+\newcommand\icorel[1]{\corel_{#1}}
+
+%%%%%%%%%%%%%%%%%%%%  Memory Models   %%%%%%%%%%%%%%%%%%%%
+\newcommand\rasem{{\mathsf{RA}}\xspace}
+
+
+%%%%%%%%%%%% Attributes %%%%%%%%%%%% 
+\newcommand\attr{\textcolor{attrcolor}{\mathsf{attr}}}
+\newcommand\attrof[1]{{#1}\mathop{\cdot}\attr}
+\newcommand\xattr[1]{\textcolor{attrcolor}{\mathsf{attr}^{#1}}}
+\newcommand\xattrof[2]{{#2}\mathop{\cdot}\xtarr{#1}}
+\newcommand\relattr{\textcolor{attrcolor}{\mathsf{R}}}
+\newcommand\relattrof[1]{{#1}\mathop{\cdot}\relattr}
+\newcommand\attrs{\mathsf{attrs}}
+\newcommand\attrsof[1]{{#1}\mathop{\cdot}\attrs}
+
+\newcommand\eventsattr{\textcolor{attrcolor}{\mathsf{E}}}
+\newcommand\eventsattrof[1]{{#1}\mathop{\cdot}\eventsattr}
+\newcommand\idattr{\textcolor{attrcolor}{\mathsf{id}}}
+\newcommand\idattrof[1]{{#1}\mathop{\cdot}\idattr}
+\newcommand\idattrdof[2]{{#1}\mathop{\cdot}{#2}\mathop{\cdot}\idattr}
+\newcommand\poattr{\textcolor{attrcolor}{\mathsf{po}}}
+\newcommand\poattrof[1]{{#1}\mathop{\cdot}\poattr}
+\newcommand\poattrdof[2]{{#1}\mathop{\cdot}{#2}\mathop{\cdot}\poattr}
+\newcommand\coattr{\textcolor{attrcolor}{\mathsf{co}}}
+\newcommand\coattrof[1]{{#1}\mathop{\cdot}\coattr}
+\newcommand\coattrdof[2]{{#1}\mathop{\cdot}{#2}\mathop{\cdot}\coattr}
+\newcommand\succcoattr{\textcolor{attrcolor}{\mathsf{coSucc}}}
+\newcommand\succcoattrof[1]{{#1}\mathop{\cdot}\succcoattr}
+\newcommand\predcoattrdof[2]{{#1}\mathop{\cdot}{#2}\mathop{\cdot}\predcoattr}
+\newcommand\predcoattr{\textcolor{attrcolor}{\mathsf{coPred}}}
+\newcommand\predcoattrof[1]{{#1}\mathop{\cdot}\predcoattr}
+\newcommand\predcodattrdof[2]{{#1}\mathop{\cdot}{#2}\mathop{\cdot}\predcoattr}
+\newcommand\xcoattr[1]{\textcolor{attrcolor}{\mathsf{co}^{#1}}}
+\newcommand\xcoattrof[2]{{#2}\mathop{\cdot}{\xcoattr{#1}}}
+\newcommand\rfattr{\textcolor{attrcolor}{\mathsf{rf}}}
+\newcommand\rfattrof[1]{{#1}\mathop{\cdot}\rfattr}
+\newcommand\rfattrdof[2]{{#1}\mathop{\cdot}{#2}\mathop{\cdot}\rfattr}
+\newcommand\frattr{\textcolor{attrcolor}{\mathsf{fr}}}
+\newcommand\frattrof[1]{{#1}\mathop{\cdot}\frattr}
+\newcommand\frattrdof[2]{{#2}\mathop{\cdot}{#2}\mathop{\cdot}\frattr}
+\newcommand\xfrattr[1]{\textcolor{attrcolor}{\mathsf{fr}^{#1}}}
+\newcommand\xfrattrof[2]{{#2}\mathop{\cdot}\xfrattr{#1}}
+\newcommand\hbattr{\textcolor{attrcolor}{\mathsf{hb}}}
+\newcommand\hbattrof[1]{{#1}\mathop{\cdot}\hbattr}
+\newcommand\cbattr{\textcolor{attrcolor}{\mathsf{cb}}}
+\newcommand\cbattrof[1]{{#1}\mathop{\cdot}\cbattr}
+%%%%%% Relations on Events %%%%%%%%%%%%%%
+
+\newcommand\cancelrelof[1]{\textcolor{red}{\cancel{\textcolor{black}{#1}}}}
+
+\newcommand\reflexiverelof[1]{\,\textcolor{relcolor}{\left[#1\right]^?}}
+\newcommand\transitiverelof[1]{\,\textcolor{relcolor}{\left[#1\right]^+}}
+\newcommand\xvarrel{{\color{relcolor}{\xvar}}}
+\newcommand\wrel{{\color{relcolor}{W}}}
+\newcommand\rrel{{\color{relcolor}{R}}}
+\newcommand\prmfrrel[1]{{\color{relcolor}{\prm\frrel{#1}}}}
+\newcommand\anyrel{{\color{relcolor}{\mathsf{{R}}}}}
+\newcommand\anyrelof[1]{{color{relcolor}{\anyrel(#1)}}}
+\newcommand\xanyrel[1]{{\color{relcolor}{\anyrel^{#1}}}}
+\newcommand\xanyrelof[2]{{\color{relcolor}{\xanyrel{#1}(#2)}}}
+\newcommand\hbrel{{\color{relcolor}{\mathsf{{hb}}}}}
+\newcommand\xhbrel[1]{{\color{relcolor}{\hbrel^{#1}}}}
+\newcommand\cbrel{{\color{relcolor}{\mathsf{{cb}}}}}
+\newcommand\xcbrel[1]{{\color{relcolor}{\of\cbrel{#1}}}}
+
+\newcommand\concurrentwith\parallel
+\newcommand\brrel{{\color{relcolor}{\mathsf{{br}}}}}
+\newcommand\xbrrel[1]{{\color{relcolor}{\brrel^{#1}}}}
+\newcommand\pohbrel{{\color{relcolor}{\mathsf{{pohb}}}}}
+\newcommand\hbporel{{\color{relcolor}{\mathsf{{hbpo}}}}}
+\newcommand\sobrel{{\mathsf{sob}}}
+\newcommand\xsobrel[1]{{\color{relcolor}{\sobrel^{#1}}}}
+\newcommand\obrel{{\mathsf{ob}}}
+\newcommand\xobrel[1]{{\color{relcolor}{\obrel^{#1}}}}
+%\newcommand\blockedfrom{\rhd}
+%\newcommand\xblockedfrom[1]{{\color{relcolor}{\blockedfrom^{#1}}}}
+\newcommand\unswappable{\rhd}
+\newcommand\xunswappable[1]{{\color{relcolor}{\unswappable^{#1}}}}
+
+\newcommand\flatteningof[1]{\left\lfloor#1\right\rfloor}
+
+
+%%%%%%% DPOR %%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%% enumerate %%%%%%%%%%%%%%
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+\renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}
+
+
+%%%%%%%%%%%%%%%%% Intervals %%%%%%%%
+\newcommand\interval\alpha
+\newcommand\binterval\beta
+\newcommand\intervals\gamma
+\newcommand\mkinterval[2]{
+  \left[{#1}\hspace{-1pt}\cdot\hspace{-1pt}\cdot\,{#2}\right]}
+
+\newcommand\rightattr{{\mathsf{right}}}
+\newcommand\rightattrof[1]{{#1}\mathop{\cdot}\rightattr}
+
+\newcommand\leftattr{{\mathsf{left}}}
+\newcommand\leftattrof[1]{{#1}\mathop{\cdot}\leftattr}
+
+\newcommand\subinterval{\preceq}

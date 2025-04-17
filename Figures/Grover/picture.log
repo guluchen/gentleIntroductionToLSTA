@@ -1,0 +1,60 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.19)  29 MAR 2025 17:31
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**picture
+(/usr/local/texlive/2024/texmf-dist/tex/plain/graphics-pln/picture.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(/usr/local/texlive/2024/texmf-dist/tex/plain/graphics-pln/miniltx.tex
+\@tempcnta=\count188
+\@tempcntb=\count189
+\@tempdima=\dimen140
+\@tempdimb=\dimen141
+\@tempdimc=\dimen142
+\@tempboxa=\box51
+\@tempskipa=\skip48
+\@tempskipb=\skip49
+\@temptokena=\toks17
+
+
+\filename@parse was defined in texsys.cfg:
+\let \filename@area \@empty \expandafter \filename@path #1/\\.
+
+\leftmarginv=\dimen143
+\leftmarginvi=\dimen144
+\@ovxx=\dimen145
+\@ovyy=\dimen146
+\@ovdx=\dimen147
+\@ovdy=\dimen148
+\@ovro=\dimen149
+\@ovri=\dimen150
+\@xdim=\dimen151
+\@ydim=\dimen152
+\@linelen=\dimen153
+\@dashdim=\dimen154
+\fboxsep=\dimen155
+\fboxrule=\dimen156
+)
+(/usr/local/texlive/2024/texmf-dist/tex/plain/graphics-pln/autopict.sty
+autopict.sty: 2001/08/27 v1.1k Picture mode autoload file
+
+! TeX capacity exceeded, sorry [input stack size=10000].
+\MessageBreak ->
+\space 
+                        \space Command \@backslashchar \reserved@a \space al...
+l.306 \newcommand\qbezier[2][0]{\bezier{#1}#2}
+                                              
+If you really absolutely need more capacity,
+you can ask a wizard to enlarge me.
+
+ 
+Here is how much of TeX's memory you used:
+ 30 strings out of 474116
+ 914 string characters out of 5743682
+ 1925187 words of memory out of 5000000
+ 22483 multiletter control sequences out of 15000+600000
+ 558069 words of font info for 36 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 10000i,0n,13p,134b,12s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!

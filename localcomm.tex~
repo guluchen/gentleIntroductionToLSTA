@@ -1,0 +1,5 @@
+\newcommand\tree{T}
+\newcommand\itree[1]{\tree_{#1}}
+\newcommand\ketof[1]{|#1\rangle}
+\newcommand\bstate{b}
+\newcommand\qustate{q}

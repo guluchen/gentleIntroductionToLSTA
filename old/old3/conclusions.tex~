@@ -1,0 +1,14 @@
+\section{Conclusions}
+In addition to its early practical promise,  the approach opens new research directions in automata theory, where quantum structures introduce novel mathematical challenges and opportunities.
+%
+It establishes a connection between quantum program verification and automata, promoting new possibilities to
+exploit the richness of automata theory and automata-based verification in quantum computing.
+%
+It is worth noting that the methodology is not just about catching mistakes but also about building trust in quantum computing systems as we move toward an era in which they might solve problems classical systems cannot.
+
+
+In conclusion, the accompanying paper represents a rare confluence of disciplines, opening pathways for collaboration between automata theorists, quantum physicists, and software engineers. Looking ahead, this line of research opens up exciting opportunities. Could similar automata-based techniques be adapted to other aspects of quantum software engineering? Could this approach handle quantum programming languages' more abstract and flexible constructs? 
+
+The authors' combination of deep theoretical insights and practical tool development sets the stage for significant advancements in the field. Their results are a milestone for quantum circuit verification and a beacon guiding future research toward reliable quantum computation.
+% 
+
