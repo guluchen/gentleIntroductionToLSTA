@@ -5,7 +5,7 @@ We start by modeling classical digital gates in the quantum setting.
 %
 Then, we introduce some quantum gates and show we can represent them using matrices.
 
-\paragraph{Classical Gates}
+\paragraph{Classical Gates.}
 \begin{figure} 
 \includegraphics[]{Figures/Gates/not} 
 \caption{(a) The $\notgate$ gate together with its matrix presentation.
@@ -35,7 +35,9 @@ The input and output states are both column vectors.
 \includegraphics[scale=0.7]{Figures/Gates/and} 
 \caption{(a) The {\tt AND gate} together with its matrix presentation.
 (b) Applying the gate to $01$, represented by $[0\;\;1\;\;0\;\;0]^T$, will give $0$. 
-(c) Applying the gate to $11$, represented by $[0\;\;0\;\;0\;\;1]^T$, will give $1$.}
+(c) Applying the gate to $11$, represented by $[0\;\;0\;\;0\;\;1]^T$, will give $1$.
+\ol{there seems to be a bug in c) --- the result should be $[0~1]$}
+  }
 \label{and:gate:fig}
 \end{figure}
 %
@@ -45,15 +47,17 @@ The gate has two input bits and one output bit, and hence its behavior is descri
 %
 The input state is of length $4$ and the output state has length $2$.
 
-\paragraph{Quantum Gates}
+\paragraph{Quantum Gates.}
 \begin{figure} 
 \includegraphics[scale=0.7]{Figures/Gates/qgates} 
-\caption{The Identity gate, the Pauli gates, and the Hadamard gate.}
+\caption{The Identity gate ($I$), the Pauli gates ($X$, $Y$, $Z$), and the Hadamard gate ($H$).
+\ol{the "2" in the right-hand top corner should be "1"}
+  }
 \label{qgates:fig} 
 \end{figure}
 In a similar manner to classical gates, we will represent quantum gate behaviors by matrices.
 %
-Quantum gates are {\it reversible}: if we run the gate and then run the inverse of the gate, then we get the identity matrix.
+Quantum gates are {\it reversible}: if we run the gate and then run the inverse of the gate, then we get the identity matrix.\ol{we get the same \emph{state}?}
 %
 Formally, the matrix representing the gate should be {\it unitary}, i.e., its conjugate transpose should be equal to its inverse.
 %
@@ -63,11 +67,11 @@ The gate $\idgate$ is the identity, and maps each input to an identical output.
 %
 Next, we introduce the three Pauli gates.
 
-The $\xpgate$ is the quantum analogue of the classical $\notgate$ gate, acting on a single qubit. 
+The $\xpgate$ is the quantum analogue of the classical $\notgate$ gate, acting on a~single qubit. 
 %
-It is often referred to as \emph{bit-flip gate} because it inverts the state.
+It is often referred to as \emph{bit-flip gate} because it inverts the value of the qubit.
 %
-In classical computing, a $\notgate$ gate flips a binary value—changing $0$ to $1$ and vice versa. 
+In classical computing, a $\notgate$ gate flips a binary value---changing~$0$ to~$1$ and vice versa. 
 %
 The $\xpgate$ gate performs the same operation in the quantum domain for the basis states.
 %
@@ -136,14 +140,16 @@ Creates superposition: Crucial for quantum algorithms like Deutsch-Jozsa, Grover
 Balanced output: Equal amplitude for both $\ketof0$ and $\ketof1$  (up to a sign), enabling interference.
 \end{itemize}
 
-\paragraph{Tree Transformations}
+\paragraph{Tree Transformations.}
 
 \begin{figure}[ht] 
     \centering
     \includegraphics[scale=0.9]{Figures/Trees/ApplyNOT} 
     \caption{Applying the $X$ gate on an input tree. 
-    We apply the gate to the bit $\xvar_1$.
-    The application is modeled by swapping the left and right subtrees of all nodes at the level corresponding to the qubit $\xvar_1$ (i.e., level~1 in this case).}
+    We apply the gate to the qubit~$\xvar_1$.
+    The application is modeled by swapping the left and right subtrees of all nodes at the level corresponding to the qubit $\xvar_1$ (i.e., level~1 in this case).
+    \ol{in the right-hand side, the 000 and 001 branches should be swapped, and also the 110 and 111 branches}
+    }
     \label{apply:not:fig}
 \end{figure}
 
@@ -151,7 +157,7 @@ Balanced output: Equal amplitude for both $\ketof0$ and $\ketof1$  (up to a sign
     \centering
     \includegraphics[scale=0.9]{Figures/Trees/ApplyH} 
     \caption{Applying the $\hgate$ gate on an input tree. 
-    The gate is applied to the bit $\xvar_1$.
+    The gate is applied to the qubit~$\xvar_1$.
     This transformation also targets all nodes at level~1 (corresponding to $\xvar_1$), updating subtree structure and amplitudes accordingly.}
     \label{apply:H:fig}
 \end{figure}
@@ -162,5 +168,5 @@ Given a tree representing a quantum state, a qubit $\xvar$, and a gate, we compu
 A major difference from the classical setting is that, due to quantum superposition, the effect of a gate application is generally \emph{global}.
 That is, we must update all parts of the state in which the qubit $\xvar$ is involved.
 
-In \cref{apply:not:fig} and \cref{apply:H:fig}, we illustrate this by swapping all subtrees at nodes corresponding to $\xvar_1$.
-As shown in the example, a gate application can affect the amplitudes of exponentially many leaves—effectively updating an exponential number of classical states.
+In \cref{apply:not:fig,apply:H:fig}, we illustrate this by swapping all subtrees at nodes corresponding to $\xvar_1$.
+As shown in the examples, a gate application can affect the amplitudes of exponentially many leaves—effectively updating an exponential number of classical states.

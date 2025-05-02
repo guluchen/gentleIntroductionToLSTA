@@ -2,11 +2,12 @@
 
 %^
 
-\begin{wrapfigure}{R}{0.5\textwidth}
+\begin{wrapfigure}[8]{R}{0.5\textwidth}
 \includegraphics[width=0.48\textwidth]{Figures/HWCircuits/DigitalCircuit} 
 \caption{A classical combinatorial circuit}
+\label{classicalcirc:fig}
 \end{wrapfigure}
-A combinatorial circuit consists of a set of gates and acts as a Boolean function. It takes a sequence of bits as input and produces a sequence of bits as output. There are also internal bits that represent the connections between gates. In the figure, the circuit has three input bits, one output bit, and three internal bits.
+A classical combinatorial circuit consists of a set of gates and acts as a~Boolean function. It takes a sequence of bits as input and produces a~sequence of bits as output. There are also internal bits that represent the connections between gates. In \cref{classicalcirc:fig}, the circuit has three input bits, one output bit, and three internal bits.
 
 %^
 
@@ -51,13 +52,15 @@ The $\zpgate$ keeps the probability unchanged (as it only affects the phase), bu
 
 %^
 
+\ol{this page does not look nice}
+
 Next, we turn our attention to the verification of quantum circuits.
 
 We can formulate the {\it program verification} problem as an instance of classical Hoare Logic:
 \[
 P \{C\} Q
 \]
-where $P$ is the {\it pre-condition}, $Q$ is the post-condition, and $C$ is a program.
+where $P$ is the {\it pre-condition}, $Q$ is the {\it post-condition}, and $C$ is a {\it program}.
 
 The pre-condition $P$ characterizes a set of {\it initial} ({\it source}) states, and the post-condition $Q$ characterizes a set of {\it final} ({\it target}) states.
 
@@ -86,18 +89,18 @@ Given that we represent quantum states by trees, a natural choice is to use tree
 \begin{figure}[ht] 
     \centering
     \includegraphics[scale=0.8]{Figures/Automata/aut3} 
-    \caption{(a) A tree automaton for generating all basis states of size $3$.
-      The dashed lines represent the left child, and the bold lines represent the right child.
-      (b) The tree corresponding to $[0\;0\;0\;0\;0\;0\;1\;0]^T$. The red rules in the automaton are those used to generate the tree.
-      (c) An automaton to generate all basis states of size $n$.}
+    \caption{(a)~A tree automaton for generating all basis states of $3$ qubits.
+      The dashed lines represent the left-hand child, and the solid lines represent the right-hand child.
+      (b)~The tree corresponding to $[0\;0\;0\;0\;0\;0\;1\;0]^T$. The red rules in the automaton are those used to generate the tree. \ol{I don't see red rules}
+      (c)~An automaton to generate all basis states of $n$ qubits.}
     \label{automata:fig}
 \end{figure}
 
 %^
 
-\cref{automata:fig}(a) gives a tree automaton for accepting all the basis states of size three.
+\cref{automata:fig}(a) gives a tree automaton for accepting all basis states of size three.
 
-The set of rules is:
+The set of rules is the following:
 \[
 \begin{array}{lll}
 p \xrightarrow{x_0} (q_0, q_1) &
@@ -105,7 +108,7 @@ p \xrightarrow{x_0} (q_0, q_1) &
 q_0 \xrightarrow{x_1} (r_0, r_0) &
 \;\;\;\;\;\; q_1 \xrightarrow{x_1} (r_1, r_0) &
 \;\;\;\;\;\; q_1 \xrightarrow{x_1} (r_0, r_1) \\
-r_0 \xrightarrow{x_2} (s_0, r_0) &
+r_0 \xrightarrow{x_2} (s_0, s_0) &
 \;\;\;\;\;\; r_1 \xrightarrow{x_2} (s_1, s_0) &
 \;\;\;\;\;\; r_1 \xrightarrow{x_2} (s_0, s_1) \\
 s_0 \xrightarrow{} 0 &
@@ -119,7 +122,11 @@ Notice that we are characterizing $2^n$ basis states using only $3n+1$ transitio
 
 \begin{figure}
 \includegraphics{Figures/Circuits/Bells}
-\caption{The Bell gates}
+\caption{The circuit for the Bell state.
+\ol{there is an inconsistency between $x_0, x_1$ in the automata and $x_1, x_2$ in the circuit.
+  Also, there is $x_2$ in  (c) --- not sure what it denotes}
+\ol{dashed/solid lines are missing}
+  }
 \label{Bells:fig}
 \end{figure}
 
@@ -135,7 +142,7 @@ We do this by constructing a sequence of automata that model the effects of each
 
 Assume we want to design a circuit constructing the Bell state, i.e., a 2-qubit circuit converting a basis state $\ketof{00}$ to the maximally entangled state $\frac{1}{\sqrt{2}}(\ketof{00} + \ketof{11})$.
 
-Given the automaton corresponding to the pre-condition (\cref{Bells:fig}(a)), we derive the automaton corresponding to the post-condition (Fig.~1b).
+Given the automaton corresponding to the pre-condition (\cref{Bells:fig}(a)), we derive the automaton corresponding to the post-condition (\cref{Bells:fig}(c)).
 
 In this case, both automata use $q$ as the root state and accept only one tree.
 
