@@ -3,12 +3,11 @@
 
 Research on the algorithmic verification of quantum systems remains in its early stages.
 %
-Only recently have initial contributions emerged, including the first studies employing SAT solvers for quantum verification \cite{DBLP:conf/cade/ChenRT23}.
+Only recently have initial contributions emerged, including the first studies employing SAT solvers for quantum verification \citep{DBLP:conf/cade/ChenRT23}.
 %
-We have taken foundational steps in this direction through recent work on the symbolic verification of quantum circuits \cite{DBLP:journals/pacmpl/AbdullaCCHLLLT25,CACM25,PLanQC25}.
+We have taken foundational steps in this direction through recent work on the symbolic verification of quantum circuits~\citep{PLanQC25,DBLP:journals/pacmpl/AbdullaCCHLLLT25,CACM25,ChenCLLTY23,ChenCLLT23,chen2025autoq}.
 %
-
-In contrast, the algorithmic verification of classical systems, particularly through model checking \cite{DBLP:reference/mc/AbdullaST18}, has been an active and well-established area of research for nearly four decades.
+In contrast, the algorithmic verification of classical systems, particularly through model checking \citep{DBLP:reference/mc/AbdullaST18}, has been an active and well-established area of research for nearly four decades.
 %
 This field has yielded a substantial and mature body of work and continues to thrive, with ongoing research published regularly in premier venues such as {\sc POPL}, {\sc CAV}, {\sc PLDI}, {\sc MICRO}, {\sc ASPLOS}, etc.
 %
@@ -39,13 +38,11 @@ Nevertheless, with techniques likely to be developed in the future, symbolic ver
 As quantum computing continues to evolve, there is a growing need to develop symbolic abstractions tailored to quantum systems, hybrid symbolic-numeric approaches, and novel verification frameworks. These directions represent promising and largely unexplored areas of research.
 %
 
-The limitations of the state of the art include the following:
+In quantum circuit simulation, decision diagrams have been employed as compact representations of a single quantum state~\citep{TsaiJiangJhang2021,ChenChenJiangJobranovaLengal2024,KissingerWetering2022,10.1145/3712711}, and even of entire quantum circuits~\citep{WeiTsaiJhangJiang2022,SistlaChaudhuriReps2023,BurgholzerWille2020,Vinkhuijzen2023limdd}. However, their application to verification against formal specifications remains underexplored. Some efforts have also investigated leveraging constraint solvers for quantum circuit simulation and equivalence checking~\citep{MeiBonsangueLaarman2024Sim,MeiCoopmansLaarman2024Eq}.
+
+Aside from a few notable exceptions~\citep{DBLP:journals/pacmpl/0001CLLTY23,DBLP:conf/fm/BauerMarquartLS23,Chareton2021,amy2018towards} and our own recent contributions~\citep{PLanQC25,DBLP:journals/pacmpl/AbdullaCCHLLLT25,CACM25,ChenCLLTY23,ChenCLLT23,chen2025autoq}, there is a significant gap in research on symbolic encodings specifically designed for the automated verification of quantum circuits.
 %
-\begin{itemize}
-\item
-With the exception of \cite{DBLP:journals/pacmpl/0001CLLTY23} and our own recent contributions \cite{DBLP:journals/pacmpl/AbdullaCCHLLLT25,PLanQC25}, there is currently a lack of work dedicated to developing symbolic encodings tailored for the automated verification of quantum circuits.
-%
-By contrast, several studies have focused on adapting classical Hoare logic to quantum systems. In particular, the approach proposed in \cite{d2006quantum} and Ying’s quantum Hoare logic \cite{ying2012floyd} defines predicates as mappings from mixed states—i.e., probability distributions over pure quantum states—to real values in the interval $[0,1]$, representing the probability that a given state satisfies a particular condition.
+By contrast, several studies have focused on adapting classical Hoare logic to quantum systems. In particular, the approach proposed in \citep{d2006quantum} and Ying’s quantum Hoare logic \citep{ying2012floyd} defines predicates as mappings from mixed states—i.e., probability distributions over pure quantum states—to real values in the interval $[0,1]$, representing the probability that a given state satisfies a particular condition.
 %
 However, these logics are inherently deductive and interactive, not algorithmic in nature. As such, they are not suited for automated verification, often requiring significant manual effort and domain-specific reasoning.
 %
@@ -57,13 +54,12 @@ Within this framework, automata serve as compact representations of such predica
 One of the primary advantages of this set-based formulation is that it facilitates the construction of efficient and fully automated verification algorithms, making it significantly more scalable for practical use in the quantum domain.
 %
 
-\item
+
 Currently, there are no algorithms for minimization, simulation, and bisimulation over automata models designed specifically for the verification of quantum systems.
 %
 Addressing this gap should be a central objective.
 %
 We need to adapt and extend prior experience in classical automata theory to develop such algorithmic frameworks tailored to the specific characteristics of quantum systems.
-\end{itemize}
 
 \subsection{Algorithmic Verification}
 
@@ -108,7 +104,7 @@ This is an operation that increases the amplitudes of the basis states that sati
 %
 By performing an increasing number of iterations, the precision of the computation increases, and the probability that we will measure the correct answer approaches one.
 %
-We reach the required precision after $O(\sqrt{N})$ iterations, which explains the number of stages\footnote{Again, we give a high-level description here. We refer, e.g., to \cite{10.5555/1408782} for the algorithm details.}.
+We reach the required precision after $O(\sqrt{N})$ iterations, which explains the number of stages\footnote{Again, we give a high-level description here. We refer, e.g., to \citep{10.5555/1408782} for the algorithm details.}.
 %
 The system is characterized by a two-dimensional parameterization: the number of qubits and the number of stages are unbounded.
 %
@@ -126,13 +122,13 @@ The following aspects are currently lacking in existing work:
 %
 \begin{itemize}
 \item
-Thge paper \cite{BauerMarquartLS23} employs \emph{symbolic execution} \cite{10.1145/360248.360252} to verify input-output relationships by formulating queries discharged to SMT solvers over the theory of real numbers.
+Thge paper \citep{BauerMarquartLS23} employs \emph{symbolic execution} \citep{10.1145/360248.360252} to verify input-output relationships by formulating queries discharged to SMT solvers over the theory of real numbers.
 %
-The SMT array theory approach \cite{DBLP:conf/cade/ChenRT23} instantiated this framework by enabling a polynomial-sized encoding of quantum circuits. Nevertheless, it continues to suffer from scalability limitations.
+The SMT array theory approach \citep{DBLP:conf/cade/ChenRT23} instantiated this framework by enabling a polynomial-sized encoding of quantum circuits. Nevertheless, it continues to suffer from scalability limitations.
 %
-In \cite{DBLP:journals/pacmpl/AbdullaCCHLLLT25,PLanQC25}, we demonstrate that automata-based techniques outperform these approaches by several orders of magnitude.
+In \citep{DBLP:journals/pacmpl/AbdullaCCHLLLT25,PLanQC25}, we demonstrate that automata-based techniques outperform these approaches by several orders of magnitude.
 %
-Another scalable, fully automated method for analyzing quantum circuits is \emph{quantum abstract interpretation}~\cite{yu2021quantum,perdrix2008quantum}.
+Another scalable, fully automated method for analyzing quantum circuits is \emph{quantum abstract interpretation}~\citep{yu2021quantum,perdrix2008quantum}.
 %
 However, quantum abstract interpretation relies on over-approximation, which may limit its precision in bug detection.
 %
@@ -140,7 +136,7 @@ However, quantum abstract interpretation relies on over-approximation, which may
 \item
 There are no methods supporting regular model checking or parameterized verification for quantum applications.
 %
-Our recent paper \cite{DBLP:journals/pacmpl/AbdullaCCHLLLT25} presents two examples of parameterized quantum circuits.
+Our recent paper \citep{DBLP:journals/pacmpl/AbdullaCCHLLLT25} presents two examples of parameterized quantum circuits.
 %
 However, it does not provide algorithms for general parameterized verification.
 %

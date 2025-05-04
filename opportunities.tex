@@ -17,7 +17,7 @@ We can use the operation to ensure that a system's behavior conforms to its spec
 %
 However, in many cases, checking language inclusion is computationally intensive or even undecidable.
 %
-This problem is well known in classical automata and similarly manifests in the models for quantum systems in \cite{DBLP:journals/pacmpl/AbdullaCCHLLLT25}.
+This problem is well known in classical automata and similarly manifests in the models for quantum systems in \citep{DBLP:journals/pacmpl/AbdullaCCHLLLT25}.
 %
 Therefore, we anticipate the models introduced in this project will exhibit the same computational difficulty.
 %
@@ -32,7 +32,7 @@ To deal with incompleteness, we can, in parallel, develop methods based on the c
 %
 As in the classical case, we expect these algorithms to suffer from state space explosion, with an exponential increase in the number of states.
 %
-To combine the strengths of both approaches, we need to adapt the antichain framework introduced in~\cite{wulfantichains,DBLP:conf/tacas/AbdullaCHMV10}.
+To combine the strengths of both approaches, we need to adapt the antichain framework introduced in~\citep{wulfantichains,DBLP:conf/tacas/AbdullaCHMV10}.
 %
 In this setting, the computed simulation relation will be used to prune unnecessary search paths during the execution of the subset-construction-based algorithm, thereby improving both performance and scalability.
 %
@@ -66,7 +66,7 @@ Empirical evidence suggests that concurrent programs often exhibit a \emph{small
 In practice, if any problematic behavior exists, it typically manifests in relatively small instances of the system.
 
 Building on this insight, we can develop methods that leverage the small model property by restricting the verification process to a limited set of fixed-size system instances.
-Inspired by the \emph{view abstraction} approach of \cite{DBLP:journals/sttt/AbdullaHH16}, one can design a procedure that involves a fixed-point iteration where we apply gate operations on fixed-size states that effectively sample the quantum state.
+Inspired by the \emph{view abstraction} approach of \citep{DBLP:journals/sttt/AbdullaHH16}, one can design a procedure that involves a fixed-point iteration where we apply gate operations on fixed-size states that effectively sample the quantum state.
 If the results are inconclusive, we can refine the abstraction by increasing the size of the sampled states.
 We can repeat this process until we either uncover a specification violation or establish an invariant confirming the correctness of the circuit.
 
@@ -84,7 +84,7 @@ A central technical challenge in this context is computing the transitive closur
 %
 In general, such closures are either not computable or involve prohibitive computational complexity.
 %
-To mitigate this, we can enhance the framework with acceleration and abstraction techniques, drawing on methods developed in prior work \cite{DBLP:conf/tacas/AbdullaDHR07}, in order to approximate or accelerate the computation of transitive closures.
+To mitigate this, we can enhance the framework with acceleration and abstraction techniques, drawing on methods developed in prior work \citep{DBLP:conf/tacas/AbdullaDHR07}, in order to approximate or accelerate the computation of transitive closures.
 %
 
 Because both the (potentially infinite) sets of initial and target states can be encoded as automata, the regular model checking framework will provide a powerful and expressive foundation for verifying both parameterized and fixed-parameter quantum circuits.
@@ -130,11 +130,11 @@ To this end, we can introduce \textit{symbolic} quantum states, in which each co
 Relational specifications can then be naturally formulated as arithmetic constraints over these variables.
 %
 
-Verification of such specifications is achieved through symbolic execution of the quantum circuit, following the principles of symbolic execution described in \cite{10.1145/360248.360252}.
+Verification of such specifications is achieved through symbolic execution of the quantum circuit, following the principles of symbolic execution described in \citep{10.1145/360248.360252}.
 %
 We can then check whether all trees accepted by the resulting tree automaton (TA) satisfy the given property.
 %
-Potentially, one can use a modified antichain-based algorithm for testing TA language inclusion \cite{DBLP:conf/tacas/AbdullaCHMV10}.
+Potentially, one can use a modified antichain-based algorithm for testing TA language inclusion \citep{DBLP:conf/tacas/AbdullaCHMV10}.
 %
 As described above, these algorithms reduce the state space by pruning based on simulation relations over automaton states.
 %
