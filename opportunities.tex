@@ -120,25 +120,37 @@ Third, due to the linearity of quantum operations, it is sufficient to test a ma
 %
 
 \subsubsection{Amplitude Verification}
-In many quantum circuits, it is often essential to consider \textit{relational specifications} that impose numerical constraints on the amplitudes found in the leaves of the trees representing quantum states.
+
+Amplitude verification has emerged as an important objective in the verification of quantum circuits. Some initial approaches have been proposed in our recent work~\citep{ChenCLLT23,chen2025autoq,DBLP:journals/pacmpl/AbdullaCCHLLLT25}, and this remains an ongoing area of investigation.
+
+In many quantum circuits, it is crucial to reason about \emph{relational specifications} that impose numerical constraints on the amplitudes associated with the leaf nodes of tree representations of quantum states. These specifications can express probabilistic guarantees or amplitude transformations, such as: ``Grover’s circuit yields a correct answer with probability greater than 90\%,'' or ``the amplitude of a particular basis state increases after executing circuit $C$.''
+
+To formally capture such properties, we introduce \emph{symbolic quantum states}, where each computational basis state is annotated with a symbolic numerical variable representing its amplitude. Relational specifications can then be encoded as arithmetic constraints over these variables.
+
+Verification proceeds by performing symbolic execution of the quantum circuit, following the general paradigm established in~\citep{10.1145/360248.360252}. This produces a symbolic representation of all possible executions, encapsulated as a tree automaton (TA). The correctness of the circuit with respect to a given specification is then reduced to checking whether all trees accepted by the TA satisfy the specified constraints.
+
+To address the computational complexity of this task, we use a modified antichain-based algorithm for tree automata language inclusion~\citep{DBLP:conf/tacas/AbdullaCHMV10}. These algorithms optimize the search by pruning the state space using simulation relations over automaton states. In our setting, we extend these simulation relations to incorporate the numerical constraints on symbolic amplitudes, thereby ensuring that the pruning strategy respects both the structural and quantitative aspects of quantum states.
+
+
+%In many quantum circuits, it is often essential to consider \textit{relational specifications} that impose numerical constraints on the amplitudes found in the leaves of the trees representing quantum states.
 %
-Such specifications allow us to express properties such as ``Grover's circuit has ${>}90\%$ probability of finding a correct answer'' or ``the amplitude of the basis state is increased after executing the circuit $C$.'' 
+%Such specifications allow us to express properties such as ``Grover's circuit has ${>}90\%$ probability of finding a correct answer'' or ``the amplitude of the basis state is increased after executing the circuit $C$.'' 
 %
 
-To this end, we can introduce \textit{symbolic} quantum states, in which each computational basis state is associated with a numerical variable representing its amplitude.
+%To this end, we can introduce \textit{symbolic} quantum states, in which each computational basis state is associated with a numerical variable representing its amplitude.
 %
-Relational specifications can then be naturally formulated as arithmetic constraints over these variables.
+%Relational specifications can then be naturally formulated as arithmetic constraints over these variables.
 %
 
-Verification of such specifications is achieved through symbolic execution of the quantum circuit, following the principles of symbolic execution described in \citep{10.1145/360248.360252}.
+%Verification of such specifications is achieved through symbolic execution of the quantum circuit, following the principles of symbolic execution described in \citep{10.1145/360248.360252}.
 %
-We can then check whether all trees accepted by the resulting tree automaton (TA) satisfy the given property.
+%We can then check whether all trees accepted by the resulting tree automaton (TA) satisfy the given property.
 %
-Potentially, one can use a modified antichain-based algorithm for testing TA language inclusion \citep{DBLP:conf/tacas/AbdullaCHMV10}.
+%Potentially, one can use a modified antichain-based algorithm for testing TA language inclusion \citep{DBLP:conf/tacas/AbdullaCHMV10}.
 %
-As described above, these algorithms reduce the state space by pruning based on simulation relations over automaton states.
+%As described above, these algorithms reduce the state space by pruning based on simulation relations over automaton states.
 %
-In our setting, we can extend this pruning strategy to account for the numerical constraints associated with symbolic amplitudes, ensuring that the verification process respects quantum states' structural and quantitative aspects.
+%In our setting, we can extend this pruning strategy to account for the numerical constraints associated with symbolic amplitudes, ensuring that the verification process respects quantum states' structural and quantitative aspects.
 %
 
 
