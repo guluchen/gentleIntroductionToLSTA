@@ -34,10 +34,9 @@ The input and output states are both column vectors.
 \begin{figure} 
 \includegraphics[scale=0.7]{Figures/Gates/and} 
 \caption{(a) The {\tt AND gate} together with its matrix presentation.
-(b) Applying the gate to $01$, represented by $[0\;\;1\;\;0\;\;0]^T$, will give $0$. 
+  (b) Applying the gate to $01$, represented by $[0\;\;1\;\;0\;\;0]^T$, will give $0$. 
 (c) Applying the gate to $11$, represented by $[0\;\;0\;\;0\;\;1]^T$, will give $1$.
-\ol{there seems to be a bug in c) --- the result should be $[0~1]$}
-  }
+}
 \label{and:gate:fig}
 \end{figure}
 %
@@ -51,13 +50,12 @@ The input state is of length $4$ and the output state has length $2$.
 \begin{figure} 
 \includegraphics[scale=0.7]{Figures/Gates/qgates} 
 \caption{The Identity gate ($I$), the Pauli gates ($X$, $Y$, $Z$), and the Hadamard gate ($H$).
-\ol{the "2" in the right-hand top corner should be "1"}
   }
 \label{qgates:fig} 
 \end{figure}
 In a similar manner to classical gates, we will represent quantum gate behaviors by matrices.
 %
-Quantum gates are {\it reversible}: if we run the gate and then run the inverse of the gate, then we get the identity matrix.\ol{we get the same \emph{state}?}
+Quantum gates are {\it reversible}: if we run the gate from a state and then run the inverse of the gate, then we get the  same state.
 %
 Formally, the matrix representing the gate should be {\it unitary}, i.e., its conjugate transpose should be equal to its inverse.
 %
@@ -148,7 +146,6 @@ Balanced output: Equal amplitude for both $\ketof0$ and $\ketof1$  (up to a sign
     \caption{Applying the $X$ gate on an input tree. 
     We apply the gate to the qubit~$\xvar_1$.
     The application is modeled by swapping the left and right subtrees of all nodes at the level corresponding to the qubit $\xvar_1$ (i.e., level~1 in this case).
-    \ol{in the right-hand side, the 000 and 001 branches should be swapped, and also the 110 and 111 branches}
     }
     \label{apply:not:fig}
 \end{figure}

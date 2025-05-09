@@ -28,9 +28,9 @@
 
 
 \begin{tikzpicture}[line width=1pt]
-\node[name=x1]{$\ketof{\xvar_1}$};
+\node[name=x1]{$\ketof{\xvar_0}$};
 \node[name=x2,anchor=north] at 
-($(x1.south)+(0pt,-20pt)$){$\ketof{\xvar_2}$};
+($(x1.south)+(0pt,-20pt)$){$\ketof{\xvar_1}$};
 
 \node[name=H,anchor=west,draw] at 
 ($(x1.east)+(15pt,0pt)$){$\hgate$};
@@ -71,7 +71,7 @@ at ($(qB)+(20pt,-20pt)$){$q_1$};
 
 
 
-\draw[bend right=30,->,>=stealth](qB) to coordinate[pos=0.3] (qBlm)(q0);
+\draw[bend right=30,->,>=stealth,dashed](qB) to coordinate[pos=0.3] (qBlm)(q0);
 \draw[bend left=30,->,>=stealth](qB) to coordinate[pos=0.3] (qBrm)(q1);
 \draw[fill=blue!10] (qB) to [bend right=9]  (qBlm) to [bend right=50]  (qBrm) to [bend right=9] cycle;
 
@@ -90,18 +90,18 @@ at ($(q1B)+(0pt,-20pt)$){$q_3$};
 
 
 \draw[bend left=0,->,>=stealth](q0B) to coordinate[pos=0.4] (q0Blm)(q2);
-\draw[bend left=30,->,>=stealth](q0B) to coordinate[pos=0.2] (q0Brm)(q3);
+\draw[bend left=30,->,>=stealth,dashed](q0B) to coordinate[pos=0.2] (q0Brm)(q3);
 \draw[fill=blue!10] (q0B) to [bend right=0]  (q0Blm) to [bend right=50]  (q0Brm) to [bend right=6] cycle;
 
 
 \draw[bend left=0,->,>=stealth](q1B) to coordinate[pos=0.4] (q1Blm)(q3);
-\draw[bend right=30,->,>=stealth](q1B) to coordinate[pos=0.2] (q1Brm)(q2);
+\draw[bend right=30,->,>=stealth,dashed](q1B) to coordinate[pos=0.2] (q1Brm)(q2);
 \draw[fill=blue!10] (q1B) to [bend left=0]  (q1Blm) to [bend left=50]  (q1Brm) to [bend left=6] cycle;
 
 
 \node[anchor=north,inner sep=2pt,font=\tiny]at(qB.south){$\xvar_0$};
 \node[anchor=north west,inner sep=0pt,font=\tiny]at($(q0B.south)+(0pt,-1pt)$){$\xvar_1$};
-\node[anchor=north east,inner sep=0pt,font=\tiny]at($(q1B.south)+(0pt,-1pt)$){$\xvar_2$};
+\node[anchor=north east,inner sep=0pt,font=\tiny]at($(q1B.south)+(0pt,-1pt)$){$\xvar_1$};
 
 \end{tikzpicture}
 
@@ -130,7 +130,7 @@ at ($(qB)+(20pt,-20pt)$){$q_1$};
 
 
 \draw[bend right=30,->,>=stealth](qB) to coordinate[pos=0.3] (qBlm)(q0);
-\draw[bend left=30,->,>=stealth](qB) to coordinate[pos=0.3] (qBrm)(q1);
+\draw[bend left=30,->,>=stealth,dashed](qB) to coordinate[pos=0.3] (qBrm)(q1);
 \draw[fill=blue!10] (qB) to [bend right=9]  (qBlm) to [bend right=50]  (qBrm) to [bend right=9] cycle;
 
 \node[anchor=north,inner sep=1pt,font=\tiny]at(qB.south){$\xvar_0$};
@@ -154,7 +154,7 @@ at ($(q1B)+(0pt,-20pt)$){$q_3$};
 
 \node[anchor=north,inner sep=3pt,font=\tiny]at(q0B.south){$\xvar_1$};
 
-\draw[bend left=0,->,>=stealth](q1B) to coordinate[pos=0.4] (q1Blm)(q3);
+\draw[bend left=0,->,>=stealth,dashed](q1B) to coordinate[pos=0.4] (q1Blm)(q3);
 \draw[bend right=30,->,>=stealth](q1B) to coordinate[pos=0.2] (q1Brm)($(q2.north east)+(-1pt,-1pt)$);
 \draw[fill=blue!10] (q1B) to [bend left=0]  (q1Blm) to [bend left=50]  (q1Brm) to [bend left=6] cycle;
 
@@ -164,7 +164,25 @@ at ($(q1B)+(0pt,-20pt)$){$q_3$};
 
 \end{tikzpicture}
 
-\input tmp
+\begin{tikzpicture}[line width=1pt]
+\node[name=in0]{$\ketof{0}$};
+
+
+\node[name=H,anchor=west,draw] at 
+($(in0.east)+(15pt,0pt)$){$\hgate$};
+\node[name=Z,anchor=west,draw] at 
+($(H.east)+(20pt,0pt)$){${\mathtt Z}$};
+
+
+\node[anchor=west,name=end] at ($(Z.east)+(15pt,0pt)$){};
+
+
+\draw (in0) -- (H);
+\draw (H) -- (Z);
+\draw (Z) -- (end);
+\end{tikzpicture}
+
+
 
 \end{document}
 

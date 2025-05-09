@@ -1,8 +1,8 @@
 \relax 
 \providecommand \oddpage@label [2]{}
 \@writefile{toc}{\contentsline {title}{On the Verification of Quantum Circuits\unskip \ \ignorespaces  (Research Challenges and Opportunities) }{1}{}\protected@file@percent }
-\@writefile{toc}{\authcount {8}}
-\@writefile{toc}{\contentsline {author}{ Parosh Aziz Abdulla \and Yo-Ga Chen \and Yu-Fang Chen \and Luk\'a\v {s} Hol\'ik \and Ond\v {r}ej Leng\'{a}l  \and Jyun-Ao Lin \and Fang-Yi  \and Lo Wei-Lun Tsai }{1}{}\protected@file@percent }
+\@writefile{toc}{\authcount {9}}
+\@writefile{toc}{\contentsline {author}{ Parosh Aziz Abdulla \and Yo-Ga Chen \and Yu-Fang Chen \and Kai-Min Chung \and Luk\'a\v {s} Hol\'ik \and {Ond\v {r}ej Leng\'{a}l}  \and Jyun-Ao Lin \and Fang-Yi Lo \and Wei-Lun Tsai }{1}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{}\protected@file@percent }
 \newlabel{introduction:section}{{1}{1}{}{}{}}
 \newlabel{introduction:section@cref}{{[section][1][]1}{[1][1][]1}}
@@ -11,110 +11,141 @@
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{qustate:tree:fig}{{1}{2}{}{}{}}
 \newlabel{qustate:tree:fig@cref}{{[figure][1][]1}{[1][2][]2}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}States}{4}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Different qubits and their vector and Dirac representations. (a, b) The basis states $|0\rangle $ and $|1\rangle $. (c, d, e) Quantum states in superposition. Measuring the state in (c) yields $0$ or $1$ with probability $0.5$. Measuring the state in (d) yields $0$ with probability $1/9$ and $1$ with probability $8/9$. }}{4}{}\protected@file@percent }
-\newlabel{qbit:state:fig}{{2}{4}{}{}{}}
-\newlabel{qbit:state:fig@cref}{{[figure][2][]2}{[1][4][]4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces A state involving three qubits. We provide the vector, Dirac, and tree-based representations. The tree spans all basis states, with the corresponding amplitudes shown as leaf labels. For instance, the left-most path represents $|000\rangle $ with amplitude $1/\sqrt  {2}$. }}{5}{}\protected@file@percent }
-\newlabel{triple:qbit:state:fig}{{3}{5}{}{}{}}
-\newlabel{triple:qbit:state:fig@cref}{{[figure][3][]3}{[1][5][]5}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Gates}{5}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces (a) The $\mathtt  {NOT}$ gate together with its matrix presentation. (b) Applying the gate to $0$, represented by $[1\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}0]^T$, will give $1$, i.e., $[0\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}1]^T$. (c) Applying the gate to $1$ will give $0$.}}{6}{}\protected@file@percent }
-\newlabel{not:gate:fig}{{4}{6}{}{}{}}
-\newlabel{not:gate:fig@cref}{{[figure][4][]4}{[1][5][]6}}
-\@writefile{toc}{\contentsline {paragraph}{Classical Gates}{6}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces (a) The {\tt  AND gate} together with its matrix presentation. (b) Applying the gate to $01$, represented by $[0\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}1\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}0]^T$, will give $0$. (c) Applying the gate to $11$, represented by $[0\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}1]^T$, will give $1$.}}{6}{}\protected@file@percent }
-\newlabel{and:gate:fig}{{5}{6}{}{}{}}
-\newlabel{and:gate:fig@cref}{{[figure][5][]5}{[1][6][]6}}
-\@writefile{toc}{\contentsline {paragraph}{Quantum Gates}{6}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The Identity gate, the Pauli gates, and the Hadamard gate.}}{7}{}\protected@file@percent }
-\newlabel{qgates:fig}{{6}{7}{}{}{}}
-\newlabel{qgates:fig@cref}{{[figure][6][]6}{[1][6][]7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Applying the $X$ gate on an input tree. We apply the gate to the bit $x_1$. The application is modeled by swapping the left and right subtrees of all nodes at the level corresponding to the qubit $x_1$ (i.e., level~1 in this case).}}{8}{}\protected@file@percent }
-\newlabel{apply:not:fig}{{7}{8}{}{}{}}
-\newlabel{apply:not:fig@cref}{{[figure][7][]7}{[1][8][]8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Applying the $\mathtt  {H}$ gate on an input tree. The gate is applied to the bit $x_1$. This transformation also targets all nodes at level~1 (corresponding to $x_1$), updating subtree structure and amplitudes accordingly.}}{8}{}\protected@file@percent }
-\newlabel{apply:H:fig}{{8}{8}{}{}{}}
-\newlabel{apply:H:fig@cref}{{[figure][8][]8}{[1][8][]8}}
-\@writefile{toc}{\contentsline {paragraph}{Tree Transformations}{9}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Circuits}{9}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces A classical combinatorial circuit}}{9}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces A simple quantum circuit.}}{9}{}\protected@file@percent }
-\newlabel{HZ:fig}{{10}{9}{}{}{}}
-\newlabel{HZ:fig@cref}{{[figure][10][]10}{[1][9][]9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces The BDD representation of a quantum state.}}{10}{}\protected@file@percent }
-\newlabel{BDD:fig}{{11}{10}{}{}{}}
-\newlabel{BDD:fig@cref}{{[figure][11][]11}{[1][9][]10}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Probabilistic vs Quantum Systems}{4}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces (a) A Markov chain. (b) Its adjacency matrix.}}{4}{}\protected@file@percent }
+\newlabel{MChain:fig}{{2}{4}{}{}{}}
+\newlabel{MChain:fig@cref}{{[figure][2][]2}{[1][3][]4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}States}{5}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Different qubits and their vector and Dirac representations. (a, b) The basis states $|0\rangle $ and $|1\rangle $. (c, d, e) Quantum states in superposition. Measuring the state in (c) yields $0$ or $1$ with probability $0.5$. Measuring the state in (d) yields $0$ with probability $1/9$ and $1$ with probability $8/9$. }}{5}{}\protected@file@percent }
+\newlabel{qbit:state:fig}{{3}{5}{}{}{}}
+\newlabel{qbit:state:fig@cref}{{[figure][3][]3}{[1][5][]5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces A state involving three qubits. We provide the vector, Dirac, and tree-based representations. The tree spans all basis states, with the corresponding amplitudes shown as leaf labels. For instance, the left-most path represents $|000\rangle $ with amplitude $1/\sqrt  {2}$. }}{6}{}\protected@file@percent }
+\newlabel{triple:qbit:state:fig}{{4}{6}{}{}{}}
+\newlabel{triple:qbit:state:fig@cref}{{[figure][4][]4}{[1][6][]6}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Gates}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Classical Gates.}{6}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces (a) The $\mathtt  {NOT}$ gate together with its matrix presentation. (b) Applying the gate to $0$, represented by $[1\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}0]^T$, will give $1$, i.e., $[0\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}1]^T$. (c) Applying the gate to $1$ will give $0$.}}{7}{}\protected@file@percent }
+\newlabel{not:gate:fig}{{5}{7}{}{}{}}
+\newlabel{not:gate:fig@cref}{{[figure][5][]5}{[1][6][]7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces (a) The {\tt  AND gate} together with its matrix presentation. (b) Applying the gate to $01$, represented by $[0\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}1\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}0]^T$, will give $0$. (c) Applying the gate to $11$, represented by $[0\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}\tmspace  +\thickmuskip {.2777em}1]^T$, will give $1$. }}{7}{}\protected@file@percent }
+\newlabel{and:gate:fig}{{6}{7}{}{}{}}
+\newlabel{and:gate:fig@cref}{{[figure][6][]6}{[1][7][]7}}
+\@writefile{toc}{\contentsline {paragraph}{Quantum Gates.}{7}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The Identity gate ($I$), the Pauli gates ($X$, $Y$, $Z$), and the Hadamard gate ($H$). }}{8}{}\protected@file@percent }
+\newlabel{qgates:fig}{{7}{8}{}{}{}}
+\newlabel{qgates:fig@cref}{{[figure][7][]7}{[1][7][]8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Applying the $X$ gate on an input tree. We apply the gate to the qubit~$x_1$. The application is modeled by swapping the left and right subtrees of all nodes at the level corresponding to the qubit $x_1$ (i.e., level~1 in this case). }}{9}{}\protected@file@percent }
+\newlabel{apply:not:fig}{{8}{9}{}{}{}}
+\newlabel{apply:not:fig@cref}{{[figure][8][]8}{[1][9][]9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Applying the $\mathtt  {H}$ gate on an input tree. The gate is applied to the qubit~$x_1$. This transformation also targets all nodes at level~1 (corresponding to $x_1$), updating subtree structure and amplitudes accordingly.}}{9}{}\protected@file@percent }
+\newlabel{apply:H:fig}{{9}{9}{}{}{}}
+\newlabel{apply:H:fig@cref}{{[figure][9][]9}{[1][9][]9}}
+\@writefile{toc}{\contentsline {paragraph}{Tree Transformations.}{9}{}\protected@file@percent }
+\citation{Flo67a}
+\citation{DBLP:journals/cacm/Hoare69}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Circuits}{10}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces A classical combinatorial circuit}}{10}{}\protected@file@percent }
+\newlabel{classicalcirc:fig}{{10}{10}{}{}{}}
+\newlabel{classicalcirc:fig@cref}{{[figure][10][]10}{[1][10][]10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces A simple quantum circuit.}}{10}{}\protected@file@percent }
+\newlabel{HZ:fig}{{11}{10}{}{}{}}
+\newlabel{HZ:fig@cref}{{[figure][11][]11}{[1][10][]10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces The BDD representation of a quantum state.}}{11}{}\protected@file@percent }
+\newlabel{BDD:fig}{{12}{11}{}{}{}}
+\newlabel{BDD:fig@cref}{{[figure][12][]12}{[1][10][]11}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Program Verification and Hoare Logic}{11}{}\protected@file@percent }
 \citation{DBLP:conf/cade/ChenRT23}
-\citation{DBLP:journals/pacmpl/AbdullaCCHLLLT25,CACM25,PLanQC25}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces (a) A tree automaton for generating all basis states of size $3$. The dashed lines represent the left child, and the bold lines represent the right child. (b) The tree corresponding to $[0\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}1\tmspace  +\thickmuskip {.2777em}0]^T$. The red rules in the automaton are those used to generate the tree. (c) An automaton to generate all basis states of size $n$.}}{11}{}\protected@file@percent }
-\newlabel{automata:fig}{{12}{11}{}{}{}}
-\newlabel{automata:fig@cref}{{[figure][12][]12}{[1][10][]11}}
+\citation{PLanQC25,DBLP:journals/pacmpl/AbdullaCCHLLLT25,CACM25,ChenCLLTY23,ChenCLLT23,chen2025autoq}
 \citation{DBLP:reference/mc/AbdullaST18}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces The Bell gates}}{12}{}\protected@file@percent }
-\newlabel{Bells:fig}{{13}{12}{}{}{}}
-\newlabel{Bells:fig@cref}{{[figure][13][]13}{[1][11][]12}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Challenges}{12}{}\protected@file@percent }
-\newlabel{challenges:section}{{5}{12}{}{}{}}
-\newlabel{challenges:section@cref}{{[section][5][]5}{[1][11][]12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Symbolic Encodings}{12}{}\protected@file@percent }
-\citation{DBLP:journals/pacmpl/0001CLLTY23}
-\citation{DBLP:journals/pacmpl/AbdullaCCHLLLT25,PLanQC25}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces (a)~A tree automaton for generating all basis states of $3$ qubits. The dashed lines represent the left-hand child, and the solid lines represent the right-hand child. (b)~The tree corresponding to $[0\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}0\tmspace  +\thickmuskip {.2777em}1\tmspace  +\thickmuskip {.2777em}0]^T$. The rules, shadowed in pink, in the automaton are those used to generate the tree. (c)~An automaton to generate all basis states of $n$ qubits.}}{12}{}\protected@file@percent }
+\newlabel{automata:fig}{{13}{12}{}{}{}}
+\newlabel{automata:fig@cref}{{[figure][13][]13}{[1][11][]12}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Challenges}{12}{}\protected@file@percent }
+\newlabel{challenges:section}{{7}{12}{}{}{}}
+\newlabel{challenges:section@cref}{{[section][7][]7}{[1][12][]12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces The circuit for the Bell state. }}{13}{}\protected@file@percent }
+\newlabel{Bells:fig}{{14}{13}{}{}{}}
+\newlabel{Bells:fig@cref}{{[figure][14][]14}{[1][11][]13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Symbolic Encodings}{13}{}\protected@file@percent }
+\citation{TsaiJiangJhang2021,ChenChenJiangJobranovaLengal2024,KissingerWetering2022,10.1145/3712711}
+\citation{WeiTsaiJhangJiang2022,SistlaChaudhuriReps2023,BurgholzerWille2020,Vinkhuijzen2023limdd}
+\citation{MeiBonsangueLaarman2024Sim,MeiCoopmansLaarman2024Eq}
+\citation{DBLP:journals/pacmpl/0001CLLTY23,DBLP:conf/fm/BauerMarquartLS23,Chareton2021,amy2018towards}
+\citation{PLanQC25,DBLP:journals/pacmpl/AbdullaCCHLLLT25,CACM25,ChenCLLTY23,ChenCLLT23,chen2025autoq}
 \citation{d2006quantum}
 \citation{ying2012floyd}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Algorithmic Verification}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Algorithmic Verification}{14}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces The classical Grover's search algorithm.}}{14}{}\protected@file@percent }
+\newlabel{grover:fig}{{15}{14}{}{}{}}
+\newlabel{grover:fig@cref}{{[figure][15][]15}{[1][14][]14}}
 \citation{10.5555/1408782}
 \citation{BauerMarquartLS23}
 \citation{10.1145/360248.360252}
 \citation{DBLP:conf/cade/ChenRT23}
 \citation{DBLP:journals/pacmpl/AbdullaCCHLLLT25,PLanQC25}
 \citation{yu2021quantum,perdrix2008quantum}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces The classical Grover's search algorithm.}}{14}{}\protected@file@percent }
-\newlabel{grover:fig}{{14}{14}{}{}{}}
-\newlabel{grover:fig@cref}{{[figure][14][]14}{[1][13][]14}}
 \citation{DBLP:journals/pacmpl/AbdullaCCHLLLT25}
 \citation{DBLP:journals/pacmpl/AbdullaCCHLLLT25}
 \citation{wulfantichains,DBLP:conf/tacas/AbdullaCHMV10}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Research Opportunities}{15}{}\protected@file@percent }
-\newlabel{opportunities:section}{{6}{15}{}{}{}}
-\newlabel{opportunities:section@cref}{{[section][6][]6}{[1][15][]15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Automata}{15}{}\protected@file@percent }
-\newlabel{automata:subsection}{{6.1}{15}{}{}{}}
-\newlabel{automata:subsection@cref}{{[subsection][1][6]6.1}{[1][15][]15}}
-\@writefile{toc}{\contentsline {subsubsection}{Language Inclusion and Equivalence}{15}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Research Opportunities}{16}{}\protected@file@percent }
+\newlabel{opportunities:section}{{8}{16}{}{}{}}
+\newlabel{opportunities:section@cref}{{[section][8][]8}{[1][16][]16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Automata}{16}{}\protected@file@percent }
+\newlabel{automata:subsection}{{8.1}{16}{}{}{}}
+\newlabel{automata:subsection@cref}{{[subsection][1][8]8.1}{[1][16][]16}}
+\@writefile{toc}{\contentsline {subsubsection}{Language Inclusion and Equivalence}{16}{}\protected@file@percent }
 \citation{DBLP:journals/sttt/AbdullaHH16}
-\@writefile{toc}{\contentsline {subsubsection}{Minimization}{16}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Verification Techniques}{16}{}\protected@file@percent }
-\newlabel{verification:subsection}{{6.2}{16}{}{}{}}
-\newlabel{verification:subsection@cref}{{[subsection][2][6]6.2}{[1][16][]16}}
-\@writefile{toc}{\contentsline {subsubsection}{Parameterized Verification}{16}{}\protected@file@percent }
 \citation{DBLP:conf/tacas/AbdullaDHR07}
+\@writefile{toc}{\contentsline {subsubsection}{Minimization}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Verification Techniques}{17}{}\protected@file@percent }
+\newlabel{verification:subsection}{{8.2}{17}{}{}{}}
+\newlabel{verification:subsection@cref}{{[subsection][2][8]8.2}{[1][17][]17}}
+\@writefile{toc}{\contentsline {subsubsection}{Parameterized Verification}{17}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\textbf  {Regular Model Checking}}{17}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Applications}{17}{}\protected@file@percent }
-\newlabel{equivalence:task}{{6.3}{17}{}{}{}}
-\newlabel{equivalence:task@cref}{{[subsection][3][6]6.3}{[1][17][]17}}
-\@writefile{toc}{\contentsline {subsubsection}{Circuit Equivalence}{17}{}\protected@file@percent }
+\citation{ChenCLLT23,chen2025autoq,DBLP:journals/pacmpl/AbdullaCCHLLLT25}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Applications}{18}{}\protected@file@percent }
+\newlabel{equivalence:task}{{8.3}{18}{}{}{}}
+\newlabel{equivalence:task@cref}{{[subsection][3][8]8.3}{[1][18][]18}}
+\@writefile{toc}{\contentsline {subsubsection}{Circuit Equivalence}{18}{}\protected@file@percent }
 \citation{10.1145/360248.360252}
 \citation{DBLP:conf/tacas/AbdullaCHMV10}
-\bibstyle{apalike}
+\bibstyle{plain}
 \bibdata{bibdatabase.bib}
-\bibcite{CACM25}{Abdulla, 2025}
-\@writefile{toc}{\contentsline {subsubsection}{Amplitude Verification}{18}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusions}{18}{}\protected@file@percent }
-\bibcite{PLanQC25}{Abdulla et~al., 2025a}
-\bibcite{DBLP:journals/pacmpl/AbdullaCCHLLLT25}{Abdulla et~al., 2025b}
-\bibcite{DBLP:conf/tacas/AbdullaCHMV10}{Abdulla et~al., 2010}
-\bibcite{DBLP:conf/tacas/AbdullaDHR07}{Abdulla et~al., 2007}
-\bibcite{DBLP:journals/sttt/AbdullaHH16}{Abdulla et~al., 2016}
-\bibcite{DBLP:reference/mc/AbdullaST18}{Abdulla et~al., 2018}
-\bibcite{BauerMarquartLS23}{Bauer{-}Marquart et~al., 2023}
-\bibcite{DBLP:journals/pacmpl/0001CLLTY23}{Chen et~al., 2023a}
-\bibcite{DBLP:conf/cade/ChenRT23}{Chen et~al., 2023b}
-\bibcite{d2006quantum}{D'Hondt and Panangaden, 2006}
-\bibcite{10.1145/360248.360252}{King, 1976}
-\bibcite{perdrix2008quantum}{Perdrix, 2008}
-\bibcite{wulfantichains}{Wulf et~al., 2006}
-\bibcite{10.5555/1408782}{Yanofsky and Mannucci, 2008}
-\bibcite{ying2012floyd}{Ying, 2012}
-\bibcite{yu2021quantum}{Yu and Palsberg, 2021}
-\gdef \@abspage@last{20}
+\@writefile{toc}{\contentsline {subsubsection}{Amplitude Verification}{19}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusions}{19}{}\protected@file@percent }
+\bibcite{CACM25}{{1}{2025}{{Abdulla}}{{}}}
+\bibcite{DBLP:conf/tacas/AbdullaDHR07}{{2}{2007}{{Abdulla et~al.}}{{Abdulla, Delzanno, Henda, and Rezine}}}
+\bibcite{DBLP:conf/tacas/AbdullaCHMV10}{{3}{2010}{{Abdulla et~al.}}{{Abdulla, Chen, Hol{\'{\i }}k, Mayr, and Vojnar}}}
+\bibcite{DBLP:journals/sttt/AbdullaHH16}{{4}{2016}{{Abdulla et~al.}}{{Abdulla, Haziza, and Hol{\'{\i }}k}}}
+\bibcite{DBLP:reference/mc/AbdullaST18}{{5}{2018}{{Abdulla et~al.}}{{Abdulla, Sistla, and Talupur}}}
+\bibcite{PLanQC25}{{6}{2025{}}{{Abdulla et~al.}}{{Abdulla, Chen, Chen, Chung, Hol{\'{\i }}k, Leng{\'{a}}l, Lin, Lo, Tsai, and Yen}}}
+\bibcite{DBLP:journals/pacmpl/AbdullaCCHLLLT25}{{7}{2025{}}{{Abdulla et~al.}}{{Abdulla, Chen, Chen, Hol{\'{\i }}k, Leng{\'{a}}l, Lin, Lo, and Tsai}}}
+\bibcite{amy2018towards}{{8}{2018}{{Amy}}{{}}}
+\bibcite{BauerMarquartLS23}{{9}{2023{}}{{Bauer{-}Marquart et~al.}}{{Bauer{-}Marquart, Leue, and Schilling}}}
+\bibcite{DBLP:conf/fm/BauerMarquartLS23}{{10}{2023{}}{{Bauer{-}Marquart et~al.}}{{Bauer{-}Marquart, Leue, and Schilling}}}
+\bibcite{BurgholzerWille2020}{{11}{2020}{{Burgholzer and Wille}}{{}}}
+\bibcite{10.1145/3712711}{{12}{2025}{{Burgholzer et~al.}}{{Burgholzer, Jimenez-Pastor, Larsen, Tribastone, Tschaikowski, and Wille}}}
+\bibcite{Chareton2021}{{13}{2021}{{Chareton et~al.}}{{Chareton, Bardin, Bobot, Perrelle, and Valiron}}}
+\bibcite{ChenChenJiangJobranovaLengal2024}{{14}{2024}{{Chen et~al.}}{{Chen, Chen, Jiang, Jobranov{\'a}, and Leng{\'a}l}}}
+\bibcite{ChenCLLT23}{{15}{2023{}}{{Chen et~al.}}{{Chen, Chung, Leng{\'{a}}l, Lin, and Tsai}}}
+\bibcite{ChenCLLTY23}{{16}{2023{}}{{Chen et~al.}}{{Chen, Chung, Leng{\'{a}}l, Lin, Tsai, and Yen}}}
+\bibcite{DBLP:journals/pacmpl/0001CLLTY23}{{17}{2023{}}{{Chen et~al.}}{{Chen, Chung, Leng{\'{a}}l, Lin, Tsai, and Yen}}}
+\bibcite{DBLP:conf/cade/ChenRT23}{{18}{2023{}}{{Chen et~al.}}{{Chen, R{\"{u}}mmer, and Tsai}}}
+\bibcite{chen2025autoq}{{19}{2025}{{Chen et~al.}}{{Chen, Chung, Hsieh, Huang, Lengal, Lin, and Tsai}}}
+\bibcite{d2006quantum}{{20}{2006}{{D'Hondt and Panangaden}}{{}}}
+\bibcite{Flo67a}{{21}{1967}{{Floyd}}{{}}}
+\bibcite{DBLP:journals/cacm/Hoare69}{{22}{1969}{{Hoare}}{{}}}
+\bibcite{10.1145/360248.360252}{{23}{1976}{{King}}{{}}}
+\bibcite{KissingerWetering2022}{{24}{2022}{{Kissinger and van~de Wetering}}{{}}}
+\bibcite{MeiBonsangueLaarman2024Sim}{{25}{2024{}}{{Mei et~al.}}{{Mei, Bonsangue, and Laarman}}}
+\bibcite{MeiCoopmansLaarman2024Eq}{{26}{2024{}}{{Mei et~al.}}{{Mei, Coopmans, Bonsangue, and Laarman}}}
+\bibcite{perdrix2008quantum}{{27}{2008}{{Perdrix}}{{}}}
+\bibcite{SistlaChaudhuriReps2023}{{28}{2023}{{Sistla et~al.}}{{Sistla, Chaudhuri, and Reps}}}
+\bibcite{TsaiJiangJhang2021}{{29}{2021}{{Tsai et~al.}}{{Tsai, Jiang, and Jhang}}}
+\bibcite{Vinkhuijzen2023limdd}{{30}{2023}{{Vinkhuijzen et~al.}}{{Vinkhuijzen, Coopmans, Elkouss, Dunjko, and Laarman}}}
+\bibcite{WeiTsaiJhangJiang2022}{{31}{2022}{{Wei et~al.}}{{Wei, Tsai, Jhang, and Jiang}}}
+\bibcite{wulfantichains}{{32}{2006}{{Wulf et~al.}}{{Wulf, Doyen, Henzinger, and Raskin}}}
+\bibcite{10.5555/1408782}{{33}{2008}{{Yanofsky and Mannucci}}{{}}}
+\bibcite{ying2012floyd}{{34}{2012}{{Ying}}{{}}}
+\bibcite{yu2021quantum}{{35}{2021}{{Yu and Palsberg}}{{}}}
+\gdef \@abspage@last{23}

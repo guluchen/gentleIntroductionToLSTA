@@ -1,0 +1,69 @@
+\section{Probabilistic vs Quantum Systems}
+
+\begin{wrapfigure}[15]{R}{0.5\textwidth}
+\includegraphics[width=0.48\textwidth]{Figures/MChains/Mchain} 
+\caption{(a) A Markov chain. (b) Its adjacency matrix.}
+\label{MChain:fig}
+\end{wrapfigure}
+
+In probabilistic systems, there exists an inherent uncertainty in our knowledge of the physical state.  
+%
+Moreover, state transitions occur according to probabilistic laws.  
+%
+This implies that the evolution of such systems is governed by rules specifying the likelihood of transitions between states.  
+%
+A classical model capturing this behaviour is the \emph{Markov chain}—an automaton whose transitions are labelled with \emph{weights}.  
+%
+A weight is a real number between $0$ and $1$, indicating the probability of moving from the source state to the target state.  
+%
+The probabilities of all transitions emanating from a given state sum to one.  
+
+We can represent a Markov chain using its adjacency matrix $M$, which is a square matrix with real-valued entries.  
+%
+Each row and column of $M$ corresponds to a state, and the entry $M[q', q]$ denotes the weight of the transition from state $q$ to state $q'$.  
+%
+By construction, the sum of the entries in each row of $M$ is equal to $1$.
+
+A probability distribution over the states of a Markov chain $M$ is represented by a column vector, for instance, $v = [1/2, 1/8, 3/8]^T$.%
+\footnote{To simplify notation, we may represent column vectors using their transposes.}  
+%
+This vector specifies that the system is in the states \emph{red}, \emph{black}, and \emph{green} with probabilities $1/2$, $1/8$, and $3/8$, respectively.  
+%
+To compute the distribution after one transition step, we multiply the transition matrix $M$ by the column vector $v$, yielding a new distribution vector, e.g., $v' = [9/20, 1/4, 3/10]^T$.
+
+
+The quantum setting operates over complex numbers rather than real-valued probabilities.  
+%
+In this context, a transition weight is not a real number $p \in [0,1]$, but a complex number $c$ such that the squared modulus $|c|^2$ lies in the interval $[0,1]$.  
+%
+This seemingly subtle change has profound implications for system dynamics.  
+
+Whereas real probabilities can only accumulate positively under addition, complex amplitudes can interfere—constructively or destructively.  
+%
+For example, if $p_1, p_2 \in [0,1]$ are real numbers, then both $p_1 + p_2 \geq p_1$ and $p_1 + p_2 \geq p_2$ hold.  
+%
+In contrast, for complex numbers $c_1, c_2$, it is not necessarily the case that the squared modulus of their sum dominates the individual squared moduli:  
+\[
+|c_1 + c_2|^2 \leq \max\left(|c_1|^2, |c_2|^2\right)
+\]
+%
+This phenomenon, known as \emph{interference}, is a hallmark of quantum systems.  
+%
+In particular, destructive interference allows for the cancellation of probability amplitudes, leading to outcomes with lower probabilities than suggested by the individual components.  
+%
+Such behaviours are central to the analysis and modelling of quantum processes, where unitary evolution replaces the stochastic matrices of classical probabilistic systems.
+
+
+
+
+The quantum setting works with complex numbers. A weight is not given as a real number p between 0 and 1. Rather, it is given
+as a complex number $c$ such that $|c|^2$ is a real number between 0 and 1.
+%
+This has a dramatic effect:
+Real number
+probabilities can only increase when added. 
+In contrast, complex numbers can cancel each other and lower their probability. For example, if $p_1$ and $p_2$ are two real
+numbers between $0$ and $1$, then $(p_1 + p_2)\geq p_1$ and $(p_1 + p_2)\geq p_2$.
+%
+However, in the complex case, if  $c_1$ and $c_2$ are two complex numbers with associated squares of modulus $|c_1|^2$ and $|c_2|^2$, then
+$|c_1 + c_2|^2$ need not be bigger than $|c_1|^2$ or $|c_2|^2$ .
