@@ -1,49 +1,49 @@
 This is BibTeX, Version 0.99d (TeX Live 2024)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
-The style file: plain.bst
+The style file: splncs.bst
 Database file #1: bibdatabase.bib
 Warning--empty journal in Flo67a
 Warning--empty journal in 10.1145/360248.360252
-You've used 37 entries,
-            2118 wiz_defined-function locations,
-            749 strings with 12900 characters,
-and the built_in function-call counts, 15746 in all, are:
-= -- 1532
-> -- 837
-< -- 26
-+ -- 325
-- -- 281
-* -- 1164
-:= -- 2510
-add.period$ -- 129
-call.type$ -- 37
-change.case$ -- 239
+You've used 40 entries,
+            2785 wiz_defined-function locations,
+            870 strings with 14370 characters,
+and the built_in function-call counts, 25598 in all, are:
+= -- 2131
+> -- 854
+< -- 53
++ -- 348
+- -- 301
+* -- 1705
+:= -- 3237
+add.period$ -- 71
+call.type$ -- 40
+change.case$ -- 300
 chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 605
-empty$ -- 1178
-format.name$ -- 281
-if$ -- 3375
+cite$ -- 42
+duplicate$ -- 2239
+empty$ -- 2196
+format.name$ -- 343
+if$ -- 5593
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 37
-newline$ -- 190
-num.names$ -- 95
-pop$ -- 270
+int.to.str$ -- 40
+missing$ -- 479
+newline$ -- 125
+num.names$ -- 101
+pop$ -- 838
 preamble$ -- 1
-purify$ -- 204
+purify$ -- 220
 quote$ -- 0
-skip$ -- 452
+skip$ -- 686
 stack$ -- 0
-substring$ -- 902
-swap$ -- 211
-text.length$ -- 26
+substring$ -- 1419
+swap$ -- 1336
+text.length$ -- 53
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 142
+type$ -- 154
 warning$ -- 2
-while$ -- 148
-width$ -- 39
-write$ -- 432
+while$ -- 211
+width$ -- 42
+write$ -- 438
 (There were 2 warnings)

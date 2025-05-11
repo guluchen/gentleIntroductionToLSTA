@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.19)  11 MAY 2025 19:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.19)  11 MAY 2025 20:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1124,7 +1124,21 @@ See the caption package documentation for explanation.
 \c@caption@flags=\count383
 \c@continuedfloat=\count384
 Package caption Info: wrapfig package is loaded.
-) (./styles.tex) (./globalcomm.tex) (./localcomm.tex) (./main.aux)
+) (./styles.tex) (./globalcomm.tex) (./localcomm.tex) (./main.aux
+
+! Package natbib Error: Bibliography not compatible with author-year citations.
+
+(natbib)                Press <return> to continue in numerical citation style.
+
+
+See the natbib package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.157 ...and\NAT@force@numbers{}\NAT@force@numbers
+                                                  
+? 
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -1141,8 +1155,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
-
-(/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count385
 \scratchdimen=\dimen378
@@ -1324,24 +1337,70 @@ File: Figures/Grover/Grover.pdf Graphic file (type pdf)
 <use Figures/Grover/Grover.pdf>
 Package pdftex.def Info: Figures/Grover/Grover.pdf  used on input line 69.
 (pdftex.def)             Requested size: 182.98273pt x 61.49356pt.
- [14 <./Figures/Grover/Grover.pdf>]
-[15]) (./opportunities.tex [16] [17] [18]) (./conclusions.tex) (./main.bbl
-[19] [20
 
-] [21] [22]) [23] (./main.aux)
+Overfull \hbox (0.47101pt too wide) in paragraph at lines 75--83
+\OT1/cmr/m/n/10 As pre-vi-ously men-tioned, al-go-rith-mic ver-i-fi-ca-tion tec
+h-niques such as \OT1/cmr/m/it/10 model check-
+ []
+
+[14] [15 <./Figures/Grover/Grover.pdf>]) (./opportunities.tex [16] [17]
+[18]) (./conclusions.tex) (./main.bbl [19]
+Underfull \hbox (badness 1199) in paragraph at lines 16--20
+[]\OT1/cmr/m/n/10 Abdulla, P.A., Chen, Y., Chen, Y., Hol^^S^^Pk, L., Leng^^Sal,
+ O., Lin, J.,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--40
+[]\OT1/cmr/m/n/10 Abdulla, P.A., Haz-iza, F., Hol^^S^^Pk, L.: Pa-ram-e-ter-ized
+ ver-i-fi-ca-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--40
+\OT1/cmr/m/n/10 tion through view ab-strac-tion. STTT 18(5), 495--516 (2016),
+ []
+
+
+Underfull \hbox (badness 3601) in paragraph at lines 68--72
+[]\OT1/cmr/m/n/10 Burgholzer, L., Jimenez-Pastor, A., Larsen, K.G., Trib-a-s-to
+ne, M.,
+ []
+
+[20
+
+]
+Underfull \hbox (badness 1275) in paragraph at lines 106--110
+[]\OT1/cmr/m/n/10 Chen, Y., Chung, K., Leng^^Sal, O., Lin, J., Tsai, W., Yen, D
+.: An
+ []
+
+
+Underfull \hbox (badness 1275) in paragraph at lines 112--116
+[]\OT1/cmr/m/n/10 Chen, Y., Chung, K., Leng^^Sal, O., Lin, J., Tsai, W., Yen, D
+.: An
+ []
+
+[21]
+Underfull \hbox (badness 2409) in paragraph at lines 145--147
+[]\OT1/cmr/m/n/10 King, J.C.: Sym-bolic ex-e-cu-tion and pro-gram test-ing 19(7
+) (1976),
+ []
+
+[22]) [23] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 36185 strings out of 474116
- 890479 string characters out of 5743682
- 1940187 words of memory out of 5000000
- 57938 multiletter control sequences out of 15000+600000
+ 36194 strings out of 474116
+ 890658 string characters out of 5743682
+ 1941187 words of memory out of 5000000
+ 57947 multiletter control sequences out of 15000+600000
  567575 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,16n,107p,736b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,16n,107p,800b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/STIXGeneral-Itali
 c.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/STIXGeneral-R
 egular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/c
@@ -1373,7 +1432,7 @@ e/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf
 s/type1/public/lm/lmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pub
 lic/lm/lmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt
 10.pfb>
-Output written on main.pdf (23 pages, 1977625 bytes).
+Output written on main.pdf (23 pages, 1971284 bytes).
 PDF statistics:
  720 PDF objects out of 1000 (max. 8388607)
  529 compressed objects within 6 object streams

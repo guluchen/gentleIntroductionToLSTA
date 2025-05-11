@@ -1,260 +1,228 @@
 \begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
 
 \bibitem{CACM25}
-Parosh~Aziz Abdulla.
-\newblock A symbolic approach to verifying quantum systems.
-\newblock Commun. {ACM}, to appear, 2025.
-\newblock To appear.
+Abdulla, P.A.: A symbolic approach to verifying quantum systems. Commun. {ACM},
+  to appear (2025), to appear
 
 \bibitem{PLanQC25}
-Parosh~Aziz Abdulla, Yo{-}Ga Chen, Yu{-}Fang Chen, Kai{-}Min Chung, Luk{\'{a}}s
-  Hol{\'{\i}}k, Ondrej Leng{\'{a}}l, Jyun{-}Ao Lin, Fang{-}Yi Lo, Wei{-}Lun
-  Tsai, and Di{-}De Yen.
-\newblock An automata-based framework for quantum circuit verification.
-\newblock Presentation at PLanQC 2025, The Fifth International Workshop on
-  Programming Languages for Quantum Computing, 2025.
+Abdulla, P.A., Chen, Y., Chen, Y., Chung, K., Hol{\'{\i}}k, L., Leng{\'{a}}l,
+  O., Lin, J., Lo, F., Tsai, W., Yen, D.: An automata-based framework for
+  quantum circuit verification. Presentation at PLanQC 2025, The Fifth
+  International Workshop on Programming Languages for Quantum Computing (2025)
 
 \bibitem{DBLP:journals/pacmpl/AbdullaCCHLLLT25}
-Parosh~Aziz Abdulla, Yo{-}Ga Chen, Yu{-}Fang Chen, Luk{\'{a}}s Hol{\'{\i}}k,
-  Ondrej Leng{\'{a}}l, Jyun{-}Ao Lin, Fang{-}Yi Lo, and Wei{-}Lun Tsai.
-\newblock Verifying quantum circuits with level-synchronized tree automata.
-\newblock {\em Proc. {ACM} Program. Lang.}, 9({POPL}):923--953, 2025.
+Abdulla, P.A., Chen, Y., Chen, Y., Hol{\'{\i}}k, L., Leng{\'{a}}l, O., Lin, J.,
+  Lo, F., Tsai, W.: Verifying quantum circuits with level-synchronized tree
+  automata. Proc. {ACM} Program. Lang.  9({POPL}),  923--953 (2025),
+  \url{https://doi.org/10.1145/3704868}
 
 \bibitem{DBLP:conf/tacas/AbdullaCHMV10}
-Parosh~Aziz Abdulla, Yu{-}Fang Chen, Luk{\'{a}}s Hol{\'{\i}}k, Richard Mayr,
-  and Tom{\'{a}}s Vojnar.
-\newblock When simulation meets antichains.
-\newblock In Javier Esparza and Rupak Majumdar, editors, {\em Tools and
+Abdulla, P.A., Chen, Y., Hol{\'{\i}}k, L., Mayr, R., Vojnar, T.: When
+  simulation meets antichains. In: Esparza, J., Majumdar, R. (eds.) Tools and
   Algorithms for the Construction and Analysis of Systems, 16th International
-  Conference, {TACAS} 2010, Held as Part of the Joint European Conferences on
-  Theory and Practice of Software, {ETAPS} 2010, Paphos, Cyprus, March 20-28,
-  2010. Proceedings}, volume 6015 of {\em Lecture Notes in Computer Science},
-  pages 158--174. Springer, 2010.
+  Conference, {TACAS} 2010. Lecture Notes in Computer Science, vol. 6015, pp.
+  158--174. Springer (2010),
+  \url{https://doi.org/10.1007/978-3-642-12002-2\_14}
 
 \bibitem{DBLP:conf/tacas/AbdullaDHR07}
-Parosh~Aziz Abdulla, Giorgio Delzanno, Noomene~Ben Henda, and Ahmed Rezine.
-\newblock Regular model checking without transducers (on efficient verification
-  of parameterized systems).
-\newblock In Orna Grumberg and Michael Huth, editors, {\em TACAS}, volume 4424
-  of {\em Lecture Notes in Computer Science}, pages 721--736. Springer, 2007.
+Abdulla, P.A., Delzanno, G., Henda, N.B., Rezine, A.: Regular model checking
+  without transducers (on efficient verification of parameterized systems). In:
+  Grumberg, O., Huth, M. (eds.) TACAS. Lecture Notes in Computer Science, vol.
+  4424, pp. 721--736. Springer (2007),
+  \url{https://doi.org/10.1007/978-3-540-71209-1\_56}
 
 \bibitem{DBLP:journals/sttt/AbdullaHH16}
-Parosh~Aziz Abdulla, Fr{\'{e}}d{\'{e}}ric Haziza, and Luk{\'{a}}s Hol{\'{\i}}k.
-\newblock Parameterized verification through view abstraction.
-\newblock {\em {STTT}}, 18(5):495--516, 2016.
+Abdulla, P.A., Haziza, F., Hol{\'{\i}}k, L.: Parameterized verification through
+  view abstraction. {STTT}  18(5),  495--516 (2016),
+  \url{https://doi.org/10.1007/s10009-015-0406-x}
 
 \bibitem{amy2018towards}
-Matthew Amy.
-\newblock Towards large-scale functional verification of universal quantum
-  circuits.
-\newblock In Peter Selinger and Giulio Chiribella, editors, {\em Proceedings
-  15th International Conference on Quantum Physics and Logic, {QPL} 2018,
-  Halifax, Canada, 3-7th June 2018}, volume 287 of {\em {EPTCS}}, pages 1--21,
-  2018.
+Amy, M.: Towards large-scale functional verification of universal quantum
+  circuits. In: Selinger, P., Chiribella, G. (eds.) Proceedings 15th
+  International Conference on Quantum Physics and Logic, {QPL} 2018, Halifax,
+  Canada, 3-7th June 2018. {EPTCS}, vol. 287, pp. 1--21 (2018),
+  \url{https://doi.org/10.4204/EPTCS.287.1}
 
 \bibitem{DBLP:books/daglib/0020348}
-Christel Baier and Joost{-}Pieter Katoen.
-\newblock {\em Principles of model checking}.
-\newblock {MIT} Press, 2008.
+Baier, C., Katoen, J.: Principles of model checking. {MIT} Press (2008)
 
 \bibitem{DBLP:conf/fm/BauerMarquartLS23}
-Fabian Bauer{-}Marquart, Stefan Leue, and Christian Schilling.
-\newblock symqv: Automated symbolic verification of quantum programs.
-\newblock In Marsha Chechik, Joost{-}Pieter Katoen, and Martin Leucker,
-  editors, {\em Formal Methods - 25th International Symposium, {FM} 2023,
-  L{\"{u}}beck, Germany, March 6-10, 2023, Proceedings}, volume 14000 of {\em
-  Lecture Notes in Computer Science}, pages 181--198. Springer, 2023.
+Bauer{-}Marquart, F., Leue, S., Schilling, C.: symqv: Automated symbolic
+  verification of quantum programs. In: Chechik, M., Katoen, J., Leucker, M.
+  (eds.) Formal Methods - 25th International Symposium, {FM} 2023,
+  L{\"{u}}beck, Germany, March 6-10, 2023, Proceedings. Lecture Notes in
+  Computer Science, vol. 14000, pp. 181--198. Springer (2023),
+  \url{https://doi.org/10.1007/978-3-031-27481-7\_12}
 
 \bibitem{BauerMarquartLS23}
-Fabian Bauer{-}Marquart, Stefan Leue, and Christian Schilling.
-\newblock symqv: Automated symbolic verification of quantum programs.
-\newblock In Marsha Chechik, Joost{-}Pieter Katoen, and Martin Leucker,
-  editors, {\em Formal Methods - 25th International Symposium, {FM} 2023,
-  L{\"{u}}beck, Germany, March 6-10, 2023, Proceedings}, volume 14000 of {\em
-  Lecture Notes in Computer Science}, pages 181--198. Springer, 2023.
+Bauer{-}Marquart, F., Leue, S., Schilling, C.: symqv: Automated symbolic
+  verification of quantum programs. In: Chechik, M., Katoen, J., Leucker, M.
+  (eds.) Formal Methods - 25th International Symposium, {FM} 2023,
+  L{\"{u}}beck, Germany, March 6-10, 2023, Proceedings. Lecture Notes in
+  Computer Science, vol. 14000, pp. 181--198. Springer (2023),
+  \url{https://doi.org/10.1007/978-3-031-27481-7\_12}
 
 \bibitem{10.1145/3712711}
-Lukas Burgholzer, Antonio Jimenez-Pastor, Kim~Guldstrand Larsen, Mirco
-  Tribastone, Max Tschaikowski, and Robert Wille.
-\newblock Forward and backward constrained bisimulations for quantum circuits
-  using decision diagrams.
-\newblock {\em ACM Transactions on Quantum Computing}, 6(2), February 2025.
+Burgholzer, L., Jimenez-Pastor, A., Larsen, K.G., Tribastone, M., Tschaikowski,
+  M., Wille, R.: Forward and backward constrained bisimulations for quantum
+  circuits using decision diagrams. ACM Transactions on Quantum Computing  6(2)
+  (Feb 2025), \url{https://doi.org/10.1145/3712711}
 
 \bibitem{BurgholzerWille2020}
-Lukas Burgholzer and Robert Wille.
-\newblock Advanced equivalence checking for quantum circuits.
-\newblock {\em IEEE Transactions on Computer-Aided Design of Integrated
-  Circuits and Systems}, 2020.
+Burgholzer, L., Wille, R.: Advanced equivalence checking for quantum circuits.
+  IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+   (2020)
 
 \bibitem{Chareton2021}
-Christophe Chareton, S{\'e}bastien Bardin, Fran{\c c}ois Bobot, Valentin
-  Perrelle, and Beno{\^i}t Valiron.
-\newblock An automated deductive verification framework for circuit-building
-  quantum programs.
-\newblock In Nobuko Yoshida, editor, {\em ESOP}, volume 12648 of {\em LNCS},
-  pages 148--177, {Cham}, March 2021. {Springer International Publishing}.
+Chareton, C., Bardin, S., Bobot, F., Perrelle, V., Valiron, B.: An automated
+  deductive verification framework for circuit-building quantum programs. In:
+  Yoshida, N. (ed.) ESOP. LNCS, vol. 12648, pp. 148--177. {Springer
+  International Publishing}, {Cham} (March 2021)
 
 \bibitem{ChenChenJiangJobranovaLengal2024}
-Tian-Fu Chen, Yu-Fang Chen, Jie-Hong~Roland Jiang, S{\'a}ra Jobranov{\'a}, and
-  Ond\v{r}ej Leng{\'a}l.
-\newblock Accelerating quantum circuit simulation with symbolic execution and
-  loop summarization.
-\newblock In {\em Proceedings of the IEEE/ACM International Conference on
-  Computer-Aided Design (ICCAD)}. IEEE/ACM, 2024.
+Chen, T.F., Chen, Y.F., Jiang, J.H.R., Jobranov{\'a}, S., Leng{\'a}l, O.:
+  Accelerating quantum circuit simulation with symbolic execution and loop
+  summarization. In: Proceedings of the IEEE/ACM International Conference on
+  Computer-Aided Design (ICCAD). IEEE/ACM (2024)
 
 \bibitem{chen2025autoq}
-Yu-Fang Chen, Kai-Min Chung, Min-Hsiu Hsieh, Wei-Jia Huang, Ondrej Lengal,
-  Jyun-Ao Lin, and Wei-Lun Tsai.
-\newblock Autoq 2.0: From verification of quantum circuits to verification of
-  quantum programs.
-\newblock In {\em Proceedings of the 31st International Conference on Tools and
-  Algorithms for the Construction and Analysis of Systems (TACAS)}, ETAPS 2025.
-  Springer, 2025.
-\newblock To appear.
+Chen, Y.F., Chung, K.M., Hsieh, M.H., Huang, W.J., Lengal, O., Lin, J.A., Tsai,
+  W.L.: Autoq 2.0: From verification of quantum circuits to verification of
+  quantum programs. In: Proceedings of the 31st International Conference on
+  Tools and Algorithms for the Construction and Analysis of Systems (TACAS).
+  ETAPS 2025, Springer (2025), to appear
 
 \bibitem{ChenCLLT23}
-Yu{-}Fang Chen, Kai{-}Min Chung, Ondrej Leng{\'{a}}l, Jyun{-}Ao Lin, and
-  Wei{-}Lun Tsai.
-\newblock {AutoQ}: An automata-based quantum circuit verifier.
-\newblock In Constantin Enea and Akash Lal, editors, {\em Computer Aided
-  Verification - 35th International Conference, {CAV} 2023, Paris, France, July
-  17-22, 2023, Proceedings, Part {III}}, volume 13966 of {\em Lecture Notes in
-  Computer Science}, pages 139--153. Springer, 2023.
+Chen, Y., Chung, K., Leng{\'{a}}l, O., Lin, J., Tsai, W.: {AutoQ}: An
+  automata-based quantum circuit verifier. In: Enea, C., Lal, A. (eds.)
+  Computer Aided Verification - 35th International Conference, {CAV} 2023,
+  Paris, France, July 17-22, 2023, Proceedings, Part {III}. Lecture Notes in
+  Computer Science, vol. 13966, pp. 139--153. Springer (2023),
+  \url{https://doi.org/10.1007/978-3-031-37709-9\_7}
 
 \bibitem{ChenCLLTY23}
-Yu{-}Fang Chen, Kai{-}Min Chung, Ondrej Leng{\'{a}}l, Jyun{-}Ao Lin, Wei{-}Lun
-  Tsai, and Di{-}De Yen.
-\newblock An automata-based framework for verification and bug hunting in
-  quantum circuits.
-\newblock {\em Proc. {ACM} Program. Lang.}, 7({PLDI}):1218--1243, 2023.
+Chen, Y., Chung, K., Leng{\'{a}}l, O., Lin, J., Tsai, W., Yen, D.: An
+  automata-based framework for verification and bug hunting in quantum
+  circuits. Proc. {ACM} Program. Lang.  7({PLDI}),  1218--1243 (2023),
+  \url{https://doi.org/10.1145/3591270}
 
 \bibitem{DBLP:journals/pacmpl/0001CLLTY23}
-Yu{-}Fang Chen, Kai{-}Min Chung, Ondrej Leng{\'{a}}l, Jyun{-}Ao Lin, Wei{-}Lun
-  Tsai, and Di{-}De Yen.
-\newblock An automata-based framework for verification and bug hunting in
-  quantum circuits.
-\newblock {\em Proc. {ACM} Program. Lang.}, 7({PLDI}):1218--1243, 2023.
+Chen, Y., Chung, K., Leng{\'{a}}l, O., Lin, J., Tsai, W., Yen, D.: An
+  automata-based framework for verification and bug hunting in quantum
+  circuits. Proc. {ACM} Program. Lang.  7({PLDI}),  1218--1243 (2023),
+  \url{https://doi.org/10.1145/3591270}
 
 \bibitem{DBLP:conf/cade/ChenRT23}
-Yu{-}Fang Chen, Philipp R{\"{u}}mmer, and Wei{-}Lun Tsai.
-\newblock A theory of cartesian arrays (with applications in quantum circuit
-  verification).
-\newblock In Brigitte Pientka and Cesare Tinelli, editors, {\em Automated
-  Deduction - {CADE} 29 - 29th International Conference on Automated Deduction,
-  Rome, Italy, July 1-4, 2023, Proceedings}, volume 14132 of {\em Lecture Notes
-  in Computer Science}, pages 170--189. Springer, 2023.
+Chen, Y., R{\"{u}}mmer, P., Tsai, W.: A theory of cartesian arrays (with
+  applications in quantum circuit verification). In: Pientka, B., Tinelli, C.
+  (eds.) Automated Deduction - {CADE} 29 - 29th International Conference on
+  Automated Deduction, Rome, Italy, July 1-4, 2023, Proceedings. Lecture Notes
+  in Computer Science, vol. 14132, pp. 170--189. Springer (2023),
+  \url{https://doi.org/10.1007/978-3-031-38499-8\_10}
 
 \bibitem{DBLP:reference/mc/2018}
-Edmund~M. Clarke, Thomas~A. Henzinger, Helmut Veith, and Roderick Bloem,
-  editors.
-\newblock {\em Handbook of Model Checking}.
-\newblock Springer, 2018.
+Clarke, E.M., Henzinger, T.A., Veith, H., Bloem, R. (eds.): Handbook of Model
+  Checking. Springer (2018), \url{https://doi.org/10.1007/978-3-319-10575-8}
 
 \bibitem{d2006quantum}
-Ellie D'Hondt and Prakash Panangaden.
-\newblock Quantum weakest preconditions.
-\newblock {\em Mathematical Structures in Computer Science}, 16(3):429--451,
-  2006.
+D'Hondt, E., Panangaden, P.: Quantum weakest preconditions. Mathematical
+  Structures in Computer Science  16(3),  429--451 (2006)
+
+\bibitem{fang2024symbolic}
+Fang, W., Ying, M.: Symbolic execution for quantum error correction programs.
+  Proceedings of the ACM on Programming Languages  8(PLDI),  1040--1065 (2024)
 
 \bibitem{Flo67a}
-Robert~W Floyd.
-\newblock Assigning meanings to programs.
-\newblock 19:19--32, 1967.
+Floyd, R.W.: Assigning meanings to programs  19,  19--32 (1967)
 
 \bibitem{DBLP:journals/cacm/Hoare69}
-C.~A.~R. Hoare.
-\newblock An axiomatic basis for computer programming.
-\newblock {\em Commun. {ACM}}, 12(10):576--580, 1969.
+Hoare, C.A.R.: An axiomatic basis for computer programming. Commun. {ACM}
+  12(10),  576--580 (1969), \url{https://doi.org/10.1145/363235.363259}
 
 \bibitem{10.1145/360248.360252}
-James~C. King.
-\newblock Symbolic execution and program testing.
-\newblock 19(7), 1976.
+King, J.C.: Symbolic execution and program testing  19(7) (1976),
+  \url{https://doi.org/10.1145/360248.360252}
 
 \bibitem{KissingerWetering2022}
-Aleks Kissinger and John van~de Wetering.
-\newblock Simulating quantum circuits with zx-calculus reduced stabiliser
-  decompositions.
-\newblock {\em Quantum Science and Technology}, 7(4):044001, July 2022.
+Kissinger, A., van~de Wetering, J.: Simulating quantum circuits with
+  zx-calculus reduced stabiliser decompositions. Quantum Science and Technology
+   7(4),  044001 (July 2022)
 
 \bibitem{MeiBonsangueLaarman2024Sim}
-Jingyi Mei, Marcello Bonsangue, and Alfons Laarman.
-\newblock Simulating quantum circuits by model counting.
-\newblock In {\em Computer Aided Verification}. Springer Nature Switzerland,
-  2024.
+Mei, J., Bonsangue, M., Laarman, A.: Simulating quantum circuits by model
+  counting. In: Computer Aided Verification. Springer Nature Switzerland (2024)
 
 \bibitem{MeiCoopmansLaarman2024Eq}
-Jingyi Mei, Tim Coopmans, Marcello Bonsangue, and Alfons Laarman.
-\newblock Equivalence checking of quantum circuits by model counting.
-\newblock In {\em Automated Reasoning}, pages 401--421. Springer, 2024.
+Mei, J., Coopmans, T., Bonsangue, M., Laarman, A.: Equivalence checking of
+  quantum circuits by model counting. In: Automated Reasoning. pp. 401--421.
+  Springer (2024)
+
+\bibitem{7163590}
+Niemann, P., Wille, R., Miller, D.M., Thornton, M.A., Drechsler, R.: Qmdds:
+  Efficient quantum function representation and manipulation. IEEE Transactions
+  on Computer-Aided Design of Integrated Circuits and Systems  35(1),  86--99
+  (2016)
 
 \bibitem{perdrix2008quantum}
-Simon Perdrix.
-\newblock Quantum entanglement analysis based on abstract interpretation.
-\newblock In {\em International Static Analysis Symposium}, pages 270--282.
-  Springer, 2008.
+Perdrix, S.: Quantum entanglement analysis based on abstract interpretation.
+  In: International Static Analysis Symposium. pp. 270--282. Springer (2008)
 
 \bibitem{DBLP:conf/fossacs/PiribauerB19}
-Jakob Piribauer and Christel Baier.
-\newblock Partial and conditional expectations in markov decision processes
-  with integer weights.
-\newblock In Mikolaj Bojanczyk and Alex Simpson, editors, {\em Foundations of
-  Software Science and Computation Structures - 22nd International Conference,
-  {FOSSACS} 2019, Held as Part of the European Joint Conferences on Theory and
-  Practice of Software, {ETAPS} 2019, Prague, Czech Republic, April 6-11, 2019,
-  Proceedings}, volume 11425 of {\em Lecture Notes in Computer Science}, pages
-  436--452. Springer, 2019.
+Piribauer, J., Baier, C.: Partial and conditional expectations in markov
+  decision processes with integer weights. In: Bojanczyk, M., Simpson, A.
+  (eds.) Foundations of Software Science and Computation Structures - 22nd
+  International Conference, {FOSSACS} 2019, Held as Part of the European Joint
+  Conferences on Theory and Practice of Software, {ETAPS} 2019, Prague, Czech
+  Republic, April 6-11, 2019, Proceedings. Lecture Notes in Computer Science,
+  vol. 11425, pp. 436--452. Springer (2019),
+  \url{https://doi.org/10.1007/978-3-030-17127-8\_25}
 
 \bibitem{SistlaChaudhuriReps2023}
-Meghana Sistla, Swarat Chaudhuri, and Thomas Reps.
-\newblock Symbolic quantum simulation with quasimodo.
-\newblock In Constantin Enea and Akash Lal, editors, {\em Computer Aided
-  Verification}, pages 213--225. Springer, 2023.
+Sistla, M., Chaudhuri, S., Reps, T.: Symbolic quantum simulation with
+  quasimodo. In: Enea, C., Lal, A. (eds.) Computer Aided Verification. pp.
+  213--225. Springer (2023)
 
 \bibitem{TsaiJiangJhang2021}
-Yuan-Hung Tsai, Jie-Hong~R. Jiang, and Chiao-Shan Jhang.
-\newblock Bit-slicing the hilbert space: Scaling up accurate quantum circuit
-  simulation.
-\newblock In {\em Proceedings of the 58th ACM/IEEE Design Automation Conference
-  (DAC)}, pages 439--444. IEEE, 2021.
+Tsai, Y.H., Jiang, J.H.R., Jhang, C.S.: Bit-slicing the hilbert space: Scaling
+  up accurate quantum circuit simulation. In: Proceedings of the 58th ACM/IEEE
+  Design Automation Conference (DAC). pp. 439--444. IEEE (2021)
 
 \bibitem{Vinkhuijzen2023limdd}
-Lieuwe Vinkhuijzen, Tim Coopmans, David Elkouss, Vedran Dunjko, and Alfons
-  Laarman.
-\newblock Limdd: A decision diagram for simulation of quantum computing
-  including stabilizer states.
-\newblock {\em Quantum}, 7:1108, 2023.
+Vinkhuijzen, L., Coopmans, T., Elkouss, D., Dunjko, V., Laarman, A.: Limdd: A
+  decision diagram for simulation of quantum computing including stabilizer
+  states. Quantum  7,  1108 (2023),
+  \url{https://doi.org/10.22331/q-2023-09-11-1108}
 
 \bibitem{WeiTsaiJhangJiang2022}
-Chun-Yu Wei, Yuan-Hung Tsai, Chiao-Shan Jhang, and Jie-Hong~R. Jiang.
-\newblock Accurate bdd-based unitary operator manipulation for scalable and
-  robust quantum circuit verification.
-\newblock In {\em Proceedings of the 59th ACM/IEEE Design Automation Conference
-  (DAC)}, pages 523--528, 2022.
+Wei, C.Y., Tsai, Y.H., Jhang, C.S., Jiang, J.H.R.: Accurate bdd-based unitary
+  operator manipulation for scalable and robust quantum circuit verification.
+  In: Proceedings of the 59th ACM/IEEE Design Automation Conference (DAC). pp.
+  523--528 (2022)
 
 \bibitem{wulfantichains}
-Martin~De Wulf, Laurent Doyen, Thomas~A. Henzinger, and Jean-Fran\c{c}ois
-  Raskin.
-\newblock {Antichains: A New Algorithm for Checking Universality of Finite
-  Automata}.
-\newblock In {\em CAV'06}, volume 4144 of {\em LNCS}, pages 17--30. Springer,
-  2006.
+Wulf, M.D., Doyen, L., Henzinger, T.A., Raskin, J.F.: {Antichains: A New
+  Algorithm for Checking Universality of Finite Automata}. In: CAV'06. LNCS,
+  vol. 4144, pp. 17--30. Springer (2006)
 
 \bibitem{10.5555/1408782}
-Noson~S. Yanofsky and Mirco~A. Mannucci.
-\newblock {\em Quantum Computing for Computer Scientists}.
-\newblock Cambridge University Press, USA, 1 edition, 2008.
+Yanofsky, N.S., Mannucci, M.A.: Quantum Computing for Computer Scientists.
+  Cambridge University Press, USA, 1 edn. (2008)
 
 \bibitem{ying2012floyd}
-Mingsheng Ying.
-\newblock Floyd-{Hoare} logic for quantum programs.
-\newblock {\em ACM Transactions on Programming Languages and Systems (TOPLAS)},
-  33(6):1--49, 2012.
+Ying, M.: Floyd-{Hoare} logic for quantum programs. ACM Transactions on
+  Programming Languages and Systems (TOPLAS)  33(6),  1--49 (2012)
 
 \bibitem{yu2021quantum}
-Nengkun Yu and Jens Palsberg.
-\newblock Quantum abstract interpretation.
-\newblock In {\em Proceedings of the 42nd ACM SIGPLAN International Conference
-  on Programming Language Design and Implementation}, pages 542--558, 2021.
+Yu, N., Palsberg, J.: Quantum abstract interpretation. In: Proceedings of the
+  42nd ACM SIGPLAN International Conference on Programming Language Design and
+  Implementation. pp. 542--558 (2021)
+
+\bibitem{8942057}
+Zulehner, A., Hillmich, S., Wille, R.: How to efficiently handle complex
+  values? implementing decision diagrams for quantum computing. In: 2019
+  IEEE/ACM International Conference on Computer-Aided Design (ICCAD). pp. 1--7
+  (2019)
 
 \end{thebibliography}

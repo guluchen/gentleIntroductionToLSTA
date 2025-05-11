@@ -1,0 +1,10 @@
+Suggestions for improvement
+- Several authors were added to the paper that are not apparent in the submission system. It would be good to make them consistent.
+ * Done
+
+- The citation format could be corrected as it does not follow the standard LNCS numbered style of references.
+ * Done
+- Model checking is currently only referred to the "Handbook of model checking" chapter about parametric model checking, while where it is referred to, the whole book and also the book by Baier and Katoen "Principles of model checking" could be referred to.
+ * Done
+- In Fig. 13, some of the solid lines might need to be dashed ones?
+ * Fixed
